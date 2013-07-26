@@ -1,0 +1,37 @@
+<h1>Imoveis</h1>
+
+<table >
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @imovels.each do |imovel| %>
+    <tr>
+      <td border border="1" width="50%"><%= image_tag "#{imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "200x200"%>
+    </td>
+    <td>
+      <br/>
+      Referencia :<%= link_to imovel.referencia, imovel_path(imovel) %>
+      <br/>
+      Resumo :<%= imovel.resumo %>
+      <br/>
+      Tipo Negocio: <%= imovel.tipoNegocio %>
+      <br/>
+      Tipo Imovel: <%= imovel.tipoImovel %>
+      <br/>
+      Preco: <%= imovel.preco %> 
+      <br/>
+        <%= link_to 'Editar', edit_imovel_path(imovel) , class: "btn btn-small btn-info"%> | 
+        <%= link_to 'Apagar', imovel, class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+      
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '+ Novo', new_imovel_path, class: "btn btn-large btn-success"  %>
+

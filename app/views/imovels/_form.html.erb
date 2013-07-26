@@ -1,0 +1,50 @@
+
+
+<%= simple_form_for(@imovel) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    
+    
+  <div class="container">
+    <div class="span6">
+      <fildset> <legend>Dados Imovel</legend>
+        <%= f.input :referencia %>
+        <%= f.input :resumo %>
+        <%= f.input :descriacao , as: :text %>
+      
+    </fildset>
+    </div>
+    <div class="span4">
+      <fildset> <legend>Localizacao</legend>
+        <%= f.input :pais %>
+        <%= f.input :provincia %>
+        <%= f.input :cidade %>
+        <%= f.input :localizacao %>
+        <%= f.input :area %>
+        
+    </fildset>
+    </div>
+    <div class="span4">
+        <fildset> <legend>Dados</legend>
+        <%= f.input :tipoNegocio %>
+        <%= f.input :tipoImovel %>
+        <%= f.input :estado %>
+        <%= f.input :preco %>
+        
+        </fildset>
+  </div>
+    <div class="span4">
+      <fildset> <legend>Fotos</legend>
+       Foto Principal: <input id="principal" type="file" >
+       Foto Anexo 1: <input id="anexo1" type="file" >
+       Foto Anexo 2: <input id="anexo2" type="file" >
+       Foto Anexo 3: <input id="anexo3" type="file" >
+      </fildset>
+    </div>
+    
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

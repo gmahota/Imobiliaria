@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @micropost.content %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @micropost.created_at %>
+</p>
+
+
+<%= link_to 'Alterar', edit_user_micropost_path(@user,@micropost),class: "btn btn-mini btn-primary" %> |
+<%= link_to 'Voltar', user_microposts_path(@user, @microposts), class: "btn btn-mini"%>
+

@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  descriacao: MyString
+  text: MyString
+  resumo: MyString
+  text: MyString
+  referencia: MyString
+  string: MyString
+  tipoNegocio: MyString
+  string: MyString
+  tipoImovel: MyString
+  string: MyString
+  estado: MyString
+  string: MyString
+  area: MyString
+  string: MyString
+  preco: MyString
+  decimal: MyString
+  pais: MyString
+  string: MyString
+  provincia: MyString
+  string: MyString
+  cidade: MyString
+  string: MyString
+  localizacao: MyString
+  string: MyString
+
+two:
+  descriacao: MyString
+  text: MyString
+  resumo: MyString
+  text: MyString
+  referencia: MyString
+  string: MyString
+  tipoNegocio: MyString
+  string: MyString
+  tipoImovel: MyString
+  string: MyString
+  estado: MyString
+  string: MyString
+  area: MyString
+  string: MyString
+  preco: MyString
+  decimal: MyString
+  pais: MyString
+  string: MyString
+  provincia: MyString
+  string: MyString
+  cidade: MyString
+  string: MyString
+  localizacao: MyString
+  string: MyString
