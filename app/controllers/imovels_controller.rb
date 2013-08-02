@@ -1,20 +1,48 @@
 class ImovelsController < ApplicationController
+  load_and_authorize_resource
   # GET /imovels
   # GET /imovels.json
   def index
-    @imovels = Imovel.all
-
+    
+    @imovels = params[:idtipoImovel]== nil ? Imovel.searchReferencia(params[:idreferencia])  :Imovel.searchtipoImovel(params[:idtipoImovel])
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @imovels }
     end
   end
-
+  
+  # GET /imovels
+  # GET /imovels.json
+  def pesquisa
+    
+    @imovels = Imovel.all
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @imovels }
+    end
+  end
+  
+  # GET /imovels/1
+  # GET /imovels/1.json
+  def detalhes
+    @imovel = Imovel.find(params[:id])
+        
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @imovel }
+    end
+  end
+  
   # GET /imovels/1
   # GET /imovels/1.json
   def show
-    @imovel = Imovel.find(params[:id])
-
+    
+    
+    @imovel = params[:id] == nil ?Imovel.find(:first,:conditions => ["estado = ? ","Destaque Semana"]):  Imovel.find(params[:id])
+    #Imovel.find(params[:id])
+        
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @imovel }

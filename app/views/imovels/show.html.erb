@@ -1,10 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<%= image_tag "#{@imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "200x200"%>
-
+<%#<p id="notice"><%= notice %><%#</p> %>
 <p>
-  <b>Descriacao:</b>
-  <%= @imovel.descriacao %>
+<%= image_tag "#{@imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "400x400"%>
+</p>
+
+
+<b>Referencia:</b>
+  <%= @imovel.referencia %>
 </p>
 
 <p>
@@ -13,20 +14,13 @@
 </p>
 
 <p>
-  <b>Referencia:</b>
-  <%= @imovel.referencia %>
-</p>
-
-
-<p>
-  <b>Tiponegocio:</b>
-  <%= @imovel.tipoNegocio %>
-</p>
-
-
-<p>
-  <b>Tipoimovel:</b>
+  <b>Tipo Imovel:</b>
   <%= @imovel.tipoImovel %>
+</p>
+
+<p>
+  <b>Tipo de Negocio:</b>
+  <%= @imovel.tipoNegocio %>
 </p>
 
 <p>
@@ -41,31 +35,22 @@
 
 <p>
   <b>Preco:</b>
-  <%= @imovel.preco %>
-</p>
-
-<p>
-  <b>Pais:</b>
-  <%= @imovel.pais %>
-</p>
-
-
-<p>
-  <b>Provincia:</b>
-  <%= @imovel.provincia %>
-</p>
-
-<p>
-  <b>Cidade:</b>
-  <%= @imovel.cidade %>
+  <%= @imovel.preco %> <%= @imovel.moeda%>
 </p>
 
 <p>
   <b>Localizacao:</b>
   <%= @imovel.localizacao %>
+  
+  <b>Cidade:</b>
+  <%= @imovel.cidade %>
+</p>
+
+<p>
+  
 </p>
 
 
 
-<%= link_to 'Edit', edit_imovel_path(@imovel) %> |
+<%= link_to 'Dados Completos', "/imovels/#{@imovel.referencia}/detalhes" %> |
 <%= link_to 'Back', imovels_path %>

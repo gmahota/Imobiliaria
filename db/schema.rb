@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724181316) do
+ActiveRecord::Schema.define(:version => 20130731231945) do
+
+  create_table "cidades", :force => true do |t|
+    t.string   "descricao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "documentos", :force => true do |t|
+    t.string   "descricao"
+    t.integer  "imovel_id"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+  create_table "estados", :force => true do |t|
+    t.string   "descricao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "imovels", :force => true do |t|
     t.string   "descriacao"
@@ -23,13 +46,14 @@ ActiveRecord::Schema.define(:version => 20130724181316) do
     t.string   "tipoImovel"
     t.string   "estado"
     t.string   "area"
-    t.integer  "preco"
+    t.float    "preco"
     t.string   "pais"
     t.string   "provincia"
     t.string   "cidade"
     t.string   "localizacao"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "moeda"
   end
 
   create_table "microposts", :force => true do |t|
@@ -37,6 +61,32 @@ ActiveRecord::Schema.define(:version => 20130724181316) do
     t.integer  "user_id"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+  end
+
+  create_table "moedas", :force => true do |t|
+    t.string   "sigla"
+    t.string   "descricao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipo_imovels", :force => true do |t|
+    t.string   "descricao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipo_negocios", :force => true do |t|
+    t.string   "descricao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipologia", :force => true do |t|
+    t.text     "descricao"
+    t.integer  "tipoImovel_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "users", :force => true do |t|

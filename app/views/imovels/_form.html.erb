@@ -1,11 +1,8 @@
-
-
-<%= simple_form_for(@imovel) do |f| %>
+<%= simple_nested_form_for @imovel ,  :html => {:multipart => true} do |f| %>
   <%= f.error_notification %>
-
+  
   <div class="form-inputs">
-    
-    
+ 
   <div class="container">
     <div class="span6">
       <fildset> <legend>Dados Imovel</legend>
@@ -19,6 +16,9 @@
       <fildset> <legend>Localizacao</legend>
         <%= f.input :pais %>
         <%= f.input :provincia %>
+        
+        <%= select("imovel","cidade", Cidade.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
+        
         <%= f.input :cidade %>
         <%= f.input :localizacao %>
         <%= f.input :area %>
@@ -27,21 +27,41 @@
     </div>
     <div class="span4">
         <fildset> <legend>Dados</legend>
-        <%= f.input :tipoNegocio %>
-        <%= f.input :tipoImovel %>
-        <%= f.input :estado %>
+        <p>Tipo de Negocio  
+        <%= select("imovel","tipoNegocio", TipoNegocio.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
+        </p>
+        
+        <p>Tipo de Imovel
+        <%= select("imovel","tipoImovel", TipoImovel.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
+        </p>
+        <p>
+        Estado
+        <%= select("imovel","estado", Estado.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
+        </p>
+        
         <%= f.input :preco %>
+        <p>
+        Moeda
+        <%= select("imovel","moeda", Moeda.all.collect { |p| [p.descricao,p.sigla ]}, {include_blank: 'None'})%>
+        </p>
         
         </fildset>
   </div>
     <div class="span4">
       <fildset> <legend>Fotos</legend>
-       Foto Principal: <input id="principal" type="file" >
-       Foto Anexo 1: <input id="anexo1" type="file" >
-       Foto Anexo 2: <input id="anexo2" type="file" >
-       Foto Anexo 3: <input id="anexo3" type="file" >
+        <div>
+        <%= f.fields_for :documentos  do |doc| %>
+          <%= doc.input :descricao %>
+          <%= doc.file_field :avatar %>
+          <%= doc.link_to_remove "Apagar" %>
+        <% end %>
+        <p><%= f.link_to_add "Adicionar Documentos", :documentos %></p>
+        </div> 
       </fildset>
     </div>
+    
+    
+    
     
   </div>
   <div class="form-actions">

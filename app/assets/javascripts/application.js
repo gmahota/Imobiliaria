@@ -13,3 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery_nested_form
+
+<%= javascript_include_tag :defaults, "nested_form" %>
+ $(".scrollable").scrollable();

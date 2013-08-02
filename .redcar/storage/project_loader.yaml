@@ -1,3 +1,7 @@
 --- 
 open_files: 
   - Gemfile
+  - app/views/imovels/_form.html.erb
+  - db/migrate/20130724181316_create_imovels.rb
+  - db/migrate/20130728143252_create_cidades.rb
+  - db/migrate/20130729094120_create_tipologia.rb

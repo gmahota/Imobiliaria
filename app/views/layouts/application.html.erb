@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MicroApp</title>
+  <title>REC</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
 <div class="navbar navbar-fixed-top">
@@ -20,6 +21,24 @@
         <ul class="nav">
           <li><%= link_to "Inicio", root_path %></li>
           <li><%= link_to "Imoveis", imovels_path %></li>
+          
+          <% if can? :update, @user %>
+          
+          <li class="dropdown"> 
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+              Ferramentas
+              <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Cidades", cidades_path %></li>
+              <li><%= link_to "Estados", estados_path %></li>
+              <li><%= link_to "Tipos de Negocio", tipo_negocios_path %></li>
+              <li><%= link_to "Tipo de Imovel", tipo_imovels_path %></li>
+            </ul>  
+          </li>
+          
+          <% end%>
+          
         </ul>
       </div>
       
@@ -34,26 +53,26 @@
            <% if current_user %>  
             
               
-            <li> <%= link_to "Edit profile", edit_user_path(:current) %> </li>  
+            <li> <%= link_to "Editar Profile", edit_user_path(current_user) %> </li>  
             <li class="divider-vertical"></li>
-            <li>  <%= link_to "Logout", logout_path %> </li>    
+            <li>  <%= link_to "Sair", logout_path %> </li>    
             
       <% else %>  
-            <li><%= link_to "Register", new_user_path %></li>  
+            <li><%= link_to "Registar", new_user_path %></li>  
             <li class="divider-vertical"></li>
-            <li>  <%= link_to "Log in", login_path %> </li>
+            <li>  <%= link_to "Entrar", login_path %> </li>
           <% end %> 
           
           
           
           
           
-          <li class="dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+         <%# <li class="dropdown">%>
+         <%#   <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
               <!-- Login form here -->
             </div>
-          </li>
+          </li>%>
         </ul>
       </div>
     </div>
@@ -63,83 +82,25 @@
 <div class="container">
   <div class="row">
     <div class="span3">
-      <form name="pesqRap" method="post" action="index.asp">
-					<input type="hidden" name="lingua" value="0">
-					<input type="hidden" name="opcao" value="4">
-					<input type="hidden" name="opTipo" value="8">
-					<input type="hidden" name="pagina" value="pesquisa_resultado.asp">
-					
-					<div class="campos">
-						<p>
-						<input type="text" name="idAngariacao" class="boxGeral" style="width:128px;" value="Referência" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
-						</p>
-						<p>
-						<select name="idObjectivo" class="boxGeral" style="width:138px;">
-						<option value="">Tipo de negócio</option>
-						<option value=""></option> <option value="2">Arrendamento</option><option value="1">Venda</option><option value="6">Venda/Arrendamento</option>
-						</select>
-						</p>
-						<p>
-						<select name="idTipo" class="boxGeral" style="width:138px;" onchange="tipologiasRap(this.form)">
-						<option value="">Tipo de imóvel</option>
-						<option value=""></option> <option value="12">Andar Moradia</option><option value="1">Apartamento</option><option value="2">Armazém</option><option value="13">Arrecadação</option><option value="3">Escritório</option><option value="4">Garagem</option><option value="5">Loja</option><option value="11">Moradia</option><option value="14">Parqueamento</option><option value="6">Prédio</option><option value="8">Quinta</option><option value="9">Quintinha</option><option value="10">Terreno</option>
-						</select>
-						</p>
-						<p class="hidden">
-							<select disabled="" name="idTipologia0" class="boxGeral" style="width:68px;" onchange="updateTipologiasRap(this.form)">
-							<option value="">Tipologia</option>
-							</select>
-							<select disabled="" name="idTipologia1" class="boxGeral" style="width:67px;">
-							</select>
-						</p>
-						<p>
-						<label>De </label><input type="text" name="prcMin" class="boxGeral" style="width:45px;" onkeypress="return eNumero(event)" value="Preço" onfocus="gotFocus(this, 'Preço')" onblur="lostFocus(this, 'Preço')"><label> a </label><input type="text" name="prcMax" class="boxGeral" style="width:45px;" onkeypress="return eNumero(event)">
-						</p>
-						<p>
-						<select name="idConcelho" class="boxGeral" style="width:138px;" onchange="freguesiasRap(this.form)">
-						<option value="">Concelho</option>
-						<option value=""></option> <option value="1401">Abrantes</option><option value="801">Albufeira</option><option value="1101">Alenquer</option><option value="803">Aljezur</option><option value="1503">Almada</option><option value="1004">Batalha</option><option value="1105">Cascais</option><option value="804">Castro Marim</option><option value="1106">Lisboa</option><option value="1107">Loures</option><option value="1109">Mafra</option><option value="706">Montemor-o-Novo</option><option value="1012">Óbidos</option><option value="211">Odemira</option><option value="1110">Oeiras</option><option value="811">Portimão</option><option value="1312">Porto</option><option value="711">Reguengos de Monsaraz</option><option value="1511">Sesimbra</option><option value="1512">Setúbal</option><option value="1111">Sintra</option><option value="615">Soure</option><option value="1215">Sousel</option><option value="1114">Vila Franca de Xira</option><option value="1317">Vila Nova de Gaia</option>
-						</select>
-						</p>
-						<p>
-						<select name="idFreguesia" class="boxGeral" style="width:138px;" disabled="">
-						<option value="">Freguesia</option>
-						</select>
-						</p>
-						<p>
-						<input type="text" name="localidade" class="boxGeral" style="width:128px" value="Zona" onfocus="gotFocus(this, 'Zona')" onblur="lostFocus(this, 'Zona')">
-						</p>
-						<p class="estreito">
-						<label><input type="checkbox" name="flgDestaque" value="1">&nbsp;<span>Em destaque</span></label>
-						</p>
-						<p class="estreito">
-						
-						<label><input type="checkbox" name="flgGeoReferencia" value="1">&nbsp;<span>Com mapa de localização</span></label>
-						
-						</p>
-						<p class="estreito">
-						
-						<label><input type="checkbox" name="flgVisitaVirtual" value="1">&nbsp;<span>Com visitas virtuais</span></label>
-						
-						</p>
-						<a class="ok" href="javascript:submetePesqRap(document.pesqRap);void(0);">OK</a>
-					</div>
-				</form>
+    </br>
     
+      <%= render 'imovels/pesquisa' %>   
     </div>
-    <div class="span6"><%= yield %></div>
+    <div class="span6">
+    <%- flash.each do |k, v| %>
+        <div class="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Alerta!</strong> <div id="<%= k%>"><%= v %></div>.
+      </div>
+        
+      
+      <% end %>
+      
+      <%= yield %>
+   </div>
     <div class="span3">
-    </br>
-      <h2>Destaque</h2>
+      <%= render 'imovels/destaque' %> 
       
-      <%= image_tag "001-principal.jpg", class:"img-polaroid", :size => "200x200"%>
-          
-      <%= link_to "Vivenda", imovel_path("001")%>
-      
-    </br>
-      <%= image_tag "002-principal.jpg", class:"img-polaroid", :size => "200x200"%>
-      
-      <%= link_to "Casa", imovel_path("002")%>
       
       
     
@@ -147,7 +108,13 @@
   </div>
 </div>
           
-
+<div class = "container">
+  <div class="row">
+    <div class = "span10">
+      <%= render 'imovels/destaques' %>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

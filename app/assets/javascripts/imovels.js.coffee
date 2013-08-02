@@ -2,3 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+jQuery ->
+  $("#idTipo").change -> 
+      $("#idTipologia").empty()
+      $("#idTipologia").append "<option value= \" \"> Tipologiass </option>"
+      $("#idTipologia").append "<option value= \" \"> </option>"
+

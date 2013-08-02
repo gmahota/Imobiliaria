@@ -9,7 +9,8 @@
 
 <% @imovels.each do |imovel| %>
     <tr>
-      <td border border="1" width="50%"><%= image_tag "#{imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "200x200"%>
+      <td border border="1" width="50%">
+    <%= link_to (image_tag "#{imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "200x200") , "/imovels/#{imovel.referencia}/detalhes" %>
     </td>
     <td>
       <br/>
@@ -21,11 +22,12 @@
       <br/>
       Tipo Imovel: <%= imovel.tipoImovel %>
       <br/>
-      Preco: <%= imovel.preco %> 
+      Preco: <%= imovel.preco %> <%= imovel.moeda %>
       <br/>
-        <%= link_to 'Editar', edit_imovel_path(imovel) , class: "btn btn-small btn-info"%> | 
-        <%= link_to 'Apagar', imovel, class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
       
+        <%= link_to 'Editar', edit_imovel_path(imovel) %> | 
+        <%= link_to 'Apagar', imovel, method: :delete, data: { confirm: 'Tens a certeza?' } %>
+     
     </td>
   </tr>
 <% end %>
@@ -33,5 +35,5 @@
 
 <br />
 
-<%= link_to '+ Novo', new_imovel_path, class: "btn btn-large btn-success"  %>
+<%= link_to '+ Novo', new_imovel_path, class: "btn btn-small btn-info"  %>
 

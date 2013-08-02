@@ -2,7 +2,30 @@ MicroApp::Application.routes.draw do
   
  
    
-  resources :imovels
+  resources :documentos
+
+
+  resources :moedas
+
+
+  resources :tipologia
+
+
+  resources :estados
+
+
+  resources :cidades
+
+
+  resources :tipo_negocios
+
+
+  resources :tipo_imovels
+
+
+  resources :imovels 
+    match 'imovels/:id/detalhes' => 'imovels#detalhes'
+  
 
 
   resources :user_sessions
@@ -10,13 +33,14 @@ MicroApp::Application.routes.draw do
           get 'logout', to: 'user_sessions#destroy'
          
   get "user_sessions/new"
-
+  
+    
   resources :users do
     resources :microposts
   end
   
-  root :to =>'imovels#index'
-
+  #root :to =>'imovels#index'
+  root :to =>'imovels#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
