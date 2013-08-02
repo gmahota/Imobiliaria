@@ -14,7 +14,9 @@ gem 'bootstrap-datepicker-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+#gem para formularios
+  gem 'simple_form'
+  
 group :development do
   gem 'sqlite3', '1.3.5'
 end
@@ -37,8 +39,7 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
   gem 'less-rails-bootstrap'
 
-  #gem para formularios
-  gem 'simple_form'
+  
   
   #gem para updates
   gem "paperclip", "~> 3.0"

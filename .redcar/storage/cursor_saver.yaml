@@ -141,15 +141,9 @@ cursor_positions:
   - :path: app/assets/javascripts/imovels.js.coffee
     :cursor_offset: 345
     :timestamp: 2013-07-29 15:20:55 +02:00
-  - :path: db/migrate/20130729094120_create_tipologia.rb
-    :cursor_offset: 0
-    :timestamp: 2013-07-29 11:41:20 +02:00
   - :path: db/migrate/20130728143548_create_estados.rb
     :cursor_offset: 0
     :timestamp: 2013-07-28 16:35:48 +02:00
-  - :path: db/migrate/20130728143252_create_cidades.rb
-    :cursor_offset: 0
-    :timestamp: 2013-07-28 16:32:52 +02:00
   - :path: db/migrate/20130728142943_create_tipo_negocios.rb
     :cursor_offset: 0
     :timestamp: 2013-07-28 16:29:43 +02:00
@@ -233,4 +227,10 @@ cursor_positions:
   - :path: app/assets/stylesheets/scaffolds.css.scss
     :cursor_offset: 0
     :timestamp: 2013-07-24 14:43:20 +02:00
+  - :path: db/migrate/20130729094120_create_tipologia.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-29 11:41:20 +02:00
+  - :path: db/migrate/20130728143252_create_cidades.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-28 16:32:52 +02:00
 files_to_retain: 0
