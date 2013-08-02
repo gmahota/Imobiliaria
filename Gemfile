@@ -10,6 +10,8 @@ gem 'cancan'
 gem 'nested_form'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-datepicker-rails'
+gem 'less-rails-bootstrap'
+
 #gem "rails3-generators"
 
 # Bundle edge Rails instead:
@@ -37,9 +39,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   
   gem 'therubyracer', :platforms => :ruby
-  gem 'less-rails-bootstrap'
 
-  
   
   #gem para updates
   gem "paperclip", "~> 3.0"
