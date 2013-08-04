@@ -4,7 +4,8 @@ class ImovelsController < ApplicationController
   # GET /imovels.json
   def index
     
-    @imovels = params[:idtipoImovel]== nil ? Imovel.searchReferencia(params[:idreferencia])  :Imovel.searchtipoImovel(params[:idtipoImovel])
+      
+    @imovels = Imovel.search(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade]) 
     
     respond_to do |format|
       format.html # index.html.erb

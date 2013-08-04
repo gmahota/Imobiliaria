@@ -1,0 +1,87 @@
+<script type="text/javascript">
+  $(function(){
+  
+    
+    $("#idTipo").change( function() {
+      $("#idTipologia").empty();
+      $('#idTipologia').append('<option value="">' + "Tipologia" + '</option>');
+      $('#idTipologia').append('<option value="">' + " " + '</option>');
+    });
+  });
+</script>
+
+
+<div class="thumbnail">
+  
+  
+
+<h2>Pesquisa</h2>
+<div class="caption">
+
+ 
+<form name="pesqRap" method="get" action=<%= imovels_path%>>
+					
+					<div class="form-group"> 
+						<p>
+              
+						<input  id ="idreferencia" type="text" name="idreferencia" class="boxGeral" style="width:128px;" value="" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
+						</p>
+						<p>
+						<select id ="idNegocio" name="idNegocio" class="boxGeral" style="width:138px;">
+						<option value="">Tipo de negócio</option>
+            
+						<option value=""></option> 
+            
+            <%  TipoNegocio.all.each do |negocio| %>
+              <option value="<%=negocio.descricao%>"><%=negocio.descricao%></option>
+						<% end %>
+            
+            </select>
+						</p>
+						<p>
+						<select  id= "idtipoImovel" name="idtipoImovel" class="boxGeral" style="width:138px;" onchange="tipologiasRap(this.form)">
+						<option value="">Tipo de imóvel</option>
+						<option value=""></option> 
+            <%  TipoImovel.all.each do |imovel| %>
+              <option value="<%=imovel.descricao%>"><%=imovel.descricao%></option>
+						<% end %>
+            </select>
+						</p>
+						<p>
+							<select id="idTipologia" name="idTipologia" class="boxGeral" style="width:138px;">
+							<option value="">Tipologia</option>
+							<option value=""></option> 
+            
+              </select>
+							
+						</p>
+						<p>
+						<label>De </label>
+              <input type="text" name="prcMin" style="width:138px;" class="numeric float optional" step="any" type="number">
+              
+              <label> a </label>
+              <input type="text" name="prcMax" style="width:138px;" class="numeric float optional" step="any" type="number">
+						</p>
+						<p>
+						<select id="idCidade" name="idCidade" class="boxGeral" style="width:138px;" onchange="freguesiasRap(this.form)">
+						<option value="">Cidade</option>
+						<option value=""></option> 
+            <% Cidade.all.each do |cidade| %>
+              <option value="<%=cidade.descricao%>"><%=cidade.descricao%></option>
+            <%end%>
+            </select>
+						</p>
+						<p>
+						
+						<p class="estreito">
+						  <label>
+                <input id= "flgDestaque" type="checkbox" name="flgDestaque" value="1">
+                  &nbsp;<span>Em destaque</span>
+              </label>
+						</p>
+						
+            <input class="btn btn-primary" type="submit" value="OK"/>
+					</div>
+</form>
+</div>
+</div>

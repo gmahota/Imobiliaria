@@ -1,0 +1,23 @@
+<h2>Lista de Tipos de Negocios</h2>
+
+<table class ="list">
+  <tr>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipo_negocios.each do |tipo_negocio| %>
+  <tr>
+    <td><%= tipo_negocio.descricao %></td>
+    <td><%= link_to 'Show', tipo_negocio %></td>
+    <td><%= link_to 'Editar', edit_tipo_negocio_path(tipo_negocio) %></td>
+    <td><%= link_to 'Apagar', tipo_negocio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Tipo de Negocio', new_tipo_negocio_path %>

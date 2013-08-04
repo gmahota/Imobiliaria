@@ -1,0 +1,14 @@
+<h2>Destaque</h2>
+<%  @imovels =Imovel.find(:all,:conditions => ["estado = ? ","Destaque"])
+%>          
+
+<% @imovels.each do |imovel| %> 
+    <p>
+      
+      <%= link_to (image_tag "#{imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "200x200"), imovel_path(imovel.referencia)%>
+      <%= imovel.tipoImovel%>
+    </p>        
+      
+    </br>
+     
+<% end %>

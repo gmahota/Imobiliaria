@@ -1,0 +1,23 @@
+<h1>Listing tipo_imovels</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipo_imovels.each do |tipo_imovel| %>
+  <tr>
+    <td><%= tipo_imovel.descricao %></td>
+    <td><%= link_to 'Show', tipo_imovel %></td>
+    <td><%= link_to 'Edit', edit_tipo_imovel_path(tipo_imovel) %></td>
+    <td><%= link_to 'Destroy', tipo_imovel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipo imovel', new_tipo_imovel_path %>

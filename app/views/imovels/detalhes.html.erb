@@ -1,0 +1,57 @@
+<%#<p id="notice"><%= notice %><%#</p> %>
+<p>
+<%= image_tag "#{@imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "400x400"%>
+</p>
+
+
+
+<div class="alert">
+   <strong>Dados Gerais - <%= @imovel.referencia %> </strong> 
+</div>
+
+<p>
+  <b>Detalhes:</b>
+  <%= @imovel.descriacao %>
+</p>
+
+<p>
+  <b>Tipo Imovel:</b>
+  <%= @imovel.tipoImovel %>
+</p>
+
+<p>
+  <b>Tipo de Negocio:</b>
+  <%= @imovel.tipoNegocio %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @imovel.estado %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @imovel.area %>
+</p>
+
+<p>
+  <b>Preco:</b>
+  <%= @imovel.preco %> <%= @imovel.moeda%>
+</p>
+
+<p>
+  <b>Localizacao:</b>
+  <%= @imovel.localizacao %>
+  
+  <b>Cidade:</b>
+  <%= @imovel.cidade %>
+</p>
+
+<p>
+  
+</p>
+
+
+
+<%= link_to 'Edit', edit_imovel_path(@imovel) %> |
+<%= link_to 'Back', imovels_path %>

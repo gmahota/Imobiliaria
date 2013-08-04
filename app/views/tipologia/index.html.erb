@@ -1,0 +1,25 @@
+<h1>Listing tipologia</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th>Tipoimovel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipologia.each do |tipologium| %>
+  <tr>
+    <td><%= tipologium.descricao %></td>
+    <td><%= tipologium.tipoImovel_id %></td>
+    <td><%= link_to 'Show', tipologium %></td>
+    <td><%= link_to 'Edit', edit_tipologium_path(tipologium) %></td>
+    <td><%= link_to 'Destroy', tipologium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipologium', new_tipologium_path %>

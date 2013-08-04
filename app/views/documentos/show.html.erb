@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @documento.descricao %>
+</p>
+
+<p>
+  <b>Imovel:</b>
+  <%= @documento.imovel_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_documento_path(@documento) %> |
+<%= link_to 'Back', documentos_path %>

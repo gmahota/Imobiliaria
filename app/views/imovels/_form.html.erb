@@ -1,3 +1,4 @@
+
 <%= simple_nested_form_for @imovel ,  :html => {:multipart => true} do |f| %>
   <%= f.error_notification %>
   
@@ -50,7 +51,8 @@
     <div class="span4">
       <fildset> <legend>Fotos</legend>
         <div>
-        <%= f.fields_for :documentos  do |doc| %>
+          
+        <%= f.fields_for :documentos  ,  :html => {:multipart => true} do |doc| %>
           <%= doc.input :descricao %>
           <%= doc.file_field :avatar %>
           <%= doc.link_to_remove "Apagar" %>

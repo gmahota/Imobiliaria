@@ -4,20 +4,11 @@ class Imovel < ActiveRecord::Base
   
   accepts_nested_attributes_for :documentos
 
-  def self.searchReferencia(search_term)
-    if search_term.blank?
-      self.all
+  def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade)
+    if idreferencia.blank?
+        self.where("tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ?", "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%")
     else
-      self.where("referencia LIKE ?", "%#{search_term}%")
+      self.where("referencia LIKE ?", "%#{idreferencia}%")
     end
   end
-  
-  def self.searchtipoImovel(search_term)
-    if search_term.blank?
-      self.all
-    else
-      self.where("tipoImovel LIKE ?", "%#{search_term}%")
-    end
-  end
-    
 end

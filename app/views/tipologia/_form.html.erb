@@ -1,0 +1,13 @@
+<%= simple_form_for(@tipologium) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :descricao %>
+    <%= select("tipologium","tipoImovel_id", TipoImovel.all.collect { |p| [p.descricao,p.id ]}, {include_blank: 'None'})%>
+        
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
