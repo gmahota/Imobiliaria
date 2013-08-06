@@ -5,12 +5,15 @@ class Ability
     
     user ||= User.new # Guest
     can :read, :all
-    if user.id
-       can :manage, Imovel
-       can :update, User, id: user.id
-    else
-      can :create,User 
-    end
+    can :manage, :all
+    can :update, :all
+    
+    #if user.id
+    #   can :manage, Imovel
+    #   can :update, User, id: user.id
+    #else
+    #  can :create,User 
+    #end
     
     # Define abilities for the passed in user here. For example:
     #
