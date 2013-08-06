@@ -3,19 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 
 
-# gem para autenticacao
-gem 'authlogic'
-
 # gem para permissoes
-gem 'cancan'
-gem 'nested_form'
-gem 'will_paginate', '~> 3.0'
-gem 'bootstrap-datepicker-rails'
-gem 'less-rails-bootstrap'
-
-gem 'jquery-rails'
-
-gem 'execjs'
 
 #gem "rails3-generators"
 
@@ -29,7 +17,6 @@ group :development do
 end
 
 group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3'
   gem 'pg'
 end
 
@@ -52,4 +39,20 @@ group :assets do
   
   gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'jquery-rails'
+
+gem 'simple_form'
+gem 'less-rails-bootstrap'
+gem 'authlogic'
+gem 'cancan'
+gem "paperclip", "~> 3.0"
+
+
+gem 'nested_form'
+gem 'execjs'
+
+gem 'will_paginate', '~> 3.0'
+
+gem 'bootstrap-datepicker-rails'
 
