@@ -42,12 +42,20 @@ class ImovelsController < ApplicationController
     
     
     @imovel = params[:id] == nil ?Imovel.find(:first,:conditions => ["estado = ? ","Destaque Semana"]):  Imovel.find(params[:id])
+    
+    if @imovel == nil
+      #@imovels = Imovel.all
+      redirect_to  :controller => 'imovels', :action => "index"
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @imovel }
+      end  
+    end
+    
     #Imovel.find(params[:id])
         
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @imovel }
-    end
+    
   end
 
   # GET /imovels/new
