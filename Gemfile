@@ -13,6 +13,10 @@ gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-datepicker-rails'
 gem 'less-rails-bootstrap'
 
+gem 'jquery-rails'
+
+gem 'execjs'
+
 #gem "rails3-generators"
 
 # Bundle edge Rails instead:
@@ -25,7 +29,8 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'pg'
 end
 
 # Gems used only for assets and not required
@@ -48,8 +53,3 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
-gem 'authlogic'
-gem 'cancan'
-gem 'execjs'

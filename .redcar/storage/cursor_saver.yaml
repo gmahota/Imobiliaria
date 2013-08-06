@@ -230,12 +230,12 @@ cursor_positions:
   - :path: app/views/imovels/_pesquisa.html.erb
     :cursor_offset: 2600
     :timestamp: 2013-08-04 21:45:15 +02:00
-  - :path: app/models/imovel.rb
-    :cursor_offset: 456
-    :timestamp: 2013-08-04 22:35:14 +02:00
   - :path: app/assets/stylesheets/application.css
     :cursor_offset: 694
     :timestamp: 2013-08-05 00:19:27 +02:00
+  - :path: app/models/imovel.rb
+    :cursor_offset: 456
+    :timestamp: 2013-08-04 22:35:14 +02:00
   - :path: app/assets/stylesheets/rec.css
     :cursor_offset: 12372
     :timestamp: 2013-08-05 00:19:30 +02:00
