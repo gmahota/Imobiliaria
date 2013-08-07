@@ -11,41 +11,29 @@
    
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
+    
+    
     <div class="container">
+      <div class="logo"> <%= link_to (image_tag "REC_top_logo.png", class:"img-polaroid", :size => "250x350") , "imovels_path"%>
+ </div> 
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">Rec</a>
+      <a class="brand" href="#">      
+      </a>
       <div class="nav-collapse">
         <ul class="nav">
           <li><%= link_to "Inicio", root_path %></li>
           <li><%= link_to "Imoveis", imovels_path %></li>
-          
-          <% if can? :update, @user %>
-          
-          <li class="dropdown"> 
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-              Ferramentas
-              <i class="caret"></i>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Cidades", cidades_path %></li>
-              <li><%= link_to "Estados", estados_path %></li>
-              <li><%= link_to "Tipos de Negocio", tipo_negocios_path %></li>
-              <li><%= link_to "Tipo de Imovel", tipo_imovels_path %></li>
-            </ul>  
-          </li>
-          
-          <% end%>
-          
         </ul>
       </div>
       
+      
       <!-- Start of the nav bar content -->
       <div class="nav-collapse"><!-- Other nav bar content -->
-        
+   
  
         <!-- The drop down menu -->
         <ul class="nav pull-right">
@@ -84,10 +72,12 @@
   <div class="row">
     <div class="span3">
       <div class="bot-pad">
+      </br></br>
         <%= render 'imovels/pesquisa' %>   
       </div>
     </div>
     <div class="span6">
+    </br></br>
     <%- flash.each do |k, v| %>
         <div class="alert">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -100,7 +90,8 @@
       <%= yield %>
    </div>
     <div class="span3">
-      <%= render 'imovels/destaque' %> 
+    </br></br>  
+    <%= render 'imovels/destaque' %> 
       
       
       

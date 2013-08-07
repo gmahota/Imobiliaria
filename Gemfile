@@ -43,6 +43,7 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 gem 'less-rails-bootstrap'
+
 gem 'authlogic'
 gem 'cancan'
 gem "paperclip", "~> 3.0"

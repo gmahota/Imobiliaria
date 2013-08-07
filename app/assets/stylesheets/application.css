@@ -18,6 +18,20 @@
  when scrolling occurs this element stays still.
 */
 
-body { padding-top:60px;}
 
 
+body { 
+  padding-top: 70px;  
+  padding-bottom: 40px; 
+}
+
+.nav li {  
+  padding-top: 50px;  
+}  
+
+.navbar .logo {
+    max-height: 40px;
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0;
+}

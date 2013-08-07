@@ -6,7 +6,9 @@ class ImovelsController < ApplicationController
     
       
     @imovels = Imovel.search(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade]) 
-    
+    if @imovel == nil
+      @imovels = Imovel.all
+    end  
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @imovels }
