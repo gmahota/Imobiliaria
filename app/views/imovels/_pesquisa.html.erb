@@ -26,7 +26,18 @@
               
 						<input  id ="idreferencia" type="text" name="idreferencia" class="boxGeral" style="width:128px;" value="" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
 						</p>
-						<p>
+						
+            <p>
+						<select id="idCidade" name="idCidade" class="boxGeral" style="width:138px;" onchange="freguesiasRap(this.form)">
+						<option value="">Cidade</option>
+						<option value=""></option> 
+            <% Cidade.all.each do |cidade| %>
+              <option value="<%=cidade.descricao%>"><%=cidade.descricao%></option>
+            <%end%>
+            </select>
+						</p>
+            
+            <p>
 						<select id ="idNegocio" name="idNegocio" class="boxGeral" style="width:138px;">
 						<option value="">Tipo de negócio</option>
             
@@ -53,24 +64,18 @@
 							<option value=""></option> 
             
               </select>
-							
 						</p>
-						<p>
+						
+            
+            
+            <p>
 						<label>De </label>
               <input type="text" name="prcMin" style="width:138px;" class="numeric float optional" step="any" type="number">
               
               <label> a </label>
               <input type="text" name="prcMax" style="width:138px;" class="numeric float optional" step="any" type="number">
 						</p>
-						<p>
-						<select id="idCidade" name="idCidade" class="boxGeral" style="width:138px;" onchange="freguesiasRap(this.form)">
-						<option value="">Cidade</option>
-						<option value=""></option> 
-            <% Cidade.all.each do |cidade| %>
-              <option value="<%=cidade.descricao%>"><%=cidade.descricao%></option>
-            <%end%>
-            </select>
-						</p>
+						
 						<p>
 						
 						<p class="estreito">

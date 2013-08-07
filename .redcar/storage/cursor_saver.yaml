@@ -164,9 +164,6 @@ cursor_positions:
   - :path: app/views/imovels/_destaques.html.erb
     :cursor_offset: 390
     :timestamp: 2013-08-01 02:40:50 +02:00
-  - :path: Gemfile.lock
-    :cursor_offset: 2333
-    :timestamp: 2013-08-02 11:31:10 +02:00
   - :path: app/assets/stylesheets/scaffolds.css.scss
     :cursor_offset: 0
     :timestamp: 2013-07-24 14:43:20 +02:00
@@ -251,13 +248,16 @@ cursor_positions:
   - :path: app/assets/javascripts/application.js
     :cursor_offset: 640
     :timestamp: 2013-08-07 02:55:46 +02:00
-  - :path: Gemfile
-    :cursor_offset: 804
-    :timestamp: 2013-08-07 02:53:04 +02:00
-  - :path: app/views/layouts/application.html.erb
-    :cursor_offset: 2599
-    :timestamp: 2013-08-07 02:27:47 +02:00
   - :path: app/controllers/imovels_controller.rb
     :cursor_offset: 296
     :timestamp: 2013-08-07 01:41:32 +02:00
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 2599
+    :timestamp: 2013-08-07 02:27:47 +02:00
+  - :path: Gemfile.lock
+    :cursor_offset: 0
+    :timestamp: 2013-08-07 03:07:40 +02:00
+  - :path: Gemfile
+    :cursor_offset: 893
+    :timestamp: 2013-08-07 02:53:04 +02:00
 files_to_retain: 0
