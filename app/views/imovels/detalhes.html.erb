@@ -1,6 +1,11 @@
 <%#<p id="notice"><%= notice %><%#</p> %>
 <p>
-<%= image_tag "#{@imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "400x400"%>
+<%#= image_tag "#{@imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "400x400"%>
+<% @imovel.documentos.each do |doc| %>
+          <% if doc.descricao = "Foto Principal"%> 
+            <%= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "400x400") , "/imovels/#{@imovel.referencia}/detalhes" %>
+          <%end%>
+      <%end%>
 </p>
 
 
@@ -48,7 +53,20 @@
 </p>
 
 <p>
+
+<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+
+<% @imovel.documentos.each do |doc| %>
   
+  <% if doc.descricao = "Foto"%>
+    <a data-gallery="gallery" href="#{image_tag doc.avatar.url}"> 
+    <%= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "100x100") , "/imovels/#{@imovel.referencia}/detalhes" %>
+    </a>
+  <%end%>
+<%end%>
+
+</div>
+
 </p>
 
 
