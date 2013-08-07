@@ -3,7 +3,9 @@ class Imovel < ActiveRecord::Base
   has_many :documentos
   
   accepts_nested_attributes_for :documentos
-
+  
+  self.per_page = 2
+  
   def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade)
     if idreferencia.blank?
         self.where("tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ?", "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%")

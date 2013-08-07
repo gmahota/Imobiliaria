@@ -1,7 +1,7 @@
 --- 
 open_files: 
-  - app/controllers/imovels_controller.rb
   - app/views/imovels/_pesquisa.html.erb
+  - Gemfile
+  - app/controllers/imovels_controller.rb
+  - app/views/imovels/index.html.erb
   - app/models/imovel.rb
-  - app/assets/stylesheets/application.css
-  - app/assets/stylesheets/rec.css

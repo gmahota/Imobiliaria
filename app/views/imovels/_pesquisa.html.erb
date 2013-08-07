@@ -16,15 +16,12 @@
   
 
 <h2>Pesquisa</h2>
-<div class="caption">
 
- 
 <form name="pesqRap" method="get" action=<%= imovels_path%>>
 					
 					<div class="form-group"> 
-						<p>
-              
-						<input  id ="idreferencia" type="text" name="idreferencia" class="boxGeral" style="width:128px;" value="" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
+						<p>Referencia:
+            <input  id ="idreferencia" type="text" name="idreferencia" class="boxGeral" style="width:128px;" value="" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
 						</p>
 						
             <p>
@@ -66,8 +63,6 @@
               </select>
 						</p>
 						
-            
-            
             <p>
 						<label>De </label>
               <input type="text" name="prcMin" style="width:138px;" class="numeric float optional" step="any" type="number">
@@ -76,17 +71,13 @@
               <input type="text" name="prcMax" style="width:138px;" class="numeric float optional" step="any" type="number">
 						</p>
 						
-						<p>
-						
 						<p class="estreito">
-						  <label>
-                <input id= "flgDestaque" type="checkbox" name="flgDestaque" value="1">
+						  <input id= "flgDestaque" type="checkbox" name="flgDestaque" value="1">
                   &nbsp;<span>Em destaque</span>
-              </label>
-						</p>
+            </p>
 						
             <input class="btn btn-primary" type="submit" value="OK"/>
 					</div>
 </form>
 </div>
-</div>
+

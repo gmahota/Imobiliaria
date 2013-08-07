@@ -5,9 +5,11 @@ class ImovelsController < ApplicationController
   def index
     
       
-    @imovels = Imovel.search(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade]) 
+    @imovels = Imovel.search(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade])
+    #.paginate(:page => params[:page])
     if @imovel == nil
       @imovels = Imovel.all
+     # .paginate(:page => params[:page])
     end  
     respond_to do |format|
       format.html # index.html.erb
