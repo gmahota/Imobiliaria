@@ -1,3 +1,15 @@
+<script>
+  $(function () {
+    $('#myTab a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    })
+    
+  })
+  
+  
+</script>
+
 
 <%= simple_nested_form_for @imovel ,  :html => {:multipart => true} do |f| %>
   <%= f.error_notification %>
@@ -6,15 +18,20 @@
  
   <div class="container">
     <div class="span6">
-      <fildset> <legend>Dados Imovel</legend>
+    <ul class="nav nav-tabs" id="myTab">
+      <li class="active"><a href="#dados">Dados Imovel</a></li>
+      <li><a href="#localizacao">Localização</a></li>
+      <li><a href="#dadoscom">Dados Comercias</a></li>
+      <li><a href="#doc">Fotos/Documentos</a></li>
+    </ul>
+ 
+    <div class="tab-content">
+      <div class="tab-pane active" id="dados">
         <%= f.input :referencia %>
         <%= f.input :resumo %>
         <%= f.input :descriacao , as: :text %>
-      
-    </fildset>
-    </div>
-    <div class="span4">
-      <fildset> <legend>Localizacao</legend>
+      </div>
+      <div class="tab-pane" id="localizacao">
         <%= f.input :pais %>
         <%= f.input :provincia %>
         
@@ -23,11 +40,8 @@
         <%= f.input :cidade %>
         <%= f.input :localizacao %>
         <%= f.input :area %>
-        
-    </fildset>
-    </div>
-    <div class="span4">
-        <fildset> <legend>Dados</legend>
+      </div>
+      <div class="tab-pane" id="dadoscom">
         <p>Tipo de Negocio  
         <%= select("imovel","tipoNegocio", TipoNegocio.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
         </p>
@@ -45,11 +59,8 @@
         Moeda
         <%= select("imovel","moeda", Moeda.all.collect { |p| [p.descricao,p.sigla ]}, {include_blank: 'None'})%>
         </p>
-        
-        </fildset>
-  </div>
-    <div class="span4">
-      <fildset> <legend>Fotos</legend>
+      </div>
+      <div class="tab-pane" id="doc">
         <div>
           
         <%= f.fields_for :documentos  ,  :html => {:multipart => true} do |doc| %>
@@ -65,14 +76,10 @@
            
         
         <p><%= f.link_to_add "Adicionar Documentos", :documentos %></p>
-        </div> 
-      </fildset>
+        </div>
+      </div>
     </div>
-    
-    
-    
-    
-  </div>
+
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

@@ -57,18 +57,19 @@
 
 <p>
 
-<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
-
+<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="div.gallery-item">
+    
 <% @imovel.documentos.each do |doc| %>
   
   <% if doc.descricao = "Foto"%>
     <a data-gallery="gallery" href="#{image_tag doc.avatar.url}"> 
-    <%= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "100x100") , "/imovels/#{@imovel.referencia}/detalhes" %>
+    <%= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "100x100") , doc.avatar.url %>
     </a>
   <%end%>
 <%end%>
 
 </div>
+
 
 </p>
 

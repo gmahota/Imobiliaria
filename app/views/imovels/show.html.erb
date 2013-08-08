@@ -11,10 +11,9 @@
 
 </p>
 
-
-<b>Referencia:</b>
-  <%= @imovel.referencia %>
-</p>
+<div class="alert">
+   <strong>Dados Gerais - <%= @imovel.referencia %> </strong> 
+</div>
 
 <p>
   <b>Resumo:</b>
@@ -54,10 +53,19 @@
   <%= @imovel.cidade %>
 </p>
 
-<p>
-  
-</p>
 
+<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="div.gallery-item">
+    
+<% @imovel.documentos.each do |doc| %>
+  
+  <% if doc.descricao = "Foto"%>
+    <a data-gallery="gallery" href="#{image_tag doc.avatar.url}"> 
+    <%= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "100x100") , doc.avatar.url %>
+    </a>
+  <%end%>
+<%end%>
+
+</div>
 
 
 <%= link_to 'Dados Completos', "/imovels/#{@imovel.referencia}/detalhes" %> |
