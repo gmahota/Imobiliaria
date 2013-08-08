@@ -11,11 +11,14 @@
     <tr>
       <td border border="1" width="50%">
       
-      <% imovel.documentos.each do |doc| %>
-          <% if doc.descricao = "Foto Principal"%> 
-            <%= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "200x200") , "/imovels/#{imovel.referencia}/detalhes" %>
-          <%end%>
-      <%end%>
+            <%= link_to (image_tag imovel.documentos.first.avatar.url, class:"img-polaroid", :size => "200x200") , "/imovels/#{imovel.referencia}/detalhes" %>
+          
+        
+      <%# imovel.documentos.each do |doc| %>
+      <%# if doc.descricao = "Foto Principal"%> 
+            <%#= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "200x200") , "/imovels/#{imovel.referencia}/detalhes" %>
+          <%#end%>
+      <%#end%>
     </td>
     <td>
       <br/>

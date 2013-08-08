@@ -231,9 +231,6 @@ cursor_positions:
   - :path: app/assets/stylesheets/application.css
     :cursor_offset: 579
     :timestamp: 2013-08-07 02:54:07 +02:00
-  - :path: app/views/imovels/_pesquisa.html.erb
-    :cursor_offset: 1787
-    :timestamp: 2013-08-07 03:22:32 +02:00
   - :path: Gemfile
     :cursor_offset: 912
     :timestamp: 2013-08-07 02:53:04 +02:00
@@ -257,6 +254,9 @@ cursor_positions:
   - :path: app/assets/javascripts/application.js
     :cursor_offset: 672
     :timestamp: 2013-08-07 23:05:39 +02:00
+  - :path: app/views/imovels/_pesquisa.html.erb
+    :cursor_offset: 1787
+    :timestamp: 2013-08-07 03:22:32 +02:00
   - :path: app/controllers/imovels_controller.rb
     :cursor_offset: 1080
     :timestamp: 2013-08-07 09:04:01 +02:00

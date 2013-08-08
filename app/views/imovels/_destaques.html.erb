@@ -1,11 +1,11 @@
-<% @imovels =Imovel.find(:all,:conditions => ["estado = ? ","Destaque"])%>          
+<% @imovels =Imovel.first(10)%>          
 
 <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
   
 <% @imovels.each do |imovel| %> 
 
       
-      <%= link_to (image_tag "#{imovel.referencia}-principal.jpg", title: imovel.tipoImovel, class:"gallery", :size => "200x200"), imovel_path(imovel.referencia)%>
+      <%= link_to (image_tag "#{imovel.referencia}-principal.jpg", title: imovel.tipoImovel, class:"gallery", :size => "150x150"), imovel_path(imovel.referencia)%>
    
     
 <% end %>
