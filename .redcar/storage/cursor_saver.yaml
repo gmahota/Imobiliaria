@@ -131,9 +131,6 @@ cursor_positions:
   - :path: app/controllers/documentos_controller.rb
     :cursor_offset: 0
     :timestamp: 2013-08-01 01:13:51 +02:00
-  - :path: app/views/imovels/_destaque.html.erb
-    :cursor_offset: 0
-    :timestamp: 2013-08-04 20:14:12 +02:00
   - :path: db/migrate/20130728142756_create_tipo_imovels.rb
     :cursor_offset: 0
     :timestamp: 2013-07-28 16:27:56 +02:00
@@ -184,9 +181,6 @@ cursor_positions:
   - :path: app/assets/stylesheets/slider.css
     :cursor_offset: 2661
     :timestamp: 2013-08-08 23:47:43 +02:00
-  - :path: app/views/imovels/_destaques.html.erb
-    :cursor_offset: 46
-    :timestamp: 2013-08-09 01:32:17 +02:00
   - :path: config/environments/test.rb
     :cursor_offset: 0
     :timestamp: 2013-07-24 14:43:20 +02:00
@@ -202,9 +196,6 @@ cursor_positions:
   - :path: config/initializers/will_paginate_array_fix.rb
     :cursor_offset: 29
     :timestamp: 2013-08-09 02:46:37 +02:00
-  - :path: Gemfile
-    :cursor_offset: 1217
-    :timestamp: 2013-08-09 02:21:49 +02:00
   - :path: config/initializers/willpaginate.rb
     :cursor_offset: 29
     :timestamp: 2013-08-09 02:57:59 +02:00
@@ -226,22 +217,9 @@ cursor_positions:
   - :path: app/views/imovels/detalhes.html.erb
     :cursor_offset: 2840
     :timestamp: 2013-08-09 04:27:56 +02:00
-  - :path: app/views/imovels/show.html.erb
-    :cursor_offset: 2952
-    :timestamp: 2013-08-09 04:23:41 +02:00
-    :selection_offset: 3001
-    :block_selection_mode: false
   - :path: app/views/imovels/edit.html.erb
     :cursor_offset: 112
     :timestamp: 2013-08-09 04:25:36 +02:00
-  - :path: app/assets/stylesheets/rec.css
-    :cursor_offset: 672
-    :timestamp: 2013-08-09 04:42:00 +02:00
-  - :path: app/views/imovels/index.html.erb
-    :cursor_offset: 1131
-    :timestamp: 2013-08-09 04:12:21 +02:00
-    :selection_offset: 1098
-    :block_selection_mode: false
   - :path: app/views/tipo_imovels/index.html.erb
     :cursor_offset: 0
     :timestamp: 2013-07-28 16:27:56 +02:00
@@ -254,11 +232,6 @@ cursor_positions:
     :cursor_offset: 0
     :timestamp: 2013-07-29 11:58:29 +02:00
     :selection_offset: 349
-    :block_selection_mode: false
-  - :path: app/controllers/imovels_controller.rb
-    :cursor_offset: 278
-    :timestamp: 2013-08-09 03:38:53 +02:00
-    :selection_offset: 245
     :block_selection_mode: false
   - :path: app/views/imovels/new.html.erb
     :cursor_offset: 22
@@ -281,11 +254,6 @@ cursor_positions:
     :timestamp: 2013-07-24 15:55:32 +02:00
     :selection_offset: 112
     :block_selection_mode: false
-  - :path: app/views/imovels/_form.html.erb
-    :cursor_offset: 180
-    :timestamp: 2013-08-08 22:04:49 +02:00
-    :selection_offset: 158
-    :block_selection_mode: false
   - :path: app/models/tipo_imovel.rb
     :cursor_offset: 89
     :timestamp: 2013-08-09 05:20:28 +02:00
@@ -294,22 +262,52 @@ cursor_positions:
   - :path: app/views/tipo_imovels/_form.html.erb
     :cursor_offset: 180
     :timestamp: 2013-08-09 05:20:04 +02:00
-  - :path: app/models/imovel.rb
-    :cursor_offset: 228
-    :timestamp: 2013-08-09 04:44:32 +02:00
   - :path: app/models/tipologium.rb
     :cursor_offset: 85
     :timestamp: 2013-08-09 05:17:41 +02:00
   - :path: app/assets/images/rails.png
     :cursor_offset: 671
     :timestamp: 2013-07-24 14:43:20 +02:00
-  - :path: app/views/layouts/application.html.erb
-    :cursor_offset: 2878
-    :timestamp: 2013-08-09 05:26:59 +02:00
-  - :path: app/assets/stylesheets/application.css
-    :cursor_offset: 1287
-    :timestamp: 2013-08-09 05:38:47 +02:00
   - :path: app/views/imovels/_pesquisa.html.erb
     :cursor_offset: 1526
     :timestamp: 2013-08-07 03:22:32 +02:00
+  - :path: app/assets/stylesheets/rec.css
+    :cursor_offset: 241
+    :timestamp: 2013-08-09 06:45:12 +02:00
+  - :path: app/views/imovels/_form.html.erb
+    :cursor_offset: 879
+    :timestamp: 2013-08-09 06:32:43 +02:00
+  - :path: app/assets/stylesheets/application.css
+    :cursor_offset: 724
+    :timestamp: 2013-08-09 06:45:15 +02:00
+  - :path: app/views/imovels/show.html.erb
+    :cursor_offset: 2952
+    :timestamp: 2013-08-09 04:23:41 +02:00
+    :selection_offset: 3001
+    :block_selection_mode: false
+  - :path: app/models/imovel.rb
+    :cursor_offset: 228
+    :timestamp: 2013-08-09 04:44:32 +02:00
+  - :path: app/views/imovels/index.html.erb
+    :cursor_offset: 1131
+    :timestamp: 2013-08-09 04:12:21 +02:00
+    :selection_offset: 1098
+    :block_selection_mode: false
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 2665
+    :timestamp: 2013-08-09 06:46:12 +02:00
+  - :path: app/controllers/imovels_controller.rb
+    :cursor_offset: 2617
+    :timestamp: 2013-08-09 06:36:35 +02:00
+  - :path: Gemfile
+    :cursor_offset: 1217
+    :timestamp: 2013-08-09 02:21:49 +02:00
+  - :path: app/views/imovels/_destaque.html.erb
+    :cursor_offset: 277
+    :timestamp: 2013-08-09 07:10:28 +02:00
+  - :path: app/views/imovels/_destaques.html.erb
+    :cursor_offset: 1018
+    :timestamp: 2013-08-09 07:09:18 +02:00
+    :selection_offset: 1009
+    :block_selection_mode: false
 files_to_retain: 0

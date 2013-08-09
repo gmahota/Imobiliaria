@@ -1,7 +1,7 @@
 <%#<p id="notice"><%= notice %><%#</p> %>
 <p>
 <%#= image_tag "#{@imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "400x400"%>
-<%= link_to (image_tag @imovel.documentos.first.avatar.url, class:"img-polaroid", :size => "400x400") , "/imovels/#{@imovel.referencia}/detalhes" %>
+<%= link_to (image_tag @imovel.documentos.first.avatar.url, class:"img-polaroid", :size => "400x400") , "/imovels/#{@imovel.id}/detalhes" %>
      
          
 <%# @imovel.documentos.each do |doc| %>
