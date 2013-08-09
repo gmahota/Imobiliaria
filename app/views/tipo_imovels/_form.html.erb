@@ -1,10 +1,21 @@
-<%= simple_form_for(@tipo_imovel) do |f| %>
+<%= simple_nested_form_for @tipo_imovel do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :descricao %>
   </div>
+  
+  <%= f.fields_for :tipologias do |tipo| %>
+  <%= tipo.error_notification %>
 
+  <div class="form-inputs">
+    <%= tipo.input :descricao %>
+  </div>
+   <%= tipo.link_to_remove "Apagar" %>
+  <% end %>
+  
+  
+  <p><%= f.link_to_add "Adicionar Tipologias", :tipologiums %></p>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

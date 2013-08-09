@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(:version => 20130731231945) do
     t.string   "moeda"
   end
 
+  create_table "microposts", :force => true do |t|
+    t.text     "content",    :limit => 255
+    t.integer  "user_id"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
   create_table "moedas", :force => true do |t|
     t.string   "sigla"
     t.string   "descricao"

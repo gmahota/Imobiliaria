@@ -514,43 +514,7 @@ ol li .send {
 	border:none;
 	float:left;
 }
-.footer {
-	background-color: #FFFFFF;
-}
-.footer_resize {
-	margin:0 auto;
-	padding:0;
-	width:960px;
-	line-height:1.5em;
-	color:#fff;
-}
-.footer_resize p {
-	margin: 24px 0;
-	padding: 0;
-	line-height: normal;
-	white-space: nowrap;
-	text-indent: inherit;
-	color: #666;
-}
-.footer_resize a {
-	color: #9CAF56;
-	font-weight: normal;
-	margin: 0;
-	padding: 0;
-	border: none;
-	text-decoration: none;
-	background-color: transparent;
-}
-.footer_resize a:hover {
-	background-color: transparent;
-	text-decoration: underline;
-}
-.footer_resize .lf {
-	float:left;
-}
-.footer_resize .rf {
-	float:right;
-}
+
 .main .content .content_resize .mainbar rticle ul {
 	list-style-position: inside;
 }
