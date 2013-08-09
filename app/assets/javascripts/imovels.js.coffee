@@ -3,9 +3,9 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $("#modal-gallery").on "load", ->
-    modalData = $(this).data("modal")
+  $(".carousel").carousel interval: 5000
   $("#idTipo").change -> 
       $("#idTipologia").empty()
       $("#idTipologia").append "<option value= \" \"> Tipologiass </option>"
       $("#idTipologia").append "<option value= \" \"> </option>"
+  

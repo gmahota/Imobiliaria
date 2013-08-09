@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @imovel %> |
-<%= link_to 'Back', imovels_path %>
+<%= link_to 'Detalhes', "/imovels/#{@imovel.referencia}/detalhes", class: "btn btn-small btn-info" %> |
+<%= link_to 'Voltar', imovels_path, class: "btn btn-small btn-danger" %>

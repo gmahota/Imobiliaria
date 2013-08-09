@@ -20,6 +20,14 @@
 #= require twitter/bootstrap/bootstrap-button
 #= require twitter/bootstrap/bootstrap-collapse
 
+//= require bootstrap
+
+
+
+//= require bootstrap/load-image.min
+//= require bootstrap/image-gallery.min
+
+
 
 
 

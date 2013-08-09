@@ -1,16 +1,43 @@
-<% @imovels =Imovel.first(10)%>          
+<% @imovels =Imovel.all%>          
 
-<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
-  
-<% @imovels.each do |imovel| %> 
-  
-    <%= link_to (image_tag imovel.documentos.first.avatar.url, class:"img-polaroid", :size => "150x150") , "/imovels/#{imovel.referencia}/detalhes" %>
-          
-      
-      <%#= link_to (image_tag "#{imovel.referencia}-principal.jpg", title: imovel.tipoImovel, class:"gallery", :size => "150x150"), imovel_path(imovel.referencia)%>
-   
-    
-<% end %>
+<%@i=0%>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+    <div class="carousel slide" id="myCarousel">
+            <div class="carousel-inner">
+              <% @imovels.each do |imovel| %> 
+              
+                  <%if @i%4==0%>
+                     <% if @i==0%>
+                        <div class="item active">
+                        <%else%>
+                  <div class="item">                  
+                      <%end%>
+                    <ul class="thumbnails">
+                  <%end%>        
+                      <li class="span3">
+                            <div class="caption">
+                                <h5>Caption</h5>
+                            </div>
+                            <div class="thumbnail">
+                            <% if imovel.documentos.count > 0%>
+                                <%= link_to (image_tag imovel.documentos.first.avatar.url, class:"img-polaroid", :size => "150x150") , "/imovels/#{imovel.referencia}/detalhes" %>
+                              <%end%>
+                            </div>
+                        </li>
+                    <%if (@i+1)%4 == 0 or  imovel.id == @imovels.last.id%>        
+                      </ul>  
+                    </div>
+                    <%end%>
+                
+                <%@i=@i+1%>
+                <% end %>
+            </div>
+            <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
+            <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
+        </div>
+</div>
+</diV>
 
 
-</div>     

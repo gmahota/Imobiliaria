@@ -5,12 +5,8 @@ class ImovelsController < ApplicationController
   def index
     
       
-    @imovels = Imovel.search(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade])
-    #.paginate(:page => params[:page])
-    if @imovel == nil
-      @imovels = Imovel.all
-     # .paginate(:page => params[:page])
-    end  
+    @imovels = Imovel.search(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade]).paginate(:page => params[:page])
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @imovels }
@@ -45,7 +41,7 @@ class ImovelsController < ApplicationController
   def show
     
     
-    @imovel = params[:id] == nil ?Imovel.find(:first,:conditions => ["estado = ? ","Destaque Semana"]):  Imovel.find(params[:id])
+    @imovel = params[:id] == nil ?Imovel.find(:first,:conditions => ["estado = ? ","Destaque Semana"]):  Imovel.find(params[:id]).paginate(:page => params[:page])
     
     if @imovel == nil
       #@imovels = Imovel.all

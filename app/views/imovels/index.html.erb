@@ -1,19 +1,13 @@
 <h1>Imoveis</h1>
 
-<table >
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table class="table" >
 <% @imovels.each do |imovel| %>
     <tr>
       <td border border="1" width="50%">
-      
+      <% if imovel.documentos.count > 0%>
             <%= link_to (image_tag imovel.documentos.first.avatar.url, class:"img-polaroid", :size => "200x200") , "/imovels/#{imovel.referencia}/detalhes" %>
           
-        
+      <%end%>  
       <%# imovel.documentos.each do |doc| %>
       <%# if doc.descricao = "Foto Principal"%> 
             <%#= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "200x200") , "/imovels/#{imovel.referencia}/detalhes" %>
@@ -33,8 +27,8 @@
       Preco: <%= imovel.preco %> <%= imovel.moeda %>
       <br/>
       
-        <%= link_to 'Editar', edit_imovel_path(imovel) %> | 
-        <%= link_to 'Apagar', imovel, method: :delete, data: { confirm: 'Tens a certeza?' } %>
+        <%= link_to 'Editar', edit_imovel_path(imovel), class: "btn btn-small btn-info" %> | 
+        <%= link_to 'Apagar', imovel,class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Tens a certeza?' } %>
      
     </td>
   </tr>
@@ -42,7 +36,8 @@
 </table>
 
 <center>
-  <%#= will_paginate @imovels %>
+  <%= will_paginate ( @imovels) %>
+  <%= page_entries_info  @imovels %><br/>
 </center>
 
 <br />

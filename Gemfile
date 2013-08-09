@@ -5,8 +5,12 @@ gem 'rails', '3.2.13'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails", github: 'seyhunak/twitter-bootstrap-rails'
-
+gem 'bootstrap-addons-rails'
+gem "less-rails"
 # gem para permissoes
+
+gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
 
 #gem "rails3-generators"
 
@@ -25,8 +29,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  
   
   # gem para pesquizas
   #gem 'sunspot_rails'
@@ -56,7 +59,7 @@ gem "paperclip", "~> 3.0"
 gem 'nested_form'
 gem 'execjs'
 
-gem 'will_paginate', '~> 3.0'
-
+gem 'will_paginate', '~> 3.0.0'
 gem 'bootstrap-datepicker-rails'
+gem 'will_paginate-bootstrap'
 
