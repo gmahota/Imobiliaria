@@ -1,5 +1,5 @@
 class Imovel < ActiveRecord::Base
-  attr_accessible :area,:documentos_attributes, :cidade, :descriacao, :estado, :localizacao, :pais, :preco, :provincia, :referencia, :resumo, :tipoImovel, :tipoNegocio, :moeda
+  attr_accessible :area,:documentos_attributes, :cidade, :descriacao, :estado, :localizacao, :preco, :provincia, :referencia, :resumo, :tipoImovel, :tipoNegocio, :moeda
   has_many :documentos
   
   accepts_nested_attributes_for :documentos
