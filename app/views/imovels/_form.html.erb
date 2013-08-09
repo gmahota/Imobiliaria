@@ -32,12 +32,8 @@
         <%= f.input :descriacao , as: :text %>
       </div>
       <div class="tab-pane" id="localizacao">
-        <%= f.input :pais %>
-        <%= f.input :provincia %>
-        
         <%= select("imovel","cidade", Cidade.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
         
-        <%= f.input :cidade %>
         <%= f.input :localizacao %>
         <%= f.input :area %>
       </div>

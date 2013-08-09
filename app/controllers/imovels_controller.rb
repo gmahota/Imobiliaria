@@ -85,7 +85,7 @@ class ImovelsController < ApplicationController
     respond_to do |format|
       if @imovel.save
         
-        format.html { redirect_to @imovel, notice: 'Imovel was successfully created.' }
+        format.html { redirect_to  action: "detalhes", notice: 'Imovel was successfully created.' }
         format.json { render json: @imovel, status: :created, location: @imovel }
       else
         format.html { render action: "new" }
@@ -107,7 +107,7 @@ class ImovelsController < ApplicationController
 
     respond_to do |format|
       if @imovel.update_attributes(params[:imovel])
-        format.html { redirect_to @imovel, notice: 'Imovel was successfully updated.' }
+        format.html { redirect_to action: "detalhes", notice: 'Imovel was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
