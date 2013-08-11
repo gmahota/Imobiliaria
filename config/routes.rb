@@ -24,7 +24,6 @@ MicroApp::Application.routes.draw do
 
 
   resources :imovels 
-    match 'imovels/:id/detalhes' => 'imovels#detalhes'
   
 
 

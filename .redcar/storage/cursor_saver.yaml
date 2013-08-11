@@ -77,14 +77,6 @@ cursor_positions:
   - :path: app/controllers/estados_controller.rb
     :cursor_offset: 0
     :timestamp: 2013-07-28 16:35:48 +02:00
-  - :path: app/controllers/microposts_controller.rb
-    :cursor_offset: 0
-    :timestamp: 2013-07-24 14:43:20 +02:00
-  - :path: app/controllers/tipo_negocios_controller.rb
-    :cursor_offset: 378
-    :timestamp: 2013-07-28 16:29:43 +02:00
-    :selection_offset: 367
-    :block_selection_mode: false
   - :path: app/views/tipo_negocios/new.html.erb
     :cursor_offset: 72
     :timestamp: 2013-07-29 09:14:15 +02:00
@@ -205,9 +197,6 @@ cursor_positions:
   - :path: app/assets/stylesheets/imovels.css.scss
     :cursor_offset: 273
     :timestamp: 2013-08-09 01:35:23 +02:00
-  - :path: app/views/imovels/detalhes.html.erb
-    :cursor_offset: 2840
-    :timestamp: 2013-08-09 04:27:56 +02:00
   - :path: app/views/imovels/edit.html.erb
     :cursor_offset: 112
     :timestamp: 2013-08-09 04:25:36 +02:00
@@ -268,39 +257,6 @@ cursor_positions:
   - :path: app/assets/stylesheets/application.css
     :cursor_offset: 724
     :timestamp: 2013-08-09 06:45:15 +02:00
-  - :path: app/views/imovels/show.html.erb
-    :cursor_offset: 2952
-    :timestamp: 2013-08-09 04:23:41 +02:00
-    :selection_offset: 3001
-    :block_selection_mode: false
-  - :path: app/views/layouts/application.html.erb
-    :cursor_offset: 2665
-    :timestamp: 2013-08-09 06:46:12 +02:00
-  - :path: app/views/imovels/_destaque.html.erb
-    :cursor_offset: 277
-    :timestamp: 2013-08-09 07:10:28 +02:00
-  - :path: app/views/imovels/_destaques.html.erb
-    :cursor_offset: 1018
-    :timestamp: 2013-08-09 07:09:18 +02:00
-    :selection_offset: 1009
-    :block_selection_mode: false
-  - :path: app/views/imovels/_pesquisa.html.erb
-    :cursor_offset: 1526
-    :timestamp: 2013-08-07 03:22:32 +02:00
-  - :path: Gemfile
-    :cursor_offset: 1217
-    :timestamp: 2013-08-09 02:21:49 +02:00
-  - :path: app/controllers/imovels_controller.rb
-    :cursor_offset: 2617
-    :timestamp: 2013-08-09 06:36:35 +02:00
-  - :path: app/views/imovels/index.html.erb
-    :cursor_offset: 1131
-    :timestamp: 2013-08-09 04:12:21 +02:00
-    :selection_offset: 1098
-    :block_selection_mode: false
-  - :path: app/models/imovel.rb
-    :cursor_offset: 228
-    :timestamp: 2013-08-09 04:44:32 +02:00
   - :path: config/environments/development.rb
     :cursor_offset: 0
     :timestamp: 2013-07-24 14:43:20 +02:00
@@ -310,4 +266,44 @@ cursor_positions:
   - :path: config/application.rb
     :cursor_offset: 1676
     :timestamp: 2013-08-11 18:43:10 +02:00
+  - :path: Gemfile
+    :cursor_offset: 0
+    :timestamp: 2013-08-11 21:56:51 +02:00
+  - :path: app/views/imovels/detalhes.html.erb
+    :cursor_offset: 2813
+    :timestamp: 2013-08-11 21:56:52 +02:00
+    :selection_offset: 2971
+    :block_selection_mode: false
+  - :path: app/models/imovel.rb
+    :cursor_offset: 0
+    :timestamp: 2013-08-11 21:56:52 +02:00
+  - :path: app/views/imovels/_pesquisa.html.erb
+    :cursor_offset: 2209
+    :timestamp: 2013-08-11 22:11:41 +02:00
+  - :path: app/controllers/imovels_controller.rb
+    :cursor_offset: 0
+    :timestamp: 2013-08-11 21:07:39 +02:00
+  - :path: app/views/imovels/_destaque.html.erb
+    :cursor_offset: 275
+    :timestamp: 2013-08-11 22:19:47 +02:00
+  - :path: app/views/imovels/index.html.erb
+    :cursor_offset: 298
+    :timestamp: 2013-08-11 21:21:58 +02:00
+    :selection_offset: 279
+    :block_selection_mode: false
+  - :path: app/views/imovels/_destaques.html.erb
+    :cursor_offset: 1016
+    :timestamp: 2013-08-11 22:19:28 +02:00
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 3764
+    :timestamp: 2013-08-11 22:18:43 +02:00
+  - :path: app/views/imovels/show.html.erb
+    :cursor_offset: 298
+    :timestamp: 2013-08-11 22:00:46 +02:00
+  - :path: app/controllers/microposts_controller.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-24 14:43:20 +02:00
+  - :path: app/controllers/tipo_negocios_controller.rb
+    :cursor_offset: 0
+    :timestamp: 2013-08-11 21:56:51 +02:00
 files_to_retain: 0
