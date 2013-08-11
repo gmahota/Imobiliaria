@@ -1,8 +1,9 @@
-1376253510
+1376255446
 Ability	/home/ssror2013/projects/imoveis/app/models/ability.rb	class Ability
 ActionView	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAttachmentAvatarToDocumentos	/home/ssror2013/projects/imoveis/db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb	class AddAttachmentAvatarToDocumentos 
 AddImovelMoedaString	/home/ssror2013/projects/imoveis/db/migrate/20130731162258_add_imovel_moeda_string.rb	class AddImovelMoedaString 
+Addtipologiatoimovel	/home/ssror2013/projects/imoveis/db/migrate/20130811204039_addtipologiatoimovel.rb	class Addtipologiatoimovel 
 Application	/home/ssror2013/projects/imoveis/config/application.rb	  class Application 
 ApplicationController	/home/ssror2013/projects/imoveis/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/ssror2013/projects/imoveis/app/helpers/application_helper.rb	module ApplicationHelper
@@ -138,6 +139,7 @@ destroy	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	 
 down	/home/ssror2013/projects/imoveis/db/migrate/20130731161652_change_imovel_preco_float.rb	  def down
 down	/home/ssror2013/projects/imoveis/db/migrate/20130731162258_add_imovel_moeda_string.rb	  def down
 down	/home/ssror2013/projects/imoveis/db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb	  def self.down
+down	/home/ssror2013/projects/imoveis/db/migrate/20130811204039_addtipologiatoimovel.rb	  def down
 edit	/home/ssror2013/projects/imoveis/app/controllers/microposts_controller.rb	  def edit
 edit	/home/ssror2013/projects/imoveis/app/controllers/cidades_controller.rb	  def edit
 edit	/home/ssror2013/projects/imoveis/app/controllers/estados_controller.rb	  def edit
@@ -244,6 +246,7 @@ to_tag	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_v
 up	/home/ssror2013/projects/imoveis/db/migrate/20130731161652_change_imovel_preco_float.rb	  def up
 up	/home/ssror2013/projects/imoveis/db/migrate/20130731162258_add_imovel_moeda_string.rb	  def up
 up	/home/ssror2013/projects/imoveis/db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb	  def self.up
+up	/home/ssror2013/projects/imoveis/db/migrate/20130811204039_addtipologiatoimovel.rb	  def up
 update	/home/ssror2013/projects/imoveis/app/controllers/microposts_controller.rb	  def update
 update	/home/ssror2013/projects/imoveis/app/controllers/cidades_controller.rb	  def update
 update	/home/ssror2013/projects/imoveis/app/controllers/estados_controller.rb	  def update

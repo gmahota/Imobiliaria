@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130731231945) do
+ActiveRecord::Schema.define(:version => 20130811204039) do
 
   create_table "cidades", :force => true do |t|
     t.string   "descricao"
@@ -54,6 +54,10 @@ ActiveRecord::Schema.define(:version => 20130731231945) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "moeda"
+    t.string   "tipologia"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.float    "raio"
   end
 
   create_table "microposts", :force => true do |t|
@@ -80,6 +84,13 @@ ActiveRecord::Schema.define(:version => 20130731231945) do
     t.string   "descricao"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipocasas", :force => true do |t|
+    t.string   "descricao"
+    t.integer  "tipoimovel_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "tipologia", :force => true do |t|

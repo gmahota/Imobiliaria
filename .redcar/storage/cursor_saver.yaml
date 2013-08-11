@@ -100,9 +100,6 @@ cursor_positions:
   - :path: db/migrate/20130731161652_change_imovel_preco_float.rb
     :cursor_offset: 139
     :timestamp: 2013-07-31 18:20:25 +02:00
-  - :path: db/migrate/20130731162258_add_imovel_moeda_string.rb
-    :cursor_offset: 102
-    :timestamp: 2013-07-31 18:24:02 +02:00
   - :path: app/assets/stylesheets/documentos.css.scss
     :cursor_offset: 0
     :timestamp: 2013-08-01 01:13:52 +02:00
@@ -271,9 +268,6 @@ cursor_positions:
   - :path: app/views/imovels/_pesquisa.html.erb
     :cursor_offset: 2209
     :timestamp: 2013-08-11 22:11:41 +02:00
-  - :path: app/controllers/imovels_controller.rb
-    :cursor_offset: 0
-    :timestamp: 2013-08-11 21:07:39 +02:00
   - :path: app/views/imovels/_destaque.html.erb
     :cursor_offset: 275
     :timestamp: 2013-08-11 22:19:47 +02:00
@@ -306,4 +300,21 @@ cursor_positions:
   - :path: config/application.rb
     :cursor_offset: 1675
     :timestamp: 2013-08-11 22:38:30 +02:00
+  - :path: db/migrate/20130731162258_add_imovel_moeda_string.rb
+    :cursor_offset: 102
+    :timestamp: 2013-07-31 18:24:02 +02:00
+    :selection_offset: 66
+    :block_selection_mode: false
+  - :path: db/migrate/20130731231351_create_documentos.rb
+    :cursor_offset: 0
+    :timestamp: 2013-08-01 01:13:51 +02:00
+  - :path: db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb
+    :cursor_offset: 0
+    :timestamp: 2013-08-01 01:19:45 +02:00
+  - :path: db/migrate/20130811204039_addtipologiatoimovel.rb
+    :cursor_offset: 97
+    :timestamp: 2013-08-11 22:41:57 +02:00
+  - :path: app/controllers/imovels_controller.rb
+    :cursor_offset: 2714
+    :timestamp: 2013-08-11 22:31:44 +02:00
 files_to_retain: 0
