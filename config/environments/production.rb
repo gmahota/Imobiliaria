@@ -1,6 +1,9 @@
 MicroApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-
+  
+  #para as imagens ficarem fixas
+    config.assets.initialize_on_precompile = false
+  
   # Code is not reloaded between requests
   config.cache_classes = true
 

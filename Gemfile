@@ -30,7 +30,7 @@ end
 # in production environments by default.
 group :assets do
   
-  
+  gem "report", "~> 0.1.1"
   # gem para pesquizas
   #gem 'sunspot_rails'
   
