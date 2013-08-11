@@ -103,7 +103,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
           
         <%= f.fields_for :documentos  ,  :html => {:multipart => true} do |doc| %>
          
-            <%= select(:doc, :descricao,[ ["Foto Principal","Foto Principal"],["Foto","Foto"],["Video","Video"],["Documentacao","Documentacao"]])%>
+            <%= select(:doc, :descricao,Fotosresposta.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
             
             <%= doc.file_field :avatar %>
           

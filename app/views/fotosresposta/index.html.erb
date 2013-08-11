@@ -1,0 +1,23 @@
+<h1>Listing fotosresposta</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fotosresposta.each do |fotosrespostum| %>
+  <tr>
+    <td><%= fotosrespostum.descricao %></td>
+    <td><%= link_to 'Show', fotosrespostum %></td>
+    <td><%= link_to 'Edit', edit_fotosrespostum_path(fotosrespostum) %></td>
+    <td><%= link_to 'Destroy', fotosrespostum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fotosrespostum', new_fotosrespostum_path %>

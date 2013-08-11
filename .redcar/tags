@@ -1,8 +1,9 @@
-1376255446
+1376259923
 Ability	/home/ssror2013/projects/imoveis/app/models/ability.rb	class Ability
 ActionView	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAttachmentAvatarToDocumentos	/home/ssror2013/projects/imoveis/db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb	class AddAttachmentAvatarToDocumentos 
 AddImovelMoedaString	/home/ssror2013/projects/imoveis/db/migrate/20130731162258_add_imovel_moeda_string.rb	class AddImovelMoedaString 
+Addfotosrespostas	/home/ssror2013/projects/imoveis/db/migrate/20130811212825_addfotosrespostas.rb	class Addfotosrespostas 
 Addtipologiatoimovel	/home/ssror2013/projects/imoveis/db/migrate/20130811204039_addtipologiatoimovel.rb	class Addtipologiatoimovel 
 Application	/home/ssror2013/projects/imoveis/config/application.rb	  class Application 
 ApplicationController	/home/ssror2013/projects/imoveis/app/controllers/application_controller.rb	class ApplicationController 
@@ -20,6 +21,7 @@ Column	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic
 CreateCidades	/home/ssror2013/projects/imoveis/db/migrate/20130728143252_create_cidades.rb	class CreateCidades 
 CreateDocumentos	/home/ssror2013/projects/imoveis/db/migrate/20130731231351_create_documentos.rb	class CreateDocumentos 
 CreateEstados	/home/ssror2013/projects/imoveis/db/migrate/20130728143548_create_estados.rb	class CreateEstados 
+CreateFotosresposta	/home/ssror2013/projects/imoveis/db/migrate/20130811212931_create_fotosresposta.rb	class CreateFotosresposta 
 CreateImovels	/home/ssror2013/projects/imoveis/db/migrate/20130724181316_create_imovels.rb	class CreateImovels 
 CreateMoedas	/home/ssror2013/projects/imoveis/db/migrate/20130731162931_create_moedas.rb	class CreateMoedas 
 CreateTipoImovels	/home/ssror2013/projects/imoveis/db/migrate/20130728142756_create_tipo_imovels.rb	class CreateTipoImovels 
@@ -44,6 +46,12 @@ EstadosHelper	/home/ssror2013/projects/imoveis/app/helpers/estados_helper.rb	mod
 EstadosHelperTest	/home/ssror2013/projects/imoveis/test/unit/helpers/estados_helper_test.rb	class EstadosHelperTest 
 FormBuilder	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	    class FormBuilder
 FormBuilderMethods	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	      module FormBuilderMethods
+Fotosresposta	/home/ssror2013/projects/imoveis/app/models/fotosresposta.rb	class Fotosresposta 
+FotosrespostaController	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	class FotosrespostaController 
+FotosrespostaControllerTest	/home/ssror2013/projects/imoveis/test/functional/fotosresposta_controller_test.rb	class FotosrespostaControllerTest 
+FotosrespostaHelper	/home/ssror2013/projects/imoveis/app/helpers/fotosresposta_helper.rb	module FotosrespostaHelper
+FotosrespostaHelperTest	/home/ssror2013/projects/imoveis/test/unit/helpers/fotosresposta_helper_test.rb	class FotosrespostaHelperTest 
+FotosrespostaTest	/home/ssror2013/projects/imoveis/test/unit/fotosresposta_test.rb	class FotosrespostaTest 
 Helpers	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	  module Helpers
 Imovel	/home/ssror2013/projects/imoveis/app/models/imovel.rb	class Imovel 
 ImovelTest	/home/ssror2013/projects/imoveis/test/unit/imovel_test.rb	class ImovelTest 
@@ -107,6 +115,7 @@ change	/home/ssror2013/projects/imoveis/db/migrate/20130728143252_create_cidades
 change	/home/ssror2013/projects/imoveis/db/migrate/20130729094120_create_tipologia.rb	  def change
 change	/home/ssror2013/projects/imoveis/db/migrate/20130731162931_create_moedas.rb	  def change
 change	/home/ssror2013/projects/imoveis/db/migrate/20130731231351_create_documentos.rb	  def change
+change	/home/ssror2013/projects/imoveis/db/migrate/20130811212931_create_fotosresposta.rb	  def change
 column_type	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	        def column_type
 count	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	      def count
 count	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def count() 
@@ -122,6 +131,7 @@ create	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb
 create	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def create
 create	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def create
 create	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def create
+create	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def create
 current_user	/home/ssror2013/projects/imoveis/app/controllers/application_controller.rb	def current_user 
 current_user_session	/home/ssror2013/projects/imoveis/app/controllers/application_controller.rb	def current_user_session 
 default_input_block	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	      def default_input_block
@@ -136,10 +146,12 @@ destroy	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.r
 destroy	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def destroy
 destroy	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def destroy
 destroy	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def destroy
+destroy	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def destroy
 down	/home/ssror2013/projects/imoveis/db/migrate/20130731161652_change_imovel_preco_float.rb	  def down
 down	/home/ssror2013/projects/imoveis/db/migrate/20130731162258_add_imovel_moeda_string.rb	  def down
 down	/home/ssror2013/projects/imoveis/db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb	  def self.down
 down	/home/ssror2013/projects/imoveis/db/migrate/20130811204039_addtipologiatoimovel.rb	  def down
+down	/home/ssror2013/projects/imoveis/db/migrate/20130811212825_addfotosrespostas.rb	  def down
 edit	/home/ssror2013/projects/imoveis/app/controllers/microposts_controller.rb	  def edit
 edit	/home/ssror2013/projects/imoveis/app/controllers/cidades_controller.rb	  def edit
 edit	/home/ssror2013/projects/imoveis/app/controllers/estados_controller.rb	  def edit
@@ -150,6 +162,7 @@ edit	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	 
 edit	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def edit
 edit	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def edit
 edit	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def edit
+edit	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def edit
 empty?	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	      def empty?
 empty?	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def empty?() 
 empty?	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def empty?() 
@@ -175,6 +188,7 @@ index	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	
 index	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def index
 index	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def index
 index	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def index
+index	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def index
 initialize	/home/ssror2013/projects/imoveis/app/models/ability.rb	  def initialize(user)
 input	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	      def input(record_name, method, options = {})
 new	/home/ssror2013/projects/imoveis/app/controllers/user_sessions_controller.rb	  def new
@@ -188,6 +202,7 @@ new	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	  
 new	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def new
 new	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def new
 new	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def new
+new	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def new
 persisted?	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def persisted?() 
 pesquisa	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def pesquisa
 pesquizar	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def pesquizar
@@ -210,6 +225,7 @@ show	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	 
 show	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def show
 show	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def show
 show	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def show
+show	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def show
 test_default_form_builder_no_instance_variable	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def test_default_form_builder_no_instance_variable
 test_default_form_builder_with_dynamic_form_helpers	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def test_default_form_builder_with_dynamic_form_helpers
 test_error_for_block	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def test_error_for_block
@@ -247,6 +263,7 @@ up	/home/ssror2013/projects/imoveis/db/migrate/20130731161652_change_imovel_prec
 up	/home/ssror2013/projects/imoveis/db/migrate/20130731162258_add_imovel_moeda_string.rb	  def up
 up	/home/ssror2013/projects/imoveis/db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb	  def self.up
 up	/home/ssror2013/projects/imoveis/db/migrate/20130811204039_addtipologiatoimovel.rb	  def up
+up	/home/ssror2013/projects/imoveis/db/migrate/20130811212825_addfotosrespostas.rb	  def up
 update	/home/ssror2013/projects/imoveis/app/controllers/microposts_controller.rb	  def update
 update	/home/ssror2013/projects/imoveis/app/controllers/cidades_controller.rb	  def update
 update	/home/ssror2013/projects/imoveis/app/controllers/estados_controller.rb	  def update
@@ -257,4 +274,5 @@ update	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb
 update	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def update
 update	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def update
 update	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def update
+update	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def update
 url_for	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def url_for(options)
