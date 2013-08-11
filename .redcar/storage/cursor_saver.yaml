@@ -131,15 +131,9 @@ cursor_positions:
     :timestamp: 2013-07-24 20:24:03 +02:00
     :selection_offset: 77
     :block_selection_mode: false
-  - :path: config/routes.rb
-    :cursor_offset: 0
-    :timestamp: 2013-08-01 01:13:51 +02:00
   - :path: app/models/ability.rb
     :cursor_offset: 167
     :timestamp: 2013-08-07 00:57:07 +02:00
-  - :path: app/controllers/application_controller.rb
-    :cursor_offset: 54
-    :timestamp: 2013-07-28 21:20:11 +02:00
   - :path: app/assets/stylesheets/moedas.css.scss
     :cursor_offset: 0
     :timestamp: 2013-07-31 18:29:32 +02:00
@@ -263,9 +257,6 @@ cursor_positions:
   - :path: config/environments/production.rb
     :cursor_offset: 206
     :timestamp: 2013-08-11 18:43:19 +02:00
-  - :path: config/application.rb
-    :cursor_offset: 1676
-    :timestamp: 2013-08-11 18:43:10 +02:00
   - :path: Gemfile
     :cursor_offset: 0
     :timestamp: 2013-08-11 21:56:51 +02:00
@@ -291,9 +282,6 @@ cursor_positions:
     :timestamp: 2013-08-11 21:21:58 +02:00
     :selection_offset: 279
     :block_selection_mode: false
-  - :path: app/views/imovels/_destaques.html.erb
-    :cursor_offset: 1016
-    :timestamp: 2013-08-11 22:19:28 +02:00
   - :path: app/views/layouts/application.html.erb
     :cursor_offset: 3764
     :timestamp: 2013-08-11 22:18:43 +02:00
@@ -306,4 +294,16 @@ cursor_positions:
   - :path: app/controllers/tipo_negocios_controller.rb
     :cursor_offset: 0
     :timestamp: 2013-08-11 21:56:51 +02:00
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 54
+    :timestamp: 2013-07-28 21:20:11 +02:00
+  - :path: app/views/imovels/_destaques.html.erb
+    :cursor_offset: 1016
+    :timestamp: 2013-08-11 22:19:28 +02:00
+  - :path: config/routes.rb
+    :cursor_offset: 243
+    :timestamp: 2013-08-11 22:30:03 +02:00
+  - :path: config/application.rb
+    :cursor_offset: 1675
+    :timestamp: 2013-08-11 22:38:30 +02:00
 files_to_retain: 0
