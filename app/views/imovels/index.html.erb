@@ -5,7 +5,7 @@
     <tr>
       <td border border="1" width="50%">
       <% if imovel.documentos.count > 0%>
-            <%= link_to (image_tag imovel.documentos.first.avatar.url, class:"img-polaroid", :size => "200x200") , "/imovels/#{imovel.referencia}/detalhes" %>
+            <%= link_to (image_tag imovel.documentos.first.avatar.url, class:"img-polaroid", :size => "200x200") ,imovel_path(imovel)  %>
           
       <%end%>  
       <%# imovel.documentos.each do |doc| %>
@@ -38,9 +38,11 @@
 <center>
   <%= will_paginate ( @imovels) %>
   <%= page_entries_info  @imovels %><br/>
+ 
 </center>
 
 <br />
 
 <%= link_to '+ Novo', new_imovel_path, class: "btn btn-small btn-info"  %>
+
 

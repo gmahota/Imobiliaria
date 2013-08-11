@@ -10,8 +10,12 @@ class ImovelsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @imovels }
+      format.pdf do
+        send_data Imovel.draw(@imovels.first), :filename => 'casas.pdf', :type => 'application/pdf', :disposition => 'inline'
     end
-  end
+    end
+    
+    end
   
   # GET /imovels
   # GET /imovels.json
@@ -27,21 +31,19 @@ class ImovelsController < ApplicationController
   
   # GET /imovels/1
   # GET /imovels/1.json
-  def detalhes
-    @imovel = Imovel.find(params[:id])
+  #def detalhes
+  #  @imovel = Imovel.find(params[:id])
         
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @imovel }
-    end
-  end
+  #  respond_to do |format|
+  #    format.html # show.html.erb
+  #    format.json { render json: @imovel }
+  #  end
+  # end
   
   # GET /imovels/1
   # GET /imovels/1.json
   def show
-    
-    
-    @imovel = params[:id] == nil ?Imovel.find(:first,:conditions => ["estado = ? ","Destaque Semana"]):  Imovel.find(params[:id]).paginate(:page => params[:page])
+    @imovel = params[:id] == nil ?Imovel.find(:first,:conditions => ["estado = ? ","Destaque Semana"]):  Imovel.find(params[:id])
     
     if @imovel == nil
       #@imovels = Imovel.all
@@ -85,7 +87,7 @@ class ImovelsController < ApplicationController
     respond_to do |format|
       if @imovel.save
         
-        format.html { redirect_to  action: "detalhes", notice: 'Imovel was successfully created.' }
+        format.html { redirect_to  @imovel, notice: 'Imovel was successfully created.' }
         format.json { render json: @imovel, status: :created, location: @imovel }
       else
         format.html { render action: "new" }
@@ -107,12 +109,21 @@ class ImovelsController < ApplicationController
 
     respond_to do |format|
       if @imovel.update_attributes(params[:imovel])
-        format.html { redirect_to action: "detalhes", notice: 'Imovel was successfully updated.' }
+        format.html { redirect_to action: @imovel, notice: 'Imovel was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
         format.json { render json: @imovel.errors, status: :unprocessable_entity }
       end
+    end
+  end
+  
+  def print
+    @imovels = Imovel.all
+    respond_to do |format|
+      format.pdf { 
+        send_data render_to_string, filename: 'teste.pdf', type: 'application/pdf', disposition: 'attachment'
+      }
     end
   end
 
