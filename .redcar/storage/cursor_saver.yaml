@@ -226,9 +226,6 @@ cursor_positions:
   - :path: config/environments/production.rb
     :cursor_offset: 206
     :timestamp: 2013-08-11 18:43:19 +02:00
-  - :path: Gemfile
-    :cursor_offset: 0
-    :timestamp: 2013-08-11 21:56:51 +02:00
   - :path: app/views/imovels/detalhes.html.erb
     :cursor_offset: 2813
     :timestamp: 2013-08-11 21:56:52 +02:00
@@ -298,18 +295,9 @@ cursor_positions:
   - :path: app/views/cidades/index.html.erb
     :cursor_offset: 114
     :timestamp: 2013-07-28 16:32:53 +02:00
-  - :path: app/models/imovel.rb
-    :cursor_offset: 632
-    :timestamp: 2013-08-12 02:13:40 +02:00
-  - :path: app/controllers/imovels_controller.rb
-    :cursor_offset: 596
-    :timestamp: 2013-08-12 02:00:22 +02:00
   - :path: app/controllers/tipo_imovels_controller.rb
     :cursor_offset: 148
     :timestamp: 2013-08-11 21:56:51 +02:00
-  - :path: app/views/imovels/_pesquisa.html.erb
-    :cursor_offset: 928
-    :timestamp: 2013-08-12 02:27:11 +02:00
   - :path: app/controllers/tipologia_controller.rb
     :cursor_offset: 130
     :timestamp: 2013-07-29 11:41:20 +02:00
@@ -319,6 +307,18 @@ cursor_positions:
   - :path: app/views/imovels/show.html.erb
     :cursor_offset: 298
     :timestamp: 2013-08-11 22:00:46 +02:00
+  - :path: app/views/imovels/_pesquisa.html.erb
+    :cursor_offset: 985
+    :timestamp: 2013-08-12 02:27:11 +02:00
+  - :path: app/controllers/imovels_controller.rb
+    :cursor_offset: 596
+    :timestamp: 2013-08-12 02:00:22 +02:00
+  - :path: Gemfile
+    :cursor_offset: 0
+    :timestamp: 2013-08-11 21:56:51 +02:00
+  - :path: app/models/imovel.rb
+    :cursor_offset: 632
+    :timestamp: 2013-08-12 02:13:40 +02:00
   - :path: app/views/imovels/index.html.erb
     :cursor_offset: 1110
     :timestamp: 2013-08-11 21:21:58 +02:00
