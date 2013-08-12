@@ -1,4 +1,4 @@
-1376259923
+1376267490
 Ability	/home/ssror2013/projects/imoveis/app/models/ability.rb	class Ability
 ActionView	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAttachmentAvatarToDocumentos	/home/ssror2013/projects/imoveis/db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb	class AddAttachmentAvatarToDocumentos 
@@ -106,6 +106,7 @@ UsersController	/home/ssror2013/projects/imoveis/app/controllers/users_controlle
 UsersControllerTest	/home/ssror2013/projects/imoveis/test/functional/users_controller_test.rb	class UsersControllerTest 
 UsersHelper	/home/ssror2013/projects/imoveis/app/helpers/users_helper.rb	module UsersHelper
 UsersHelperTest	/home/ssror2013/projects/imoveis/test/unit/helpers/users_helper_test.rb	class UsersHelperTest 
+actualizaTipoImovel	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def actualizaTipoImovel
 all_input_tags	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	      def all_input_tags(record, record_name, options)
 change	/home/ssror2013/projects/imoveis/db/migrate/20130724181316_create_imovels.rb	  def change
 change	/home/ssror2013/projects/imoveis/db/migrate/20130728143548_create_estados.rb	  def change
@@ -130,8 +131,8 @@ create	/home/ssror2013/projects/imoveis/app/controllers/moedas_controller.rb	  d
 create	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	  def create
 create	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def create
 create	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def create
-create	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def create
 create	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def create
+create	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def create
 current_user	/home/ssror2013/projects/imoveis/app/controllers/application_controller.rb	def current_user 
 current_user_session	/home/ssror2013/projects/imoveis/app/controllers/application_controller.rb	def current_user_session 
 default_input_block	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	      def default_input_block
@@ -145,8 +146,8 @@ destroy	/home/ssror2013/projects/imoveis/app/controllers/moedas_controller.rb	  
 destroy	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	  def destroy
 destroy	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def destroy
 destroy	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def destroy
-destroy	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def destroy
 destroy	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def destroy
+destroy	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def destroy
 down	/home/ssror2013/projects/imoveis/db/migrate/20130731161652_change_imovel_preco_float.rb	  def down
 down	/home/ssror2013/projects/imoveis/db/migrate/20130731162258_add_imovel_moeda_string.rb	  def down
 down	/home/ssror2013/projects/imoveis/db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb	  def self.down
@@ -161,8 +162,8 @@ edit	/home/ssror2013/projects/imoveis/app/controllers/moedas_controller.rb	  def
 edit	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	  def edit
 edit	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def edit
 edit	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def edit
-edit	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def edit
 edit	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def edit
+edit	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def edit
 empty?	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	      def empty?
 empty?	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def empty?() 
 empty?	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def empty?() 
@@ -187,8 +188,8 @@ index	/home/ssror2013/projects/imoveis/app/controllers/moedas_controller.rb	  de
 index	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	  def index
 index	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def index
 index	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def index
-index	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def index
 index	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def index
+index	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def index
 initialize	/home/ssror2013/projects/imoveis/app/models/ability.rb	  def initialize(user)
 input	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	      def input(record_name, method, options = {})
 new	/home/ssror2013/projects/imoveis/app/controllers/user_sessions_controller.rb	  def new
@@ -201,8 +202,8 @@ new	/home/ssror2013/projects/imoveis/app/controllers/moedas_controller.rb	  def 
 new	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	  def new
 new	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def new
 new	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def new
-new	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def new
 new	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def new
+new	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def new
 persisted?	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def persisted?() 
 pesquisa	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def pesquisa
 pesquizar	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def pesquizar
@@ -224,8 +225,8 @@ show	/home/ssror2013/projects/imoveis/app/controllers/moedas_controller.rb	  def
 show	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	  def show
 show	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def show
 show	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def show
-show	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def show
 show	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def show
+show	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def show
 test_default_form_builder_no_instance_variable	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def test_default_form_builder_no_instance_variable
 test_default_form_builder_with_dynamic_form_helpers	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def test_default_form_builder_with_dynamic_form_helpers
 test_error_for_block	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def test_error_for_block
@@ -273,6 +274,6 @@ update	/home/ssror2013/projects/imoveis/app/controllers/moedas_controller.rb	  d
 update	/home/ssror2013/projects/imoveis/app/controllers/documentos_controller.rb	  def update
 update	/home/ssror2013/projects/imoveis/app/controllers/tipo_negocios_controller.rb	  def update
 update	/home/ssror2013/projects/imoveis/app/controllers/tipo_imovels_controller.rb	  def update
-update	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def update
 update	/home/ssror2013/projects/imoveis/app/controllers/fotosresposta_controller.rb	  def update
+update	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  def update
 url_for	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def url_for(options)

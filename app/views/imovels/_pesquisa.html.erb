@@ -1,11 +1,23 @@
 <script type="text/javascript">
   $(function(){
-  
     
-    $("#idTipo").change( function() {
+    $("#idtipoImovel").change( function() {
       $("#idTipologia").empty();
       $('#idTipologia').append('<option value="">' + "Tipologia" + '</option>');
-      $('#idTipologia').append('<option value="">' + " " + '</option>');
+      
+    if( $("#idtipoImovel").val() == "Apartamento") {
+        $('#idTipologia').append('<option value="T1">' + 'T1' + '</option>');
+        $('#idTipologia').append('<option value="T2">' + 'T2' + '</option>');
+        $('#idTipologia').append('<option value="T3">' + 'T3' + '</option>');
+        $('#idTipologia').append('<option value="T4">' + 'T4' + '</option>');
+    }
+    
+    if( $("#idtipoImovel").val() == "Vivenda") {
+        $('#idTipologia').append('<option value="V1">' + 'V1' + '</option>');
+        $('#idTipologia').append('<option value="V2">' + 'V2' + '</option>');
+        $('#idTipologia').append('<option value="V3">' + 'V3' + '</option>');
+        $('#idTipologia').append('<option value="V4">' + 'V4' + '</option>');
+    }
     });
   });
 </script>
@@ -47,7 +59,7 @@
             </select>
 						</p>
 						<p>
-						<select  id= "idtipoImovel" name="idtipoImovel" class="boxGeral" style="width:138px;" onchange="tipologiasRap(this.form)">
+						<select  id= "idtipoImovel" name="idtipoImovel" class="boxGeral" style="width:138px;" >
 						<option value="">Tipo de imóvel</option>
 						<option value=""></option> 
             <%  TipoImovel.all.each do |imovel| %>

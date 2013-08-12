@@ -173,12 +173,6 @@ cursor_positions:
   - :path: config/initializers/willpaginate.rb
     :cursor_offset: 29
     :timestamp: 2013-08-09 02:57:59 +02:00
-  - :path: app/assets/javascripts/imovels.js.coffee
-    :cursor_offset: 277
-    :timestamp: 2013-08-09 01:40:12 +02:00
-  - :path: app/views/imovels/_imovels.html.erb
-    :cursor_offset: 0
-    :timestamp: 2013-08-09 03:12:15 +02:00
   - :path: app/assets/javascripts/application.js
     :cursor_offset: 910
     :timestamp: 2013-08-09 03:06:16 +02:00
@@ -191,9 +185,6 @@ cursor_positions:
   - :path: app/views/imovels/edit.html.erb
     :cursor_offset: 112
     :timestamp: 2013-08-09 04:25:36 +02:00
-  - :path: app/views/tipo_imovels/index.html.erb
-    :cursor_offset: 0
-    :timestamp: 2013-07-28 16:27:56 +02:00
   - :path: app/models/documento.rb
     :cursor_offset: 117
     :timestamp: 2013-08-04 20:56:02 +02:00
@@ -212,11 +203,6 @@ cursor_positions:
   - :path: app/views/tipo_imovels/new.html.erb
     :cursor_offset: 0
     :timestamp: 2013-07-28 16:27:56 +02:00
-  - :path: app/controllers/tipo_imovels_controller.rb
-    :cursor_offset: 130
-    :timestamp: 2013-07-28 16:27:56 +02:00
-    :selection_offset: 117
-    :block_selection_mode: false
   - :path: app/models/moeda.rb
     :cursor_offset: 0
     :timestamp: 2013-07-31 18:29:31 +02:00
@@ -225,26 +211,12 @@ cursor_positions:
     :timestamp: 2013-07-24 15:55:32 +02:00
     :selection_offset: 112
     :block_selection_mode: false
-  - :path: app/models/tipo_imovel.rb
-    :cursor_offset: 89
-    :timestamp: 2013-08-09 05:20:28 +02:00
-    :selection_offset: 87
-    :block_selection_mode: false
-  - :path: app/views/tipo_imovels/_form.html.erb
-    :cursor_offset: 180
-    :timestamp: 2013-08-09 05:20:04 +02:00
-  - :path: app/models/tipologium.rb
-    :cursor_offset: 85
-    :timestamp: 2013-08-09 05:17:41 +02:00
   - :path: app/assets/images/rails.png
     :cursor_offset: 671
     :timestamp: 2013-07-24 14:43:20 +02:00
   - :path: app/assets/stylesheets/rec.css
     :cursor_offset: 241
     :timestamp: 2013-08-09 06:45:12 +02:00
-  - :path: app/views/imovels/_form.html.erb
-    :cursor_offset: 879
-    :timestamp: 2013-08-09 06:32:43 +02:00
   - :path: app/assets/stylesheets/application.css
     :cursor_offset: 724
     :timestamp: 2013-08-09 06:45:15 +02:00
@@ -262,26 +234,12 @@ cursor_positions:
     :timestamp: 2013-08-11 21:56:52 +02:00
     :selection_offset: 2971
     :block_selection_mode: false
-  - :path: app/models/imovel.rb
-    :cursor_offset: 0
-    :timestamp: 2013-08-11 21:56:52 +02:00
-  - :path: app/views/imovels/_pesquisa.html.erb
-    :cursor_offset: 2209
-    :timestamp: 2013-08-11 22:11:41 +02:00
   - :path: app/views/imovels/_destaque.html.erb
     :cursor_offset: 275
     :timestamp: 2013-08-11 22:19:47 +02:00
-  - :path: app/views/imovels/index.html.erb
-    :cursor_offset: 298
-    :timestamp: 2013-08-11 21:21:58 +02:00
-    :selection_offset: 279
-    :block_selection_mode: false
   - :path: app/views/layouts/application.html.erb
     :cursor_offset: 3764
     :timestamp: 2013-08-11 22:18:43 +02:00
-  - :path: app/views/imovels/show.html.erb
-    :cursor_offset: 298
-    :timestamp: 2013-08-11 22:00:46 +02:00
   - :path: app/controllers/microposts_controller.rb
     :cursor_offset: 0
     :timestamp: 2013-07-24 14:43:20 +02:00
@@ -311,10 +269,59 @@ cursor_positions:
   - :path: db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb
     :cursor_offset: 0
     :timestamp: 2013-08-01 01:19:45 +02:00
+  - :path: app/models/fotosresposta.rb
+    :cursor_offset: 60
+    :timestamp: 2013-08-11 23:29:31 +02:00
+    :selection_offset: 69
+    :block_selection_mode: false
+  - :path: app/views/tipo_imovels/_form.html.erb
+    :cursor_offset: 143
+    :timestamp: 2013-08-12 01:07:40 +02:00
+  - :path: app/views/tipo_imovels/index.html.erb
+    :cursor_offset: 0
+    :timestamp: 2013-08-11 21:56:52 +02:00
+  - :path: app/models/tipologium.rb
+    :cursor_offset: 69
+    :timestamp: 2013-08-12 01:03:09 +02:00
+  - :path: app/models/tipo_imovel.rb
+    :cursor_offset: 139
+    :timestamp: 2013-08-12 01:07:21 +02:00
   - :path: db/migrate/20130811204039_addtipologiatoimovel.rb
-    :cursor_offset: 97
-    :timestamp: 2013-08-11 22:41:57 +02:00
+    :cursor_offset: 232
+    :timestamp: 2013-08-11 22:43:33 +02:00
+  - :path: app/views/imovels/_imovels.html.erb
+    :cursor_offset: 0
+    :timestamp: 2013-08-09 03:12:15 +02:00
+  - :path: app/assets/javascripts/imovels.js.coffee
+    :cursor_offset: 230
+    :timestamp: 2013-08-12 01:17:16 +02:00
+  - :path: app/views/cidades/index.html.erb
+    :cursor_offset: 114
+    :timestamp: 2013-07-28 16:32:53 +02:00
+  - :path: app/models/imovel.rb
+    :cursor_offset: 632
+    :timestamp: 2013-08-12 02:13:40 +02:00
   - :path: app/controllers/imovels_controller.rb
-    :cursor_offset: 2714
-    :timestamp: 2013-08-11 22:31:44 +02:00
+    :cursor_offset: 596
+    :timestamp: 2013-08-12 02:00:22 +02:00
+  - :path: app/controllers/tipo_imovels_controller.rb
+    :cursor_offset: 148
+    :timestamp: 2013-08-11 21:56:51 +02:00
+  - :path: app/views/imovels/_pesquisa.html.erb
+    :cursor_offset: 928
+    :timestamp: 2013-08-12 02:27:11 +02:00
+  - :path: app/controllers/tipologia_controller.rb
+    :cursor_offset: 130
+    :timestamp: 2013-07-29 11:41:20 +02:00
+  - :path: app/views/imovels/_form.html.erb
+    :cursor_offset: 1102
+    :timestamp: 2013-08-12 02:26:50 +02:00
+  - :path: app/views/imovels/show.html.erb
+    :cursor_offset: 298
+    :timestamp: 2013-08-11 22:00:46 +02:00
+  - :path: app/views/imovels/index.html.erb
+    :cursor_offset: 1110
+    :timestamp: 2013-08-11 21:21:58 +02:00
+    :selection_offset: 1076
+    :block_selection_mode: false
 files_to_retain: 0

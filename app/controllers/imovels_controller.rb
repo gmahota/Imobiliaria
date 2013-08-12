@@ -15,7 +15,13 @@ class ImovelsController < ApplicationController
     end
     end
     
-    end
+  end
+  
+  def actualizaTipoImovel
+    
+  
+  end
+  
   
   # GET /imovels
   # GET /imovels.json

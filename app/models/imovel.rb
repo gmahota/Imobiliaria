@@ -9,7 +9,7 @@ class Imovel < ActiveRecord::Base
   def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade)
     @imovel
     if idreferencia.blank?
-      @imovel = self.where("tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ?", "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%")
+      @imovel = self.where("tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ? and tipologia LIKE?" , "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%", "%#{idTipologia}%")
     else
       @imovel = self.where("referencia LIKE ?", "%#{idreferencia}%")
     end
