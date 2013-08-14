@@ -1,4 +1,4 @@
-1376292982
+1376510071
 Ability	/home/ssror2013/projects/imoveis/app/models/ability.rb	class Ability
 ActionView	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAttachmentAvatarToDocumentos	/home/ssror2013/projects/imoveis/db/migrate/20130731231945_add_attachment_avatar_to_documentos.rb	class AddAttachmentAvatarToDocumentos 
@@ -211,7 +211,7 @@ print	/home/ssror2013/projects/imoveis/app/controllers/imovels_controller.rb	  d
 protect_against_forgery?	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def protect_against_forgery?
 request	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_i18n_test.rb	  attr_reader :request
 request_forgery_protection_token	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  attr_accessor :request_forgery_protection_token, :form_authenticity_token
-search	/home/ssror2013/projects/imoveis/app/models/imovel.rb	  def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade)
+search	/home/ssror2013/projects/imoveis/app/models/imovel.rb	  def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, precoMin , precoMax)
 setup	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def setup
 setup	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_i18n_test.rb	  def setup
 setup_post	/home/ssror2013/projects/imoveis/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def setup_post
