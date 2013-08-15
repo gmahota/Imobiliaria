@@ -69,7 +69,8 @@ class ImovelsController < ApplicationController
   # GET /imovels/new
   # GET /imovels/new.json
   def new
-    @imovel = Imovel.new
+    @imovel = Imovel.new 
+    @imovel.raio = 200
 
     respond_to do |format|
       format.html # new.html.erb

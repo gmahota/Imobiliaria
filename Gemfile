@@ -10,8 +10,7 @@ gem "less-rails"
 # gem para permissoes
 
 gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
+gem 'coffee-rails', '~> 3.2.1'
 #gem "rails3-generators"
 
 # Bundle edge Rails instead:
@@ -30,6 +29,8 @@ end
 # in production environments by default.
 group :assets do
   
+  gem "gmaps4rails", "~> 1.5.6"
+  #gem "geocoder"
   gem "report", "~> 0.1.1"
   # gem para pesquizas
   #gem 'sunspot_rails'
