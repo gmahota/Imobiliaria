@@ -182,7 +182,7 @@ DEPENDENCIES
   cancan
   coffee-rails (~> 3.2.1)
   execjs
-  gmaps4rails
+  gmaps4rails (~> 1.5.6)
   jquery-rails
   less-rails
   nested_form
