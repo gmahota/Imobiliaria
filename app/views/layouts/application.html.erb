@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   
 </head>
-<body onload="initialize()">
+<body onload="initialize()" class="main">
    
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
@@ -72,12 +72,12 @@
   <div class="row">
     <div class="span3">
       <div class="bot-pad">
-      </br></br></br></br>
+      
         <%= render 'imovels/pesquisa' %>   
       </div>
     </div>
     <div class="span6">
-    </br></br></br></br>
+    
     <%- flash.each do |k, v| %>
         <div class="alert">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -99,7 +99,7 @@
     </div>
   </div>
   <div class="row">
-  </br>
+  
     <div class = "span10">
       <%= render 'imovels/destaques' %>
     </div>
