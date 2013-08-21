@@ -33,6 +33,8 @@ module MicroApp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     
+    Paperclip::Attachment.default_options[:fog_credentials] = {:provider => "Local", :local_root => "#{Rails.root}/public"}
+    
     #para as imagens ficarem fixas
     config.assets.initialize_on_precompile = false
     
