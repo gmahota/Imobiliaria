@@ -22,12 +22,12 @@ class Imovel < ActiveRecord::Base
       @imovel = self.where("tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ? and tipologia LIKE?" , "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%", "%#{idTipologia}%")
     
       
-      if precoMin.blank? and precoMax.blank?
-        @imovel = self.where("(preco BETWEEN ? and ?) and tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ? and tipologia LIKE?", "%#{precoMin}%", "%#{ precoMax}%" , "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%", "%#{idTipologia}%")
-      else
+      #if precoMin.blank? and precoMax.blank?
+        #@imovel = self.where("(preco BETWEEN ? and ?) and tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ? and tipologia LIKE?", "%#{precoMin}%", "%#{ precoMax}%" , "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%", "%#{idTipologia}%")
+      #else
         @imovel = self.where("tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ? and tipologia LIKE?", "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%", "%#{idTipologia}%")
       
-      end
+      #end
       
     else
       
