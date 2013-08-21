@@ -22,7 +22,7 @@
                             </div>
                             <div class="thumbnail">
                             <% if imovel.documentos.count > 0%>
-                                <%= link_to (image_tag imovel.documentos.first.avatar.url, class:"img-polaroid", :size => "150x150") , imovel_path(imovel) %>
+                                <%= link_to (image_tag imovel.documentos.first.avatar.url, :size => "150x150") , imovel_path(imovel) %>
                               <%end%>
                             </div>
                         </li>
