@@ -182,4 +182,5 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 <%= link_to 'Editar', edit_imovel_path(@imovel), class: "btn btn-small btn-info" %> |
-<%= link_to 'Voltar', imovels_path, class: "btn btn-small btn-danger" %>
+<%= link_to 'Voltar', imovels_path, class: "btn btn-small btn-danger" %> |
+<%= link_to 'Imprimir', imovel_path(@imovel, format: 'pdf')  , class: "btn btn-small btn-info"%> 

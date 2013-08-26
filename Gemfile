@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails", github: 'seyhunak/twitter-bootstrap-rails'
+gem "twitter-bootstrap-rails" #, github: 'seyhunak/twitter-bootstrap-rails'
 gem 'bootstrap-addons-rails'
 gem "less-rails"
 # gem para permissoes
@@ -63,4 +63,5 @@ gem 'execjs'
 gem 'will_paginate', '~> 3.0.0'
 gem 'bootstrap-datepicker-rails'
 gem 'will_paginate-bootstrap'
+gem 'thinreports-rails'
 

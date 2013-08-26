@@ -10,9 +10,10 @@ class ImovelsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @imovels }
-      format.pdf do
-        send_data Imovel.draw(@imovels.first), :filename => 'casas.pdf', :type => 'application/pdf', :disposition => 'inline'
-    end
+      
+      # Example: Basic Usage
+      format.pdf { render_imovels_list(@imovels) }
+
     end
     
   end
@@ -58,6 +59,14 @@ class ImovelsController < ApplicationController
       respond_to do |format|
         format.html # show.html.erb
         format.json { render json: @imovel }
+        
+        # Example: Using thinreports-rails gem
+        # see https://github.com/takeshinoda/thinreports-rails
+        format.pdf {
+          send_data render_to_string, filename: "imovel#{@imovel.referencia}.pdf", 
+                                    type: 'application/pdf', 
+                                    disposition: 'inline'
+        }
       end  
     end
     
@@ -154,5 +163,24 @@ class ImovelsController < ApplicationController
       format.json { render json: @imovels }
     end
     
+  end
+
+
+
+  def render_imovels_list(imovels)
+    report = ThinReports::Report.new layout: File.join(Rails.root, 'app', 'reports', 'imovels.tlf')
+
+    imovels.each do |imovel|
+      report.list.add_row do |row|
+        row.values referencia: imovel.referencia, 
+                   resumo: imovel.resumo, 
+                   cidade: imovel.cidade
+        #row.item(:name).style(:color, 'red') unless task.done?
+      end
+    end
+    
+    send_data report.generate, filename: 'imovels.pdf', 
+                               type: 'application/pdf', 
+                               disposition: 'attachment'
   end
 end

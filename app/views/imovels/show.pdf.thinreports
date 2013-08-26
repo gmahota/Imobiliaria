@@ -1,0 +1,10 @@
+report.start_new_page do |page|
+  page.values referencia: @imovel.referencia, 
+              resumo: @imovel.resumo,
+              preco: @imovel.preco,
+              moeda: @imovel.moeda,
+              tipoimovel: @imovel.tipoImovel,
+              tiponegocio: @imovel.tipoNegocio,
+              estado: @imovel.estado
+end
+
