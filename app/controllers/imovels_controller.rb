@@ -79,6 +79,7 @@ class ImovelsController < ApplicationController
   # GET /imovels/new.json
   def new
     @imovel = Imovel.new 
+    @imovel.moeda = "USD"
     @imovel.raio = 200
 
     respond_to do |format|
