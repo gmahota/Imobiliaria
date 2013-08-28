@@ -2,7 +2,7 @@ class FotosrespostaController < ApplicationController
   # GET /fotosresposta
   # GET /fotosresposta.json
   def index
-    @fotosresposta = Fotosrespostum.all
+    @fotosresposta = Fotosresposta.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class FotosrespostaController < ApplicationController
   # GET /fotosresposta/1
   # GET /fotosresposta/1.json
   def show
-    @fotosrespostum = Fotosrespostum.find(params[:id])
+    @fotosrespostum = Fotosresposta.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class FotosrespostaController < ApplicationController
   # GET /fotosresposta/new
   # GET /fotosresposta/new.json
   def new
-    @fotosrespostum = Fotosrespostum.new
+    @fotosrespostum = Fotosresposta.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +34,17 @@ class FotosrespostaController < ApplicationController
 
   # GET /fotosresposta/1/edit
   def edit
-    @fotosrespostum = Fotosrespostum.find(params[:id])
+    @fotosrespostum = Fotosresposta.find(params[:id])
   end
 
   # POST /fotosresposta
   # POST /fotosresposta.json
   def create
-    @fotosrespostum = Fotosrespostum.new(params[:fotosrespostum])
+    @fotosrespostum = Fotosresposta.new(params[:fotosrespostum])
 
     respond_to do |format|
       if @fotosrespostum.save
-        format.html { redirect_to @fotosrespostum, notice: 'Fotosrespostum was successfully created.' }
+        format.html { redirect_to @fotosrespostum, notice: 'Respostas Criadas com Sucesso.' }
         format.json { render json: @fotosrespostum, status: :created, location: @fotosrespostum }
       else
         format.html { render action: "new" }
@@ -56,11 +56,11 @@ class FotosrespostaController < ApplicationController
   # PUT /fotosresposta/1
   # PUT /fotosresposta/1.json
   def update
-    @fotosrespostum = Fotosrespostum.find(params[:id])
+    @fotosrespostum = Fotosresposta.find(params[:id])
 
     respond_to do |format|
       if @fotosrespostum.update_attributes(params[:fotosrespostum])
-        format.html { redirect_to @fotosrespostum, notice: 'Fotosrespostum was successfully updated.' }
+        format.html { redirect_to @fotosrespostum, notice: 'Respostas actualizadas com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -72,7 +72,7 @@ class FotosrespostaController < ApplicationController
   # DELETE /fotosresposta/1
   # DELETE /fotosresposta/1.json
   def destroy
-    @fotosrespostum = Fotosrespostum.find(params[:id])
+    @fotosrespostum = Fotosresposta.find(params[:id])
     @fotosrespostum.destroy
 
     respond_to do |format|
