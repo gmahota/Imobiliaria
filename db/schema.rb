@@ -66,13 +66,6 @@ ActiveRecord::Schema.define(:version => 20130811212931) do
     t.float    "raio"
   end
 
-  create_table "microposts", :force => true do |t|
-    t.text     "content",    :limit => 255
-    t.integer  "user_id"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-  end
-
   create_table "moedas", :force => true do |t|
     t.string   "sigla"
     t.string   "descricao"
@@ -90,13 +83,6 @@ ActiveRecord::Schema.define(:version => 20130811212931) do
     t.string   "descricao"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "tipocasas", :force => true do |t|
-    t.string   "descricao"
-    t.integer  "tipoimovel_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
   end
 
   create_table "tipologia", :force => true do |t|
