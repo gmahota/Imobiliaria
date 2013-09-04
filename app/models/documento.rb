@@ -1,6 +1,6 @@
 class Documento < ActiveRecord::Base
   attr_accessible :descricao, :imovel_id, :avatar
-  has_attached_file :avatar, :storage => :s3
+  has_attached_file :avatar
   belongs_to :imovel
 
   
