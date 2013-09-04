@@ -19,14 +19,12 @@ class Imovel < ActiveRecord::Base
   def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, precoMin , precoMax)
     @imovel
     if idreferencia.blank?
-      @imovel = self.where("tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ? and tipologia LIKE?" , "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%", "%#{idTipologia}%")
-    
-      
-      if precoMin.blank? and precoMax.blank?
-        #@imovel = self.where("(preco BETWEEN ? and ?) and tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ? and tipologia LIKE?", "%#{precoMin}%", "%#{ precoMax}%" , "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%", "%#{idTipologia}%")
-      else
-        @imovel = self.where("tipoNegocio LIKE ? and tipoImovel LIKE ? and  cidade LIKE ? and tipologia LIKE?", "%#{idNegocio}%", "%#{idtipoImovel}%" , "%#{idCidade}%", "%#{idTipologia}%")
-      end
+     @imovel = self.where(:tipoNegocio => idNegocio) unless idNegocio.blank?
+     @imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
+     @imovel = self.where(:cidade => idNegocio) unless idCidade.blank?
+     @imovel = self.where(:tipologia => idtipoImovel) unless idTipologia.blank?
+     @imovel = self.where(preco: precoMin..precoMax) unless ( precoMin.blank? and precoMax.blank? )  
+     
       
     else
       
