@@ -55,8 +55,10 @@ gem 'simple_form'
 gem 'authlogic'
 gem 'cancan'
 gem "paperclip", "~> 3.0"
+gem "nokogiri", "~> 1.6.0"
 gem 'aws-s3'
 gem 'aws-sdk'
+
 
 gem 'nested_form'
 gem 'execjs'
