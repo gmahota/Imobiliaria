@@ -34,6 +34,10 @@ GEM
     authlogic (3.3.0)
       activerecord (>= 3.2)
       activesupport (>= 3.2)
+    aws-s3 (0.6.3)
+      builder
+      mime-types
+      xml-simple
     bootstrap-addons-rails (0.1.2)
       rails
     bootstrap-datepicker-rails (1.1.1.5)
@@ -170,12 +174,14 @@ GEM
       activesupport
       fast_xs
       unix_utils
+    xml-simple (1.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   authlogic
+  aws-s3
   bootstrap-addons-rails
   bootstrap-datepicker-rails
   cancan
