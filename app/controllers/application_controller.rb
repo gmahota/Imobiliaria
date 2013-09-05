@@ -19,10 +19,3 @@ rescue_from CanCan::AccessDenied do |exception|
 end
 
 end
-
-
-
-
-
-
-

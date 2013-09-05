@@ -27,15 +27,6 @@
 //= require bootstrap/load-image.min
 //= require bootstrap/image-gallery.min
 
-
-
-
-
-
-
-
-
-
 //= require_tree .
 //= require jquery_nested_form
 
