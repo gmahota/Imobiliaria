@@ -2,7 +2,7 @@
 @charset "utf-8";
 body {
 	margin: 0;
-	padding: 0;
+	padding: 40%;
 	width: 100%;
 	color: #6d6d6d;
 	font: normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;
@@ -38,7 +38,7 @@ h2 {
 
 p {
 	margin:8px 0;
-	padding:0 0 8px 0;
+	padding:0 0 0px 0;
 }
 a {
 	color: #9CAF56;
@@ -376,81 +376,7 @@ p.infopost a:hover {
 	padding:0;
 	float:left;
 }
-.fbg {
-	padding: 15px;
-	background-color: #E2E2E2;
-}
-.fbg_resize {
-	margin: 0 auto;
-	width: 960px;
-	padding: 16px 0;
-	color: #1B1B1B;
-}
-.fbg h2 {
-	color: #1B1B1B;
-	padding-bottom: 24px;
-}
-.fbg img.gal {
-	margin: 0 8px 0 0;
-	padding: 0;
-}
-.fbg .col {
-	margin:0;
-	float:right;
-}
-.fbg .c1 {
-	padding:0 16px 0 0;
-	width:280px;
-	float:right;
-	line-height:inherit;
-}
-.fbg .c2 {
-	width:200px;
-	float:right;
-	text-align:right;
-	line-height:inherit;
-	padding-top: 0px;
-	padding-right: 35px;
-	padding-bottom: 0;
-	padding-left: 0px;
-}
-.fbg .c3 {
-	padding:0 0 0 16px;
-	width:294px;
-}
-.fbg .fbg_ul {
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-.fbg .fbg_ul li {
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-.fbg .fbg_ul li a {
-	display: block;
-	margin: 0;
-	padding: 2px 0 2px 12px;
-	color: #1B1B1B;
-	text-decoration: none;
-}
-.fbg .fbg_ul li a:hover {
-	text-decoration: underline;
-}
-.fbg p.contact_info {
-	line-height:1.8em;
-}
-.fbg p.contact_info a {
-	color:#fff;
-	text-decoration:underline;
-}
-.fbg p.contact_info span {
-	display:block;
-	float:left;
-	width:74px;
-	font-weight:bold;
-}
+
 ol {
 	list-style:none;
 }

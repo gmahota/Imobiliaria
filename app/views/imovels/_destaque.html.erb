@@ -1,3 +1,4 @@
+<% if current_user %>
 <h2>Destaque</h2>
 <%  @imovels =Imovel.find(:all,:conditions => ["estado = ? ","Destaque"])
 %>          
@@ -12,4 +13,6 @@
       
     </br>
      
+<% end %>
+
 <% end %>
