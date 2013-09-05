@@ -14,6 +14,7 @@ class Ability
        can :update, :all
     else
        can :read, :all
+       can :create, User
     end
 
 

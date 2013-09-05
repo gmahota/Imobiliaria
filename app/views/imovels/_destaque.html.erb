@@ -1,4 +1,4 @@
-<% if current_user %>
+<% if can? :create, current_user %>
 <h2>Destaque</h2>
 <%  @imovels =Imovel.find(:all,:conditions => ["estado = ? ","Destaque"])
 %>          
