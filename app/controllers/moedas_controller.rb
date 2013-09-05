@@ -1,6 +1,8 @@
 class MoedasController < ApplicationController
   # GET /moedas
   # GET /moedas.json
+  load_and_authorize_resource 
+  
   def index
     @moedas = Moeda.all
 

@@ -1,6 +1,8 @@
 class CidadesController < ApplicationController
   # GET /cidades
   # GET /cidades.json
+  load_and_authorize_resource 
+  
   def index
     @cidades = Cidade.all
 

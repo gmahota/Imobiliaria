@@ -1,6 +1,8 @@
 class EstadosController < ApplicationController
   # GET /estados
   # GET /estados.json
+  load_and_authorize_resource 
+  
   def index
     @estados = Estado.all
 

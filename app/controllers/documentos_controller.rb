@@ -1,6 +1,8 @@
 class DocumentosController < ApplicationController
   # GET /documentos
   # GET /documentos.json
+  load_and_authorize_resource 
+  
   def index
     @documentos = Documento.all
 

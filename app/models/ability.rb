@@ -4,10 +4,19 @@ class Ability
   def initialize(user)
     
     user ||= User.new # Guest
-    can :read, :all
-    can :manage, :all
-    can :update, :all
+    #can :read, :all
+    #can :manage, :all
+    #can :update, :all
     
+    # Admins 
+    if user.id
+       can :manage, :all
+       can :update, :all
+    else
+       can :read, :all
+    end
+
+
     #if user.id
     #   can :manage, Imovel
     #   can :update, User, id: user.id

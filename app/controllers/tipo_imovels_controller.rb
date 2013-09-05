@@ -1,6 +1,8 @@
 class TipoImovelsController < ApplicationController
   # GET /tipo_imovels
   # GET /tipo_imovels.json
+  load_and_authorize_resource 
+  
   def index
     @tipo_imovels = TipoImovel.all
 

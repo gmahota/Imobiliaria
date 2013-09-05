@@ -1,6 +1,7 @@
 class TipologiaController < ApplicationController
   # GET /tipologia
   # GET /tipologia.json
+  load_and_authorize_resource 
   def index
     @tipologia = Tipologium.all
 

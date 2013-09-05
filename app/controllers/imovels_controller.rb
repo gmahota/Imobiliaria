@@ -1,5 +1,7 @@
 class ImovelsController < ApplicationController
   
+  load_and_authorize_resource #:nested => :documento 
+  
   # GET /imovels
   # GET /imovels.json
   def index

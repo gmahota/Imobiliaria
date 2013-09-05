@@ -1,6 +1,8 @@
 class FotosrespostaController < ApplicationController
   # GET /fotosresposta
   # GET /fotosresposta.json
+  load_and_authorize_resource 
+  
   def index
     @fotosresposta = Fotosresposta.all
 

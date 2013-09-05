@@ -1,6 +1,7 @@
 class TipoNegociosController < ApplicationController
   # GET /tipo_negocios
   # GET /tipo_negocios.json
+  load_and_authorize_resource 
   def index
     @tipo_negocios = TipoNegocio.all
 

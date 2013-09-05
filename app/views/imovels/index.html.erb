@@ -26,10 +26,10 @@
       <br/>
       Preco: <%= imovel.preco %> <%= imovel.moeda %>
       <br/>
-      
+      <% if can? :manage, current_user %> 
         <%= link_to 'Editar', edit_imovel_path(imovel), class: "btn btn-small btn-info" %> | 
         <%= link_to 'Apagar', imovel,class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Tens a certeza?' } %>
-     
+      <%end%>
     </td>
   </tr>
 <% end %>
@@ -42,6 +42,7 @@
 </center>
 
 <br />
-
+<% if can? :manage, current_user %> 
 <%= link_to '+ Novo', new_imovel_path, class: "btn btn-small btn-info"  %> |
+<% end %>
 <%= link_to 'Imprimir', imovels_path(format: 'pdf'), class: "btn btn-small btn-info" %>
