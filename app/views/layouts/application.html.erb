@@ -9,32 +9,9 @@
 </head>
 <body onload="initialize()" class="main">
 
-
-<div style="background-image: url(<%= asset_path 'REC_top_bg.jpg' %>)">
-         
-
-<div class ="Hero"  >
-    <div class="logo"> <%= link_to (image_tag "REC_top_logo.png", :size => "250x350") , "http://www.rec.co.mz"%>
-     </div>
-
-     <div class="top_holding">
-            Uma Empresa do Grupo
-              <%= link_to (image_tag "Logos_grupo-Meridian1.png") , "http://www.meridian32.com"%>
-
-
-  </div>
-
-</div>   
-</div>
-
-
-
-
-
-
-<div class="navbar navbar-inverse navbar-fixed-top" style=" position: static;" >
+<div class="navbar navbar-inverse navbar-fixed-top" style="position: static;">
   <div class="navbar-inner">
-    <a class="brand" href="#"></a>
+    <a class="brand" href="#">Intermediacao</a>
     
     <ul class="nav">
               
@@ -77,11 +54,26 @@
 </div>
 
 
-
+<div class="container" style="background-image: url(<%= asset_path 'REC_top_bg.jpg' %>) ;">
+           
+  <div class="logo"> <%= link_to (image_tag "REC_top_logo.png", :size => "250x350") , "http://www.rec.co.mz"%>
+            </div>
+         
+          
+          <div class="top_holding">
 
             
 
 
+              <%= link_to (image_tag "Logos_grupo-Meridian1.png") , "http://www.meridian32.com"%>
+
+
+            </div>
+
+          <div class="top_nav"><a href="#">PT</a> | <a href="#">EN</a> <img src="#" width="10" height="1"/>Uma empresa do GRUPO Meridian32
+          </div>  
+
+</div>
 
 
 
