@@ -10,10 +10,7 @@
  *
  *= require_self
  *= require bootstrap_and_overrides
-
  *= require bootstrap/image-gallery
-
-
  *= require_tree .
  */
 
