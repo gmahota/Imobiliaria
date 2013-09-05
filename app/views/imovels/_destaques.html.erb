@@ -1,4 +1,4 @@
-<% if can? :create, current_user %>
+<% if !current_user %>
 
 <% @imovels =Imovel.all%>          
 
