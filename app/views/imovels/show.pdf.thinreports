@@ -6,7 +6,7 @@ report.start_new_page do |page|
               tipoimovel: @imovel.tipoImovel,
               tiponegocio: @imovel.tipoNegocio,
               estado: @imovel.estado
-  page.item(:foto1).src(open('http://'+request.host+':'+request.port.to_s+@imovel.documentos.first.avatar.url ))
+  page.item(:foto1).src(open('http://'+@imovel.documentos.first.avatar.url ))
   page.item(:fotolocalizacao).src(open("http://maps.google.com/maps/api/staticmap?center=" + @imovel.latitude.to_s + "," + @imovel.longitude.to_s + "&markers=" + @imovel.latitude.to_s + "," + @imovel.longitude.to_s + "&zoom=15&size=640x640&sensor=false")) 
 end
 
