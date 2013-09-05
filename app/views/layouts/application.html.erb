@@ -9,7 +9,30 @@
 </head>
 <body onload="initialize()" class="main">
 
-<div class="navbar navbar-inverse navbar-fixed-top" style="position: static;">
+
+<div style="background-image: url(<%= asset_path 'REC_top_bg.jpg' %>)">
+         
+
+<div class ="Hero"  >
+    <div class="logo"> <%= link_to (image_tag "REC_top_logo.png", :size => "250x350") , "http://www.rec.co.mz"%>
+     </div>
+
+     <div class="top_holding">
+            Uma Empresa do Grupo
+              <%= link_to (image_tag "Logos_grupo-Meridian1.png") , "http://www.meridian32.com"%>
+
+
+  </div>
+
+</div>   
+</div>
+
+
+
+
+
+
+<div class="navbar navbar-inverse navbar-fixed-top" style=" position: static;" >
   <div class="navbar-inner">
     <a class="brand" href="#"></a>
     
@@ -54,21 +77,8 @@
 </div>
 
 
-<div class="container">
-         
-
-<div class ="Hero"  style="background-image: url(<%= asset_path 'REC_top_bg.jpg' %>)">
-    <div class="logo"> <%= link_to (image_tag "REC_top_logo.png", :size => "250x350") , "http://www.rec.co.mz"%>
-            </div>
-          </div>   
-          
-<div class="top_holding">
-
-              <%= link_to (image_tag "Logos_grupo-Meridian1.png") , "http://www.meridian32.com"%>
 
 
-            </div>
-</div>
             
 
 
