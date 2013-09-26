@@ -30,7 +30,7 @@ end
 group :assets do
   
   gem "gmaps4rails", "~> 1.5.6"
-  #gem "geocoder"
+  gem "geocoder"
   gem "report", "~> 0.1.1"
   # gem para pesquizas
   #gem 'sunspot_rails'

@@ -64,6 +64,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fast_xs (0.8.0)
+    geocoder (1.1.8)
     gmaps4rails (1.5.6)
     hashery (2.1.0)
     hike (1.2.3)
@@ -196,6 +197,7 @@ DEPENDENCIES
   cancan
   coffee-rails (~> 3.2.1)
   execjs
+  geocoder
   gmaps4rails (~> 1.5.6)
   jquery-rails
   less-rails
