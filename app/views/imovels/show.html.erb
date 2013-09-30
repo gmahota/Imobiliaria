@@ -45,23 +45,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
 
-
-
-
-
-
-<%#<p id="notice"><%= notice %><%#</p> %>
 <p>
-<%#= image_tag "#{@imovel.referencia}-principal.jpg", class:"img-polaroid", :size => "400x400"%>
- <% if @imovel.documentos.count > 0%>
-<%= image_tag @imovel.documentos.first.avatar.url, :size => "400x400" %>
-<%end%>     
-         
-<%# @imovel.documentos.each do |doc| %>
-<%# if doc.descricao = "Foto Principal"%> 
-            <%#= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "400x400") , "/imovels/#{@imovel.referencia}/detalhes" %>
-          <%#end%>
-      <%#end%>
+
+<% @imovel.documentos.each do |doc| %>
+      <% if doc.descricao == "Hall Entrada" %> 
+            <%= image_tag doc.avatar.url, :size => "400x400"%>
+          <%end%>
+      <%end%>
+
+
+  
 </p>
 
 
@@ -130,7 +123,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   
             <% if doc.descricao = "Foto"%>
               <a data-gallery="gallery" href="#{image_tag doc.avatar.url}"> 
-                <%= link_to (image_tag doc.avatar.url, class:"img-polaroid", :size => "100x100") , doc.avatar.url %>
+                <%= link_to (image_tag doc.avatar.url, :size => "100x100", :title => doc.descricao) , doc.avatar.url %>
               </a>
             <%end%>
           <%end%>
@@ -138,6 +131,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
         </div>
       </div>
     
+
     </div>
   </div>
   
@@ -161,27 +155,53 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </div>  
 
 
-<p>
-
-<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="div.gallery-item">
-  
-          <% @imovel.documentos.each do |doc| %>
-  
-            <% if doc.descricao = "Foto"%>
-              <a data-gallery="gallery" href="#{image_tag doc.avatar.url}"> 
-                <%= link_to (image_tag doc.avatar.url, :size => "100x100") , doc.avatar.url %>
-              </a>
-            <%end%>
-          <%end%>
-
-        </div>
-
-
-
-</p>
-
 <% if can? :manage, current_user %> 
 <%= link_to 'Editar', edit_imovel_path(@imovel), class: "btn btn-small btn-info" %> |
 <%end%>
 <%= link_to 'Voltar', imovels_path, class: "btn btn-small btn-danger" %> |
 <%= link_to 'Imprimir', imovel_path(@imovel, format: 'pdf')  , class: "btn btn-small btn-info"%> 
+
+
+
+
+
+
+
+<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+  <a data-gallery="gallery" href="http://farm4.static.flickr.com/3685/9996751123_2179a5ae86_b.jpg" title="Above the Mist"><img src="http://farm4.static.flickr.com/3685/9996751123_2179a5ae86_s.jpg"></a></div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3 class="modal-title"></h3>
+    </div>
+    <div class="modal-body"><div class="modal-image"></div></div>
+    <div class="modal-footer">
+        <a class="btn modal-download" target="_blank">
+            <i class="icon-download"></i>
+            <span>Download</span>
+        </a>
+        <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000">
+            <i class="icon-play icon-white"></i>
+            <span>Slideshow</span>
+        </a>
+        <a class="btn btn-info modal-prev">
+            <i class="icon-arrow-left icon-white"></i>
+            <span>Previous</span>
+        </a>
+        <a class="btn btn-primary modal-next">
+            <span>Next</span>
+            <i class="icon-arrow-right icon-white"></i>
+        </a>
+    </div>
+</div>
