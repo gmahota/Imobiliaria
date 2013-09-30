@@ -34,8 +34,8 @@ class Imovel < ActiveRecord::Base
       
     end
     #if idreferencia.blank? and idNegocio.blank? and idtipoImovel.blank? and idTipologia.blank? and idCidade.blank? and precoMin.blank? and precoMax.blank?
-    #  @imovel = self.where("id LIKE ?", "%#{idreferencia}%");
-    #end
+      @imovel = self.where("id >", 0);
+    end
     @imovel
   end
 end
