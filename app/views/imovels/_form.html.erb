@@ -18,22 +18,29 @@
     
     
     $("#imovel_tipoImovel").change( function() {
+      var tipoimovel = $("#imovel_tipoImovel").val();
       $("#imovel_tipologia").empty();
       $('#imovel_tipologia').append('<option value="">' + "Tipologia" + '</option>');
       
-    if( $("#imovel_tipoImovel").val() == "Apartamento") {
-        $('#imovel_tipologia').append('<option value="T1">' + 'T1' + '</option>');
-        $('#imovel_tipologia').append('<option value="T2">' + 'T2' + '</option>');
-        $('#imovel_tipologia').append('<option value="T3">' + 'T3' + '</option>');
-        $('#imovel_tipologia').append('<option value="T4">' + 'T4' + '</option>');
-    }
-    
-    if( $("#imovel_tipoImovel").val() == "Vivenda") {
-        $('#imovel_tipologia').append('<option value="V1">' + 'V1' + '</option>');
-        $('#imovel_tipologia').append('<option value="V2">' + 'V2' + '</option>');
-        $('#imovel_tipologia').append('<option value="V3">' + 'V3' + '</option>');
-        $('#imovel_tipologia').append('<option value="V4">' + 'V4' + '</option>');
-    }
+      $.ajax({
+         url: '/tipologia/0/getTipologias',
+          data: "idTipoImovel=" + tipoimovel ,
+          type:"get",
+         dataType:"json", //the type of response you are expecting from the server
+         success:function(data){
+             
+             //iterate over the result sent by the server and populate the category combo e.g.
+             $.each(data,function(k,v){
+               $("#imovel_tipologia").append("<option value="+ v.descricao +">"+v.descricao+"</option>");
+             });
+
+         },
+         error:function(jxhr){
+             console.log(jxhr.responseText);
+         }
+
+
+      });
     });
   });
 </script>
@@ -186,7 +193,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
  
     <div class="tab-content">
       <div class="tab-pane active" id="dados">
-        <%= f.input :referencia %>
+        
         <%= f.input :resumo %>
         <%= f.input :descriacao , as: :text %>
       </div>

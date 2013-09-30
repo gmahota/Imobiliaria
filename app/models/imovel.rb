@@ -30,11 +30,11 @@ class Imovel < ActiveRecord::Base
       
       
       
-      @imovel = self.where("referencia LIKE ?", "%#{idreferencia}%")
+      @imovel = self.where("id LIKE ?", "%#{idreferencia}%")
       
     end
     if idreferencia.blank? and idNegocio.blank? and idtipoImovel.blank? and idTipologia.blank? and idCidade.blank? and precoMin.blank? and precoMax.blank?
-      @imovel = self.where("referencia LIKE ?", "%#{idreferencia}%");
+      @imovel = self.where("id LIKE ?", "%#{idreferencia}%");
     end
     @imovel
   end

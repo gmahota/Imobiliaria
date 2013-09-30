@@ -20,10 +20,7 @@ class ImovelsController < ApplicationController
     
   end
   
-  def actualizaTipoImovel
-    
   
-  end
   
   
   # GET /imovels

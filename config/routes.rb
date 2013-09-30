@@ -11,7 +11,9 @@ MicroApp::Application.routes.draw do
   resources :moedas
 
 
-  resources :tipologia
+  resources :tipologia do
+    get 'getTipologias'
+  end
 
 
   resources :estados
@@ -23,7 +25,7 @@ MicroApp::Application.routes.draw do
   resources :tipo_negocios
 
 
-  resources :tipo_imovels
+  resources :tipo_imovels 
 
 
   resources :imovels 

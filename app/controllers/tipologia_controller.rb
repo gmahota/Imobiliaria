@@ -11,6 +11,25 @@ class TipologiaController < ApplicationController
     end
   end
 
+  def getTipologias
+    
+    #@tipoImovel = TipoImovel.where(:descricao => params[:idtipoimovel])
+    @tipoimovel = TipoImovel.find(:first,:conditions => ["descricao = ?",params[:idTipoImovel]] )
+    
+    @tipologias = Tipologium.find(:all,:conditions =>["tipoImovel_id",@tipoimovel.id] )
+    
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @tipologias }
+      
+      # Example: Basic Usage
+      #format.pdf { render_imovels_list(@imovels) }
+
+    end
+
+  end
+
   # GET /tipologia/1
   # GET /tipologia/1.json
   def show
