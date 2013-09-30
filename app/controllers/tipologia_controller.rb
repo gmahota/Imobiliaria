@@ -16,7 +16,7 @@ class TipologiaController < ApplicationController
     #@tipoImovel = TipoImovel.where(:descricao => params[:idtipoimovel])
     @tipoimovel = TipoImovel.find(:first,:conditions => ["descricao = ?",params[:idTipoImovel]] )
     
-    @tipologias = Tipologium.find(:all,:conditions =>["tipoImovel_id",@tipoimovel.id] )
+    @tipologias = Tipologium.where(:tipoImovel_id => @tipoimovel.id )
     
 
     respond_to do |format|
