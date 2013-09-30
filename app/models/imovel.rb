@@ -32,7 +32,7 @@ class Imovel < ActiveRecord::Base
       
     end
     if idreferencia.blank? and idNegocio.blank? and idtipoImovel.blank? and idTipologia.blank? and idCidade.blank? and precoMin.blank? and precoMax.blank?
-      @imovel = self.where(id: > 0);
+      @imovel = self.where(id: 0..1000000000);
     end
     @imovel
   end
