@@ -28,7 +28,7 @@ class Imovel < ActiveRecord::Base
       
     else
       
-      @imovel = self.where("id >", "%#{idreferencia}%")
+      @imovel = self.where("id > ", 0)
       
     end
     
