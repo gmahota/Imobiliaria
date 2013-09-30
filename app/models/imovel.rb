@@ -28,12 +28,11 @@ class Imovel < ActiveRecord::Base
       
     else
       
-      
-      
-      @imovel = self.where("id LIKE ?", "%#{idreferencia}%")
+      @imovel = self.where("id >", "%#{idreferencia}%")
       
     end
-    #if idreferencia.blank? and idNegocio.blank? and idtipoImovel.blank? and idTipologia.blank? and idCidade.blank? and precoMin.blank? and precoMax.blank?
+    
+    if idreferencia.blank? and idNegocio.blank? and idtipoImovel.blank? and idTipologia.blank? and idCidade.blank? and precoMin.blank? and precoMax.blank?
       @imovel = self.where("id >", 0);
     end
     @imovel
