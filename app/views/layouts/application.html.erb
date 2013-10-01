@@ -21,6 +21,7 @@
 
 
 
+
             </ul>
             <!-- The drop down menu -->
             <ul class="nav pull-right">
@@ -29,26 +30,18 @@
               <% if current_user %>  
             
               
-            <li> Bem Vindo (<%= current_user.name %>)
-              <%= link_to "Editar Profile", edit_user_path(current_user) %> </li>  
-            <li>  <%= link_to "Sair", logout_path %> </li>    
+                <li>  
+                    <%= link_to "Bem Vindo "+ current_user.name , edit_user_path(current_user) %> 
+                </li>  
+                
+                <li>  <%= link_to "Sair", logout_path %> </li>    
             
             <% else %>  
-            <li><%= link_to "Registar", new_user_path %></li>  
-            <li class="divider-vertical"></li>
-            <li>  <%= link_to "Entrar", login_path %> </li>
+            
+              <li><%= link_to "Registar", new_user_path %></li>  
+            
+              <li>  <%= link_to "Entrar", login_path %> </li>
             <% end %> 
-          
-          
-          
-          
-          
-         <%# <li class="dropdown">%>
-         <%#   <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-              <!-- Login form here -->
-            </div>
-          </li>%>
           </ul>
   </div>
 </div>

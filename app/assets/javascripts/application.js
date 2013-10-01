@@ -30,6 +30,7 @@
 //= require_tree .
 //= require jquery_nested_form
 
+$('.dropdown-toggle').dropdown()
 
 
 
