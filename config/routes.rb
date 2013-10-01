@@ -2,7 +2,9 @@ MicroApp::Application.routes.draw do
   
  
    
-  resources :fotosresposta
+  resources :fotosresposta do
+    get 'new'
+  end
 
 
   resources :documentos

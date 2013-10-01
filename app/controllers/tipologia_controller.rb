@@ -1,7 +1,7 @@
 class TipologiaController < ApplicationController
   # GET /tipologia
   # GET /tipologia.json
-  load_and_authorize_resource 
+  
   def index
     @tipologia = Tipologium.all
 
@@ -13,7 +13,6 @@ class TipologiaController < ApplicationController
 
   def getTipologias
     
-    #@tipoImovel = TipoImovel.where(:descricao => params[:idtipoimovel])
     @tipoimovel = TipoImovel.find(:first,:conditions => ["descricao = ?",params[:idTipoImovel]] )
     
     @tipologias = Tipologium.where(:tipoImovel_id => @tipoimovel.id )
@@ -23,9 +22,6 @@ class TipologiaController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @tipologias }
       
-      # Example: Basic Usage
-      #format.pdf { render_imovels_list(@imovels) }
-
     end
 
   end

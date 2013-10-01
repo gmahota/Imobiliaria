@@ -48,7 +48,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <p>
 
 <% @imovel.documentos.each do |doc| %>
-      <% if doc.descricao == "Hall Entrada" %> 
+      <% if doc.descricao == "Geral" %> 
             <%= image_tag doc.avatar.url, :size => "400x400"%>
           <%end%>
       <%end%>
