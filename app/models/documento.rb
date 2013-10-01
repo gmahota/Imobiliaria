@@ -5,8 +5,8 @@ class Documento < ActiveRecord::Base
     	:secret_access_key => ENV['S3_SECRET']
   	},  :bucket => ENV['S3_BUCKET'], :path => ":attachment/:id" ,:styles => {
                       :small => {
-                        :geometry => '150x150#',
-                        :quality => 60,
+                        :geometry => '200x200#',
+                        :quality => 50,
                         :format => 'JPG'
                       }}
 
