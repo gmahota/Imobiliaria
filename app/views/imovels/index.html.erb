@@ -1,4 +1,5 @@
-<h2> Lista de Imoveis</h2>
+<fieldset>
+    <legend>Lista de Imoveis</legend> 
 
 <table class="table" >
 <% @imovels.each do |imovel| %>
@@ -7,7 +8,7 @@
        
       <% imovel.documentos.each do |doc| %>
       <% if doc.descricao == "Geral" %> 
-            <%= link_to (image_tag doc.avatar.url, :size => "200x200") , imovel_path(imovel) %>
+            <%= link_to (image_tag doc.avatar.url, :size => "200x200", class: "img-polaroid") , imovel_path(imovel) %>
           <%end%>
       <%end%>
     </td>
@@ -43,3 +44,4 @@
 <%= link_to '+ Novo', new_imovel_path, class: "btn btn-small btn-info"  %> |
 <% end %>
 <%= link_to 'Imprimir', imovels_path(format: 'pdf'), class: "btn btn-small btn-info" %>
+</fieldset>

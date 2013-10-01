@@ -34,12 +34,12 @@
 
 <div class="thumbnail">
   
-  
 
-<h2>Pesquisa</h2>
+
 
 <form name="pesqRap" method="get" action=<%= imovels_path%>>
-					
+  <fieldset>
+    <legend>Pesquisa</legend>					
 					<div class="form-group"> 
 						<p>Referencia:
             <input  id ="idreferencia" type="text" name="idreferencia" class="boxGeral" style="width:128px;" value="" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
@@ -97,9 +97,10 @@
                   &nbsp;<span>Em destaque</span>
             </p>
 						
-            <i class="icon-search"></i>
-            <input class="btn btn-primary" type="submit" value="OK"/>
+           
+            <input class="btn" type="submit" value="Submeter"/>
 					</div>
+    </fieldset>
 </form>
 </div>
 

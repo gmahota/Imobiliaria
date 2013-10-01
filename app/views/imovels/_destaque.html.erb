@@ -1,5 +1,8 @@
 <% if !current_user %>
-<h2>Destaque</h2>
+
+<fieldset>
+    <legend>Destaque</legend> 
+
 <%  @imovels =Imovel.find(:all,:conditions => ["estado = ? ","Destaque"])
 %>          
 
@@ -18,5 +21,5 @@
     </br>
      
 <% end %>
-
+</fieldset>
 <% end %>

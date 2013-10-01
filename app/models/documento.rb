@@ -7,7 +7,6 @@ class Documento < ActiveRecord::Base
                       :medium  => {
                         :geometry => '400x400#',
                         :quality => 60,
-                        :format => 'JPG'
                       }}
 
   belongs_to :imovel
