@@ -39,8 +39,6 @@ module MicroApp
     
     Paperclip::Attachment.default_options[:fog_credentials] = {:provider => "Local", :local_root => "#{Rails.root}/public"}
     
-    #para as imagens ficarem fixas
-    config.assets.initialize_on_precompile = false
     
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
