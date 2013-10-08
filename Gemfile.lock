@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
+  revision: 70e6e63b0ee15962b623b2b04c87c35b0010e5c6
+  specs:
+    twitter-bootstrap-rails (2.2.8)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,13 +54,13 @@ GEM
       uuidtools (~> 2.1)
     bootstrap-addons-rails (0.1.2)
       rails
-    bootstrap-datepicker-rails (1.1.1.5)
+    bootstrap-datepicker-rails (1.1.1.8)
       railties (>= 3.0)
     builder (3.0.4)
     cancan (1.6.10)
     climate_control (0.0.3)
       activesupport (>= 3.0)
-    cocaine (0.5.1)
+    cocaine (0.5.2)
       climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -59,14 +69,13 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    commonjs (0.2.6)
+    commonjs (0.2.7)
     erubis (2.7.0)
-    execjs (1.4.0)
-      multi_json (~> 1.0)
+    execjs (2.0.2)
     fast_xs (0.8.0)
     geocoder (1.1.8)
     gmaps4rails (1.5.6)
-    hashery (2.1.0)
+    hashery (2.1.1)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -74,18 +83,18 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
-    less (2.3.2)
-      commonjs (~> 0.2.6)
-    less-rails (2.3.3)
+    less (2.4.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.4.2)
       actionpack (>= 3.1)
-      less (~> 2.3.1)
-    libv8 (3.11.8.17)
+      less (~> 2.4.0)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.23)
+    mime-types (1.25)
     mini_portile (0.5.1)
-    multi_json (1.7.8)
+    multi_json (1.8.1)
     nested_form (0.3.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
@@ -100,7 +109,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
-    pg (0.16.0)
+    pg (0.17.0)
     polyglot (0.3.3)
     posix-spawn (0.3.6)
     prawn (0.12.0)
@@ -138,7 +147,7 @@ GEM
       prawn
       xlsx_writer (>= 0.3.1)
     ruby-rc4 (0.1.5)
-    sass (3.2.10)
+    sass (3.2.12)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -152,8 +161,8 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.5)
-    therubyracer (0.11.4)
-      libv8 (~> 3.11.8.12)
+    therubyracer (0.12.0)
+      libv8 (~> 3.16.14.0)
       ref
     thinreports (0.7.6)
       prawn (>= 0.12.0, <= 0.12.0)
@@ -161,23 +170,18 @@ GEM
       thinreports (~> 0.7.6)
     thor (0.18.1)
     tilt (1.4.1)
-    treetop (1.4.14)
+    treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     ttfunk (1.0.3)
-    twitter-bootstrap-rails (2.2.8)
-      actionpack (>= 3.1)
-      execjs
-      rails (>= 3.1)
-      railties (>= 3.1)
     tzinfo (0.3.37)
-    uglifier (2.1.2)
+    uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     unix_utils (0.0.15)
     uuidtools (2.1.4)
-    will_paginate (3.0.4)
-    will_paginate-bootstrap (0.2.3)
+    will_paginate (3.0.5)
+    will_paginate-bootstrap (0.2.5)
       will_paginate (>= 3.0.3)
     xlsx_writer (0.4.0)
       activesupport
@@ -212,7 +216,7 @@ DEPENDENCIES
   sqlite3 (= 1.3.5)
   therubyracer
   thinreports-rails
-  twitter-bootstrap-rails
+  twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
   will_paginate (~> 3.0.0)
   will_paginate-bootstrap
