@@ -22,7 +22,9 @@
       <br/>
       Tipo Imovel: <%= imovel.tipoImovel %>
       <br/>
-      Preco: <%= imovel.preco %> <%= imovel.moeda %>
+      Preco:
+      <span class="price"><%= number_to_currency(imovel.preco ) %></span>
+        <%#= imovel.moeda %>
       <br/>
       <% if can? :manage, current_user %> 
         <%= link_to 'Editar', edit_imovel_path(imovel), class: "btn btn-small btn-info" %> | 
