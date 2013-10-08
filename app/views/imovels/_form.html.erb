@@ -226,6 +226,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
         Estado
         <%= select("imovel","estado", Estado.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
         </p>
+
+        <p>
+        Estuto
+        <%= select("imovel","estatuto", Estatuto.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
+        </p>
         
         <%= f.input :preco %>
         <p>

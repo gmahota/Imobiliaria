@@ -1,0 +1,23 @@
+<h1>Listing estatutos</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @estatutos.each do |estatuto| %>
+  <tr>
+    <td><%= estatuto.descricao %></td>
+    <td><%= link_to 'Show', estatuto %></td>
+    <td><%= link_to 'Edit', edit_estatuto_path(estatuto) %></td>
+    <td><%= link_to 'Destroy', estatuto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Estatuto', new_estatuto_path %>

@@ -49,7 +49,7 @@ class ImovelsController < ApplicationController
   # GET /imovels/1
   # GET /imovels/1.json
   def show
-    @imovel = params[:id] == nil ?Imovel.find(:first,:conditions => ["estado = ? ","Destaque Semana"]):  Imovel.find(params[:id])
+    @imovel = params[:id] == nil ?Imovel.find(:first,:conditions => ["estatuto = ? ","Destaque Semana"]):  Imovel.find(params[:id])
     
     if @imovel == nil
       #@imovels = Imovel.all

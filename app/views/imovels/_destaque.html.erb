@@ -3,7 +3,7 @@
 <fieldset>
     <legend>Destaque</legend> 
 
-<%  @imovels =Imovel.find(:all,:conditions => ["estado = ? ","Destaque"])
+<%  @imovels =Imovel.find(:all,:conditions => ["estatuto = ? ","Destaque"])
 %>          
 
 <% @imovels.each do |imovel| %> 
