@@ -26,6 +26,7 @@ report.start_new_page do |page|
      	@i= @i + 1
      end
   end
+  
 end
 
 
