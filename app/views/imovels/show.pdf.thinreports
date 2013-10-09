@@ -1,4 +1,5 @@
 report.start_new_page do |page|
+  
   page.values referencia: @imovel.referencia, 
               resumo: @imovel.resumo,
               preco: @imovel.preco,
@@ -6,8 +7,25 @@ report.start_new_page do |page|
               tipoimovel: @imovel.tipoImovel,
               tiponegocio: @imovel.tipoNegocio,
               estado: @imovel.estado
-  page.item(:foto1).src(open(@imovel.documentos.first.avatar.url ))
+  page.item(:logo).src(open("#{Rails.root}/app/assets/images/REC_top_logo.png" ))
+  
   page.item(:fotolocalizacao).src(open("http://maps.google.com/maps/api/staticmap?center=" + @imovel.latitude.to_s + "," + @imovel.longitude.to_s + "&markers=" + @imovel.latitude.to_s + "," + @imovel.longitude.to_s + "&zoom=15&size=640x640&sensor=false")) 
+
+  @i = 2
+
+  @imovel.documentos.each do |doc|
+  	 if doc.descricao == "Geral" 
+        page.item(:foto1).src(open(doc.avatar.url))   
+     else
+     	if  @ i> 7
+     		page.item("foto#{@i.to_s}").src(doc.avatar.url))
+     		page.item("foto#{@i.to_s}text").value(doc.descricao)
+     		
+     	end 
+
+     	@i= @i + 1
+     end
+  end
 end
 
 
