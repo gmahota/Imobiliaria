@@ -21,8 +21,6 @@ report.start_new_page do |page|
 
      		page.item("foto#{@i.to_s}").src(open(doc.avatar.url))
 
-     		page.item("foto#{@i.to_s}").src(doc.avatar.url)
-
      		page.item("foto#{@i.to_s}text").value(doc.descricao)
      		
      	end 
