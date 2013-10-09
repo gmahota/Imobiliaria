@@ -2,13 +2,13 @@ MicroApp::Application.routes.draw do
   
  
    
+  resources :admins
+
+
   resources :estatutos
 
 
-  resources :fotosresposta do
-    get 'new'
-  end
-
+  resources :fotosresposta
 
   resources :documentos
 

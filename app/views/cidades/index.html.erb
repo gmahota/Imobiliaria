@@ -1,4 +1,4 @@
-<h1>Listing cidades</h1>
+<h1>Lista de Cidades</h1>
 
 <table>
   <tr>
@@ -11,13 +11,13 @@
 <% @cidades.each do |cidade| %>
   <tr>
     <td><%= cidade.descricao %></td>
-    <td><%= link_to 'Show', cidade %></td>
-    <td><%= link_to 'Edit', edit_cidade_path(cidade) %></td>
-    <td><%= link_to 'Destroy', cidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostar', cidade %></td>
+    <td><%= link_to 'Editar', edit_cidade_path(cidade) %></td>
+    <td><%= link_to 'Apagar', cidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Cidade', new_cidade_path %>
+<%= link_to 'Nova Cidade', new_cidade_path %>

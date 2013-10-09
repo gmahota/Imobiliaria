@@ -26,31 +26,32 @@ class FotosrespostaController < ApplicationController
   # GET /fotosresposta/new
   # GET /fotosresposta/new.json
   def new
-    @fotosresposta = Fotosresposta.new
+    @foto = Fotosresposta.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @fotosresposta }
+      format.json { render json: @foto }
     end
   end
 
   # GET /fotosresposta/1/edit
   def edit
-    @fotosresposta = Fotosresposta.find(params[:id])
+    @foto = Fotosresposta.find(params[:id])
   end
 
   # POST /fotosresposta
   # POST /fotosresposta.json
   def create
-   @fotosresposta = Fotosresposta.new(params[:@fotosresposta])
+  
+   @foto = Fotosresposta.new(params[:fotosresposta])
 
     respond_to do |format|
-      if @fotosresposta.save
-        format.html { redirect_to @fotosresposta, notice: 'Respostas Criadas com Sucesso.' }
-        format.json { render json: @fotosresposta, status: :created, location: @fotosrespostum }
+      if @foto.save
+        format.html { redirect_to @foto, notice: 'Respostas Criadas com Sucesso.' }
+        format.json { render json: @foto, status: :created, location: @foto}
       else
         format.html { render action: "new" }
-        format.json { render json: @fotosresposta.errors, status: :unprocessable_entity }
+        format.json { render json: @foto.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -58,15 +59,15 @@ class FotosrespostaController < ApplicationController
   # PUT /fotosresposta/1
   # PUT /fotosresposta/1.json
   def update
-    @fotosresposta = Fotosresposta.find(params[:id])
+    @foto = Fotosresposta.find(params[:id])
 
     respond_to do |format|
-      if @fotosresposta.update_attributes(params[:@fotosresposta])
-        format.html { redirect_to @fotosresposta, notice: 'Respostas actualizadas com sucesso.' }
+      if @foto.update_attributes(params[:fotosresposta])
+        format.html { redirect_to @foto, notice: 'Respostas actualizadas com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @fotosresposta.errors, status: :unprocessable_entity }
+        format.json { render json: @foto.errors, status: :unprocessable_entity }
       end
     end
   end
