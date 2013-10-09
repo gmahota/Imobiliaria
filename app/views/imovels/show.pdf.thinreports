@@ -17,7 +17,7 @@ report.start_new_page do |page|
   	 if doc.descricao == "Geral" 
         page.item(:foto1).src(open(doc.avatar.url))   
      else
-     	if  @i> 7
+     	if  @i < 7
      		page.item("foto#{@i.to_s}").src(doc.avatar.url))
      		page.item("foto#{@i.to_s}text").value(doc.descricao)
      		
@@ -26,7 +26,7 @@ report.start_new_page do |page|
      	@i= @i + 1
      end
   end
-  
+
 end
 
 
