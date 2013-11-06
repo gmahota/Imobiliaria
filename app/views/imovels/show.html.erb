@@ -177,12 +177,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
           <div id="links">
             <% @imovel.documentos.each do |doc| %>
     
-              <% if doc.descricao = "Foto"%>
-                <a href="<%= doc.avatar.url%>" title="<%= doc.descricao%>" data-gallery> 
+              <a href="<%= doc.avatar.url%>" title="<%= doc.descricao%>" data-gallery> 
                   <%= image_tag doc.avatar.url, :size => "100x100", :title => doc.descricao %>
                 </a>
 
-              <%end%>
             <%end%>
           </div>
         </div>
