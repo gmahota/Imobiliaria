@@ -15,7 +15,7 @@
     
     <ul class="nav">
               
-              <li><%= link_to "Inicio", root_path %></li>
+              <li> <i class="icon-home icon-white"></i> <%= link_to "Inicio", root_path %></li>
               <li><%= link_to "Imoveis", imovels_path %></li>
               <% if current_user %>
                 <li><%= link_to "Parametros", admins_path %></li>
@@ -30,7 +30,7 @@
             
               
                 <li>  
-                    <%= link_to "Bem Vindo "+ current_user.name , edit_user_path(current_user) %> 
+                    <%= link_to "Bem Vindo "+ current_user.name , user_path(current_user) %> 
                 </li>  
                 
                 <li>  <%= link_to "Sair", logout_path %> </li>    

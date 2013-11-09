@@ -3,11 +3,6 @@
 
 </script>
 
-
-
-
-
-
 <script type="text/javascript">
   $(function(){
 
@@ -189,6 +184,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <li><a href="#localizacao">Localização</a></li>
       <li><a href="#dadoscom">Dados Comercias</a></li>
       <li><a href="#doc">Fotos/Documentos</a></li>
+      <li><a href="#obs">Observações</a></li>
     </ul>
  
     <div class="tab-content">
@@ -258,7 +254,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <p><%= f.link_to_add "Adicionar Documentos", :documentos %></p>
         </div>
       </div>
+      <div class="tab-pane" id="obs">
+        <div>
+          <%= f.input :referencia %>
+
+        </div>
+     
     </div>
+    </div>
+
+    
 
   <div class="form-actions">
     <%= f.button :submit %>

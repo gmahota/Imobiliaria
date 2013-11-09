@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131106060132) do
+ActiveRecord::Schema.define(:version => 20131109225659) do
 
   create_table "admins", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20131106060132) do
     t.text     "descriacao"
     t.string   "text"
     t.string   "resumo"
-    t.string   "referencia"
+    t.text     "referencia",  :limit => 255
     t.string   "string"
     t.string   "tipoNegocio"
     t.string   "tipoImovel"
@@ -68,14 +68,16 @@ ActiveRecord::Schema.define(:version => 20131106060132) do
     t.string   "provincia"
     t.string   "cidade"
     t.string   "localizacao"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.string   "moeda"
     t.string   "tipologia"
     t.float    "latitude"
     t.float    "longitude"
     t.float    "raio"
     t.string   "estatuto"
+    t.text     "observacao"
+    t.integer  "user_id"
   end
 
   create_table "moedas", :force => true do |t|

@@ -3,4 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Detalhes', imovel_path(@imovel), class: "btn btn-small btn-info" %> |
+ <%= link_to 'Apagar', @imovel,class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Tens a certeza?' } %>
 <%= link_to 'Voltar', imovels_path, class: "btn btn-small btn-danger" %>

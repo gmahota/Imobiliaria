@@ -26,10 +26,7 @@
       <span class="price"><%= number_to_currency(imovel.preco ) %></span>
         <%#= imovel.moeda %>
       <br/>
-      <% if can? :manage, current_user %> 
-        <%= link_to 'Editar', edit_imovel_path(imovel), class: "btn btn-small btn-info" %> | 
-        <%= link_to 'Apagar', imovel,class: "btn btn-small btn-danger", method: :delete, data: { confirm: 'Tens a certeza?' } %>
-      <%end%>
+     
     </td>
   </tr>
 <% end %>
