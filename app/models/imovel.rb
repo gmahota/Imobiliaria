@@ -36,9 +36,9 @@ class Imovel < ActiveRecord::Base
       end
     end
 
-    #if @imagem == "none" and documentos.count > 0
-     # @imagem = documentos.first.avatar.url
-    #end
+    if @imagem == "none" and documentos.count > 0
+      @imagem = documentos.first.avatar.url
+    end
 
     @imagem
   end
