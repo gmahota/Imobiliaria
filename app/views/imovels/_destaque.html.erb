@@ -84,7 +84,7 @@
 
 <%
   @imovelOutros =Imovel.where(:estatuto => "Destaque")
-  @imovelOutros =Imovel.where(["tipoImovel not in (?)", ["Vivendas","Apartamento"]])
+  @imovelOutros =Imovel.where(:tipoImovel => ["Vivendas","Apartamento"])
 
   @i=0
 %> 
