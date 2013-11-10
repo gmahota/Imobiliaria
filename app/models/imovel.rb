@@ -27,4 +27,20 @@ class Imovel < ActiveRecord::Base
     end
     @imovel
   end
+
+  def getImagemGeral
+    @imagem = "none"
+    documentos.each do |doc| 
+      if doc.descricao == "Geral" 
+        @imagem = doc.avatar.url
+      end
+    end
+
+    if @imagem == "none" and documentos.count > 0
+      @imagem = documentos.first.avatar.url
+    end
+
+    @imagem
+  end
+
 end

@@ -6,11 +6,8 @@
     <tr>
       <td border border="1" width="50%">
        
-      <% imovel.documentos.each do |doc| %>
-      <% if doc.descricao == "Geral" %> 
-            <%= link_to (image_tag doc.avatar.url, :size => "200x200", class: "img-polaroid") , imovel_path(imovel) %>
-          <%end%>
-      <%end%>
+        <%= link_to (image_tag image_tag imovel.getImagemGeral, :size => "200x200", class: "img-polaroid") , imovel_path(imovel) %>
+          
     </td>
     <td>
       <br/>
