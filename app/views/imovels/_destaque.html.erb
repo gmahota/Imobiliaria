@@ -3,22 +3,49 @@
 <fieldset>
     <legend>Destaque</legend> 
 
-<%  @imovels =Imovel.find(:all,:conditions => ["estatuto = ? ","Destaque"])
+<%  
+  @imovels =Imovel.where(:estatuto => "Destaque")
+  @imovels =Imovel.where(:tipoImovel => "Apartamento")
+
+  @i=0
 %>          
 
-<% @imovels.each do |imovel| %> 
-    <p>
-      <% imovel.documentos.each do |doc| %>
-                              <% if doc.descricao == "Geral" %> 
-                                    <%= link_to (image_tag doc.avatar.url, :size => "200x200") , imovel_path(imovel) %>
-                                  <%end%>
-                              <%end%>
- 
-      <%= imovel.tipoImovel%>
-    </p>        
+
+
+<div id="myCarousel1" class="carousel slide">  
+  <!-- Carousel items -->  
+  <div class="carousel-inner">  
+    
+    <% @imovels.each do |imovel| %> 
       
+                     <% if @i==0%>
+                        <div class="item active">
+                        <%else%>
+                  <div class="item">                  
+                      <%end%>
+      <% imovel.documentos.each do |doc| %>
+                                <% if doc.descricao == "Geral" %> 
+                                      <%= link_to (image_tag doc.avatar.url, :size => "200x200") , imovel_path(imovel) %>
+                                    <%end%>
+                                <%end%>
+   
+        <%= imovel.tipoImovel%>
+      </div>
+  
     </br>
-     
+     <%@i=@i+1%>
 <% end %>
+      
+     
+  </div>  
+  <!-- Carousel nav -->  
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
+</div> 
+
+
+
+
 </fieldset>
 <% end %>
+

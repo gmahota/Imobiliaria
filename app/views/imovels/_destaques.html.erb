@@ -1,6 +1,6 @@
 <% if !current_user %>
 
-<% @imovels =Imovel.all%>          
+<% @imovels =Imovel.all.sort_by { rand }%>          
 
 <%@i=0%>
 
@@ -17,19 +17,21 @@
                   <div class="item">                  
                       <%end%>
                     <ul class="thumbnails">
-                  <%end%>        
+                  <%end%>   
+                      <% imovel.documentos.each do |doc| %>
+                              <% if doc.descricao == "Geral" %>     
                       <li class="span3">
                             <div class="caption">
                                 <h5></h5>
                             </div>
                             <div class="thumbnail">
-                           <% imovel.documentos.each do |doc| %>
-                              <% if doc.descricao == "Geral" %> 
+                            
                                     <%= link_to (image_tag doc.avatar.url, :size => "150x150") , imovel_path(imovel) %>
-                                  <%end%>
-                              <%end%>
+                                  
                             </div>
                         </li>
+                        <%end%>
+                              <%end%>
                     <%if (@i+1)%4 == 0 or  imovel.id == @imovels.last.id%>        
                       </ul>  
                     </div>
