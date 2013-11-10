@@ -29,7 +29,7 @@ class Imovel < ActiveRecord::Base
   end
 
   def getImagemGeral
-    @imagem = "http://s3.amazonaws.com/RecImoveis/avatars/81?1384048180"
+    @imagem = "https://s3.amazonaws.com/RecImoveis/avatars/real-estate-agent.jpg"
     documentos.each do |doc| 
       if doc.descricao == "Geral" 
         @imagem = doc.avatar.url

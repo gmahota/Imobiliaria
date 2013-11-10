@@ -4,18 +4,59 @@
     <legend>Destaque</legend> 
 
 <%  
-  @imovels =Imovel.where(:estatuto => "Destaque")
-  @imovels =Imovel.where(:tipoImovel => "Apartamento")
+  @imovelApartamentos =Imovel.where(:estatuto => "Destaque")
+  @imovelApartamentos =Imovel.where(:tipoImovel => "Apartamento")
   @i=0
 %>          
 
+<% if @imovelApartamentos.count > 0 %>
 
 
 <div id="myCarousel1" class="carousel slide">  
   <!-- Carousel items -->  
   <div class="carousel-inner">  
     
-    <% @imovels.each do |imovel| %> 
+    <% @imovelApartamentos.each do |imovel| %> 
+      
+                     <% if @i==0%>
+                        <div class="item active">
+                        <%else%>
+                  <div class="item">                  
+                      <%end%>
+      <%= link_to (image_tag imovel.getImagemGeral, :size => "200x200") , imovel_path(imovel) %>
+                               
+      <%= imovel.tipoImovel%>
+      </div>
+  
+    </br>
+     <%@i=@i+1%>
+<% end %>
+      
+    
+  </div>  
+  <!-- Carousel nav -->  
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
+</div> 
+
+<% end %>
+ 
+
+<%
+  @imovelVivendas =Imovel.where(:estatuto => "Destaque")
+  @imovelVivendas =Imovel.where(:tipoImovel => "Vivendas")
+
+  @i=0
+%> 
+
+<% if @imovelVivendas.count > 0 %>
+
+
+<div id="myCarousel2" class="carousel slide">  
+  <!-- Carousel items -->  
+  <div class="carousel-inner">  
+    
+    <% @imovelVivendas.each do |imovel| %> 
       
                      <% if @i==0%>
                         <div class="item active">
@@ -36,10 +77,48 @@
   <!-- Carousel nav -->  
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
   <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
-</div> 
+</div>
+
+<% end %>
 
 
+<%
+  @imovelOutros =Imovel.where(:estatuto => "Destaque")
+  @imovelOutros =Imovel.where(["tipoImovel not in (?)", ["Vivendas","Apartamento"]])
 
+  @i=0
+%> 
+
+<% if @imovelOutros.count > 0 %>
+
+<div id="myCarousel3" class="carousel slide">  
+  <!-- Carousel items -->  
+  <div class="carousel-inner">  
+    
+    <% @imovelOutros.each do |imovel| %> 
+      
+                     <% if @i==0%>
+                        <div class="item active">
+                        <%else%>
+                  <div class="item">                  
+                      <%end%>
+      <%= link_to (image_tag imovel.getImagemGeral, :size => "200x200") , imovel_path(imovel) %>
+                               
+      <%= imovel.tipoImovel%>
+      </div>
+  
+    </br>
+     <%@i=@i+1%>
+<% end %>
+      
+     
+  </div>  
+  <!-- Carousel nav -->  
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
+</div>
+
+<%end%>
 
 </fieldset>
 <% end %>
