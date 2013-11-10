@@ -29,14 +29,14 @@ class Imovel < ActiveRecord::Base
   end
 
   def getImagemGeral
-    @imagem = "none"
+    @imagem = "http://s3.amazonaws.com/RecImoveis/avatars/81?1384048180"
     documentos.each do |doc| 
       if doc.descricao == "Geral" 
         @imagem = doc.avatar.url
       end
     end
 
-    if @imagem == "none" and documentos.count > 0
+    if @imagem == "http://s3.amazonaws.com/RecImoveis/avatars/81?1384048180" and documentos.count > 0
       @imagem = documentos.first.avatar.url
     end
 
