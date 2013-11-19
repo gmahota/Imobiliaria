@@ -4,8 +4,9 @@
     <legend>Destaque</legend> 
 
 <%  
-  @imovelApartamentos =Imovel.where(:estatuto => "Destaque")
-  @imovelApartamentos =Imovel.where(:tipoImovel => "Apartamento")
+  @imovelApartamentos = Imovel.procurar("Apartamento" , "Destaque")
+  #Imovel.where(:estatuto => )
+  #@imovelApartamentos =Imovel.where(:tipoImovel => )
   @i=0
 %>          
 
@@ -35,16 +36,17 @@
     
   </div>  
   <!-- Carousel nav -->  
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
+  <a class="carousel-control left" href="#myCarousel1" data-slide="prev">‹</a>  
+  <a class="carousel-control right" href="#myCarousel1" data-slide="next">›</a>  
 </div> 
 
 <% end %>
  
 
 <%
-  @imovelVivendas =Imovel.where(:estatuto => "Destaque")
-  @imovelVivendas =Imovel.where(:tipoImovel => "Vivendas")
+  @imovelVivendas =  Imovel.procurar("Vivendas" , "Destaque")
+  #Imovel.where(:estatuto => "Destaque")
+  #@imovelVivendas =Imovel.where(:tipoImovel => "Vivendas")
 
   @i=0
 %> 
@@ -75,16 +77,17 @@
      
   </div>  
   <!-- Carousel nav -->  
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
+  <a class="carousel-control left" href="#myCarousel2" data-slide="prev">‹</a>  
+  <a class="carousel-control right" href="#myCarousel2" data-slide="next">›</a>  
 </div>
 
 <% end %>
 
 
 <%
-  @imovelOutros =Imovel.where(:estatuto => "Destaque")
-  @imovelOutros =Imovel.where(:tipoImovel => ["Vivendas","Apartamento"])
+  @imovelOutros = Imovel.procurar(["Terreno", "Armazém", "Escritório", "Quinta", "Loja", "Ruina"] , "Destaque")
+  #Imovel.where(:estatuto => "Destaque")
+  #@imovelOutros =Imovel.where(:tipoImovel => ["Terreno", "Armazém", "Escritório", "Quinta", "Loja", "Ruina"])
 
   @i=0
 %> 
@@ -114,8 +117,8 @@
      
   </div>  
   <!-- Carousel nav -->  
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
+  <a class="carousel-control left" href="#myCarousel3" data-slide="prev">‹</a>  
+  <a class="carousel-control right" href="#myCarousel3" data-slide="next">›</a>  
 </div>
 
 <%end%>

@@ -28,6 +28,14 @@ class Imovel < ActiveRecord::Base
     @imovel
   end
 
+  def self.procurar(idtipoImovel , idEstatuto)
+    @imovel
+    @imovel = self.where(:estatuto => idEstatuto) unless idEstatuto.blank?
+    @imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
+    @imovel
+  end
+
+
   def getImagemGeral
     @imagem = "https://s3.amazonaws.com/RecImoveis/avatars/real-estate-agent.jpg"
     documentos.each do |doc| 
