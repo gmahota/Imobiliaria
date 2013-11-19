@@ -18,8 +18,7 @@
                       <%end%>
                     <ul class="thumbnails">
                   <%end%>   
-                      <% imovel.documentos.each do |doc| %>
-                              <li class="span3">
+                      <li class="span3">
                             <div class="caption">
                                 <h5>
                                 </h5>
@@ -30,7 +29,6 @@
                                   
                             </div>
                         </li>
-                        <%end%>
                     <%if (@i+1)%4 == 0 or  imovel.id == @imovels.last.id%>        
                       </ul>  
                     </div>
