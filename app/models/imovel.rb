@@ -25,14 +25,14 @@ class Imovel < ActiveRecord::Base
     if idreferencia.blank? and idNegocio.blank? and idtipoImovel.blank? and idTipologia.blank? and idCidade.blank? and precoMin.blank? and precoMax.blank?
       @imovel = self.where(id: 0..1000000000);
     end
-    @imovel
+    @imovel.order('id desc')
   end
 
   def self.procurar(idtipoImovel , idEstatuto)
     @imovel
     @imovel = self.where(:estatuto => idEstatuto) unless idEstatuto.blank?
     @imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
-    @imovel
+    @imovel.order('id desc')
   end
 
 

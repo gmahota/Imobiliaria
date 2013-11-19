@@ -1,6 +1,6 @@
 <% if !current_user %>
 
-<% @imovels =Imovel.last(10)%>          
+<% @imovels =Imovel.last(10).reverse%>          
 
 <%@i=0%>
 
@@ -19,10 +19,10 @@
                     <ul class="thumbnails">
                   <%end%>   
                       <% imovel.documentos.each do |doc| %>
-                              <% if doc.descricao == "Geral" %>     
-                      <li class="span3">
+                              <li class="span3">
                             <div class="caption">
-                                <h5></h5>
+                                <h5>
+                                </h5>
                             </div>
                             <div class="thumbnail">
                             
@@ -31,7 +31,6 @@
                             </div>
                         </li>
                         <%end%>
-                              <%end%>
                     <%if (@i+1)%4 == 0 or  imovel.id == @imovels.last.id%>        
                       </ul>  
                     </div>
