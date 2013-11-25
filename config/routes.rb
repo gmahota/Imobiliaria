@@ -2,6 +2,9 @@ MicroApp::Application.routes.draw do
   
  
    
+  resources :companies
+
+
   resources :admins
 
 

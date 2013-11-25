@@ -211,16 +211,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseTree">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseTree1">
          Entre em Contacto
       </a>
     </div>
-    <div id="collapseTree" class="accordion-body collapse">
+    <div id="collapseTree1" class="accordion-body collapse">
       <div class="accordion-inner">
-        
-         
-           
-        
+        Celular: <%= Company.first.celular%>
+        <br>
+        <br>
+        Email: <%= mail_to Company.first.email,Company.first.email, subject: "Dados do Imovel - #{@imovel.id}"  %>
       </div>
     
     </div>
