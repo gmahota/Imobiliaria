@@ -54,6 +54,10 @@
             <%end%>
             </select>
 						</p>
+
+            <p>Localização:
+            <input  id ="idlocalizacao" type="text" name="idlocalizacao" class="boxGeral" style="width:128px;" value="" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
+            </p>
             
             <p>
 						<select id ="idNegocio" name="idNegocio" class="boxGeral" style="width:138px;">
@@ -83,7 +87,7 @@
             
               </select>
 						</p>
-						
+            
             <p>
 						<label>Preço De </label>
               <input type="text"id="prcMin" name="prcMin" style="width:138px;" class="numeric float optional" step="any" type="number">
