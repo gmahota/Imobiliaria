@@ -12,10 +12,10 @@ class Imovel < ActiveRecord::Base
     if idreferencia.blank?
      @imovel = self.where(:tipoNegocio => idNegocio) unless idNegocio.blank?
      @imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
-     @imovel = self.where(:cidade => idNegocio) unless idCidade.blank?
-     @imovel = self.where(:tipologia => idtipoImovel) unless idTipologia.blank?
+     @imovel = self.where(:cidade => idCidade) unless idCidade.blank?
+     @imovel = self.where(:tipologia => idTipologia) unless idTipologia.blank?
      @imovel = self.where(preco: precoMin..precoMax) unless ( precoMin.blank? and precoMax.blank? )  
-     @imovel = self.where(:localizacao => idlocalizacao) unless idlocalizacao.blank?
+     @imovel = self.where(:localizacao => "%"+idlocalizacao+"%") unless idlocalizacao.blank?
       
     else
       
