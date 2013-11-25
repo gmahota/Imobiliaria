@@ -29,8 +29,8 @@
                                 <%= link_to imovel.tipoNegocio,imovel_path(imovel) %>  </br>
                                 <%= link_to imovel.tipoImovel,imovel_path(imovel) %>  </br>
                                 <%= link_to imovel.tipologia,imovel_path(imovel) %>  </br>
-                                <%= link_to imovel.preco,imovel_path(imovel) %>  </br>
-
+                                <%= link_to number_to_currency(imovel.preco ),imovel_path(imovel) %>  </br>
+                                
                                     <%#= link_to (image_tag imovel.getImagemGeral, :size => "150x150") , imovel_path(imovel) %>
                                   
                             </div>
