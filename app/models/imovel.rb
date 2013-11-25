@@ -15,7 +15,7 @@ class Imovel < ActiveRecord::Base
      @imovel = self.where(:cidade => idCidade) unless idCidade.blank?
      @imovel = self.where(:tipologia => idTipologia) unless idTipologia.blank?
      @imovel = self.where(preco: precoMin..precoMax) unless ( precoMin.blank? and precoMax.blank? )  
-     @imovel = self.where(:localizacao => "%"+idlocalizacao+"%") unless idlocalizacao.blank?
+     @imovel = self.where(Imovel.arel_table[:localizacao].matches("%#{idlocalizacao}%" )) unless idlocalizacao.blank?
       
     else
       
