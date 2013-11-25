@@ -6,6 +6,9 @@
     <th>Email</th>
     <th>Telefone</th>
     <th>Celular</th>
+    <th>Facebook</th>
+    <th>Skype</th>
+    <th>Twitter</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,7 +19,10 @@
     <td><%= company.nome %></td>
     <td><%= company.email %></td>
     <td><%= company.telefone %></td>
-    <td><%= company.celular %></td>
+    <td><%= company.celular %></td>\
+    <td><%= company.facebook %></td>
+    <td><%= company.skype %></td>
+    <td><%= company.twitter %></td>
     <td><%= link_to 'Show', company %></td>
     <td><%= link_to 'Edit', edit_company_path(company) %></td>
     <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>

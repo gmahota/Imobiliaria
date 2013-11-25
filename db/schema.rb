@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131125164126) do
+ActiveRecord::Schema.define(:version => 20131125171636) do
 
   create_table "admins", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(:version => 20131125164126) do
     t.string   "celular"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "skype"
   end
 
   create_table "documentos", :force => true do |t|

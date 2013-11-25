@@ -1,0 +1,43 @@
+<%  
+  @company = Company.first
+  #Imovel.where(:estatuto => )
+  #@imovelApartamentos =Imovel.where(:tipoImovel => )
+%> 
+<div class="thumbnail">
+<fieldset>
+    <legend>Entrar em Contacto</legend> 
+    <p>
+      <b>Email:</b>
+      <%= @company.email %>
+    </p>
+
+    <p>
+      <b>Telefone:</b>
+      <%= @company.telefone %>
+    </p>
+
+    <p>
+      <b>Celular:</b>
+      <%= @company.celular %>
+    </p>
+
+    <p>
+      <b>Facebook:</b>
+      <%= @company.facebook %>
+    </p>
+
+    <p>
+      <b>Skype:</b>
+      <%= @company.skype %>
+    </p>
+
+    <p>
+      <b>Twitter:</b>
+      <%= @company.twitter %>
+    </p>
+
+
+</fieldset>
+
+
+</div>
