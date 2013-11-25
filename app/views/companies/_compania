@@ -8,7 +8,8 @@
     <legend>Entrar em Contacto</legend> 
     <p>
       <b>Email:</b>
-      <%= @company.email %>
+      <%= mail_to @company.email, @company.email %>
+      
     </p>
 
     <p>
@@ -23,19 +24,13 @@
 
     <p>
       <b>Facebook:</b>
-      <%= @company.facebook %>
+      <%= link_to "Rec", @company.facebook %>
     </p>
 
     <p>
       <b>Skype:</b>
       <%= @company.skype %>
     </p>
-
-    <p>
-      <b>Twitter:</b>
-      <%= @company.twitter %>
-    </p>
-
 
 </fieldset>
 
