@@ -1,0 +1,36 @@
+<% @company = Company.first%> 
+<div class="thumbnail">
+
+  <div class="caption">
+          <h4>Contactos</h4>
+          
+      <p>
+        <b>Email:</b>
+        <%= mail_to @company.email, @company.email %>
+        
+      </p>
+
+      <p>
+        <b>Telefone:</b>
+        <%= @company.telefone %>
+      </p>
+
+      <p>
+        <b>Celular:</b>
+        <%= @company.celular %>
+      </p>
+
+      <p>
+        <b>Facebook:</b>
+        <%= link_to "Rec", @company.facebook %>
+      </p>
+
+      <p>
+        <b>Skype:</b>
+        <%= @company.skype %>
+      </p>
+          
+</div>
+
+
+</div>

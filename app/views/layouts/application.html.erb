@@ -5,12 +5,22 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  
+
 </head>
 <body onload="initialize()" class="main">
 
 <div class="navbar navbar-inverse navbar-fixed-top" style="position: static">
   <div class="navbar-inner">
+
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+    
+    <a class="brand" href="#">
+      <%= (image_tag "REC_top_logo.png", :size => "100x50")%>
+    </a>
     <a class="brand" href="#">Intermediacao</a>
     
     <ul class="nav">
@@ -45,11 +55,11 @@
   </div>
 </div>
 
-
+<%#
 <div class="hero-unit" style="background-image: url('https://s3.amazonaws.com/RecImoveis/Logotipos/REC_top_bg.jpg') ;">
   <div class="container">
         <div class="span4"> <%= link_to (image_tag "REC_top_logo.png", :size => "200x200") , "http://www.rec.co.mz"%>
-
+<%#
         </div>
     <div class="span3 offset4">
           Uma empresa do Grupo: 
@@ -61,45 +71,51 @@
           
 
 </div>
-
+%>
 
 
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span3">
+    <div class="span2">
       
       <%= render 'imovels/pesquisa' %>
 
       <%= render 'companies/compania' %>   
       
     </div>
-    <div class="span6">
+    <div class="span7">
     
     <%- flash.each do |k, v| %>
         <div class="alert">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong>Alerta!</strong> <div id="<%= k%>"><%= v %></div>.
-      </div>
+        
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Alerta!</strong> 
+
+          <div id="<%= k%>"><%= v %></div>.
+        
+        </div>
         
       
       <% end %>
       
       <%= yield %>
-   </div>
+    </div>
     <div class="span3">
     
-    <%= render 'imovels/destaque' %> 
-      
-      
-      
-    
+      <%= render 'imovels/destaque' %> 
     </div>
   </div>
+</div>
+<br>
+
+<div class="container">
   <div class="row">
-  
-    <div class = "span10">
-      <%= render 'imovels/destaques' %>
-    </div>
+    
+      <div >
+        
+        <%= render 'imovels/destaques' %>
+      
+      </div>
   </div>
 </div>
 
@@ -113,18 +129,19 @@
     </div>
     <div class="row">
           
-      <div >
-          <div class="col cl">
+      <div class="col cl">
 
+        <%= link_to (image_tag "GrupoMeridian_ACCSYS-ON.png", :size => "60x60") , "http://www.accsys.co.mz"%>   
 
-<%= link_to (image_tag "GrupoMeridian_ACCSYS-ON.png", :size => "60x60") , "http://www.accsys.co.mz"%>         
-<%= link_to (image_tag "GrupoMeridian_REC-ON.png", :size => "60x60") , "http://www.rec.co.mz"%>         
-<%= link_to (image_tag "GrupoMeridian_AMBIQUAL-ON.png", :size => "60x60") , "http://www.ambiqual.com"%>         
-<%= link_to (image_tag "GrupoMeridian_CEAL-ON.png", :size => "60x60") , "http://www.ceal.co.mz"%>         
-<%= link_to (image_tag "GrupoMeridian_JA-ON.png", :size => "60x60") , "http://www.ja-mz.com"%>         
+        <%= link_to (image_tag "GrupoMeridian_REC-ON.png", :size => "60x60") , "http://www.rec.co.mz"%>         
 
+        <%= link_to (image_tag "GrupoMeridian_AMBIQUAL-ON.png", :size => "60x60") , "http://www.ambiqual.com" %>
 
+        <%= link_to (image_tag "GrupoMeridian_CEAL-ON.png", :size => "60x60") , "http://www.ceal.co.mz"%> 
+
+        <%= link_to (image_tag "GrupoMeridian_JA-ON.png", :size => "60x60") , "http://www.ja-mz.com"%>        
       </div>
+
     </div>
   </div>
   
@@ -133,7 +150,7 @@
     <center>
       © Copyright <a href="http://www.rec.co.mz"> REC - Real Estate Consulting</a> - Powered by <a href="mailto:guimaraesmahota@gmail.com" >Guimarães Mahota Jr.
     </center>
-    </p>
+  </p>
 </div>
 
 </body>

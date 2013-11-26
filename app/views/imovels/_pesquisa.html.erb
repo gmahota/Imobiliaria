@@ -41,26 +41,26 @@
   <fieldset>
     <legend>Pesquisa</legend>					
 					<div class="form-group"> 
-						<p>Referencia:
+						Referencia:
             <input  id ="idreferencia" type="text" name="idreferencia" class="boxGeral" style="width:128px;" value="" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
-						</p>
-						
-            <p>
-						<select id="idCidade" name="idCidade" class="boxGeral" style="width:138px;" onchange="freguesiasRap(this.form)">
+						</br>
+            
+						<select id="idCidade" name="idCidade" class="boxGeral" style="width:128px;" onchange="freguesiasRap(this.form)">
 						<option value="">Cidade</option>
 						<option value=""></option> 
             <% Cidade.all.each do |cidade| %>
               <option value="<%=cidade.descricao%>"><%=cidade.descricao%></option>
             <%end%>
             </select>
-						</p>
+						</br>
 
-            <p>Localização:
+            Localização:
             <input  id ="idlocalizacao" type="text" name="idlocalizacao" class="boxGeral" style="width:128px;" value="" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
-            </p>
             
-            <p>
-						<select id ="idNegocio" name="idNegocio" class="boxGeral" style="width:138px;">
+            </br>
+            
+            
+						<select id ="idNegocio" name="idNegocio" class="boxGeral" style="width:128px;">
 						<option value="">Tipo de negócio</option>
             
 						<option value=""></option> 
@@ -70,38 +70,39 @@
 						<% end %>
             
             </select>
-						</p>
-						<p>
-						<select  id= "idtipoImovel" name="idtipoImovel" class="boxGeral" style="width:138px;" >
+						
+            </br>
+						
+						<select  id= "idtipoImovel" name="idtipoImovel" class="dropdown-toggle" style="width:128px;" >
 						<option value="">Tipo de imóvel</option>
 						<option value=""></option> 
             <%  TipoImovel.all.each do |imovel| %>
               <option value="<%=imovel.descricao%>"><%=imovel.descricao%></option>
 						<% end %>
             </select>
-						</p>
-						<p>
-							<select id="idTipologia" name="idTipologia" class="boxGeral" style="width:138px;">
+						
+            </br>
+						
+							<select id="idTipologia" name="idTipologia" class="boxGeral" style="width:128px;">
 							<option value="">Tipologia</option>
 							<option value=""></option> 
             
               </select>
-						</p>
+						
+            </br>
             
-            <p>
-						<label>Preço De </label>
-              <input type="text"id="prcMin" name="prcMin" style="width:138px;" class="numeric float optional" step="any" type="number">
+            
+						Preço De 
+              <input type="text"id="prcMin" name="prcMin" style="width:128px;" class="numeric float optional" step="any" type="number">
               
-              <label> a </label>
-              <input type="text"id="prcMax" name="prcMax" style="width:138px;" class="numeric float optional" step="any" type="number">
-						</p>
+             a
+              <input type="text"id="prcMax" name="prcMax" style="width:128px;" class="numeric float optional" step="any" type="number">
+						</br>
 						
-						<p class="estreito">
-						  <input id= "flgDestaque" type="checkbox" name="flgDestaque" value="1">
+						<input id= "flgDestaque" type="checkbox" name="flgDestaque" value="1">
                   &nbsp;<span>Em destaque</span>
-            </p>
-						
-           
+            </br>
+						           
             <input class="btn" type="submit" value="Submeter"/>
 					</div>
     </fieldset>

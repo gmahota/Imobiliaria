@@ -1,47 +1,53 @@
 <% if !current_user %>
 
 <fieldset>
-    <legend>Destaque</legend> 
+    <legend>Destaques</legend> 
 
-<%
-  @imovelOutros = Imovel.procurar(Tipologium.all.map{ |tipo| tipo.descricao} , "Destaque")
-  #Imovel.where(:estatuto => "Destaque")
-  #@imovelOutros =Imovel.where(:tipoImovel => ["Terreno", "Armazém", "Escritório", "Quinta", "Loja", "Ruina"])
 
-  @i=0
-%> 
+<% @imovels =Imovel.procurar(Tipologium.all.map{ |tipo| tipo.descricao} , "Destaque")%>          
 
-<% if @imovelOutros.count > 0 %>
+<%@i=0%>
 
-<div id="myCarousel3" class="carousel slide">  
-  <!-- Carousel items -->  
-  <div class="carousel-inner">  
-    
-    <% @imovelOutros.each do |imovel| %> 
-      
+<div class="container-fluid">
+    <div class="row-fluid">
+    <div class="carousel slide" id="myCarousel1">
+            <div class="carousel-inner">
+              <% @imovels.each do |imovel| %> 
+              
+                  <%if @i%4==0%>
                      <% if @i==0%>
                         <div class="item active">
                         <%else%>
                   <div class="item">                  
                       <%end%>
-      <%= link_to (image_tag imovel.getImagemGeral, :size => "200x200") , imovel_path(imovel) %>
-                               
-      <%= imovel.tipoImovel%>
-      </div>
-  
-    </br>
-     <%@i=@i+1%>
-<% end %>
-      
-     
-  </div>  
-  <!-- Carousel nav -->  
-  <a class="carousel-control left" href="#myCarousel3" data-slide="prev">‹</a>  
-  <a class="carousel-control right" href="#myCarousel3" data-slide="next">›</a>  
+                    <ul class="thumbnails">
+                  <%end%>   
+                      <li class="span3">
+                            <div class="caption">
+                                <h5>
+                                  <%= imovel.tipoImovel + " #{imovel.tipologia}"%>
+                                </h5>
+                            </div>
+                            <div >
+                                <%= link_to (image_tag imovel.getImagemGeral, :size => "200x200") , imovel_path(imovel) %>
+                                <%#= link_to (image_tag imovel.getImagemGeral, :size => "150x150") , imovel_path(imovel) %>
+                                  
+                            </div>
+                        </li>
+                    <%if (@i+1)%4 == 0 or  imovel.id == @imovels.last.id%>        
+                      </ul>  
+                    </div>
+                    <%end%>
+                
+                <%@i=@i+1%>
+                <% end %>
+            </div>
+            <a data-slide="prev" href="#myCarousel1" class="left carousel-control">‹</a>
+            <a data-slide="next" href="#myCarousel1" class="right carousel-control">›</a>
+        </div>
 </div>
-
-<%end%>
+</diV>
 
 </fieldset>
-<% end %>
 
+<% end %>

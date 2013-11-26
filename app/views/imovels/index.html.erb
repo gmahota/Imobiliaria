@@ -1,17 +1,29 @@
 <fieldset>
     <legend>Lista de Imoveis</legend> 
 
+<% if (@tipoPesquiza!= "")%>
+<div class="alert">
+        
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Pesquiza:</strong> 
+
+          <div id="<%= @tipoPesquiza %>"><%= @tipoPesquiza %></div>.
+        
+</div>
+<%end%>
+
+
 <table class="table " >
 <% @imovels.each do |imovel| %>
     <tr>
       <td border border="1" width="50%">
        
-        <%= link_to (image_tag imovel.getImagemGeral , :size => "200x200", class: "img-polaroid") , imovel_path(imovel) %>
+        <%= link_to (image_tag imovel.getImagemGeral , :size => "200x200") , imovel_path(imovel) %>
           
     </td>
     <td>
       <br/>
-      Referencia :<%= link_to imovel.id, imovel_path(imovel) %>
+      <b>Referencia : </b><%= link_to imovel.id, imovel_path(imovel) %>
       <br/>
       Resumo :<%= imovel.resumo %>
       <br/>

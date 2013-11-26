@@ -28,6 +28,32 @@ class Imovel < ActiveRecord::Base
     @imovel.order('id desc')
   end
 
+  def self.tipoPesquiza(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, idlocalizacao, precoMin , precoMax)
+    @tipo = ""
+    if idreferencia.blank?
+     
+     @tipo = @tipo + " * Localizacao - #{idlocalizacao} " unless idlocalizacao.blank?
+
+     @tipo = @tipo + " * Tipo Negocio - #{idNegocio} " unless idNegocio.blank?
+
+     @tipo = @tipo + " * Tipo Imovel - #{idtipoImovel} " unless idtipoImovel.blank?
+     
+     @tipo = @tipo + " * Cidade - #{idCidade} " unless idCidade.blank?
+     
+     @tipo = @tipo + " * Tipologia - #{idTipologia} " unless idTipologia.blank?
+     
+     @tipo = @tipo + " * Entre $#{precoMin} e $#{precoMax} " unless ( precoMin.blank? and precoMax.blank? )
+      
+    else
+      @tipo = @tipo + " Referencia - #{idreferencia}"
+      
+    end
+    if idreferencia.blank? and idlocalizacao.blank? and idNegocio.blank? and idtipoImovel.blank? and idTipologia.blank? and idCidade.blank? and precoMin.blank? and precoMax.blank?
+      @tipo = ""
+    end
+    @tipo
+  end
+
   def self.procurar(idtipoImovel , idEstatuto)
     @imovel
     @imovel = self.where(:estatuto => idEstatuto) unless idEstatuto.blank?

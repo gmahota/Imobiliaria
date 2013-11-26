@@ -9,6 +9,8 @@ class ImovelsController < ApplicationController
       
     @imovels = Imovel.search(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade],params[:idlocalizacao], params[:prcMin],params[:prcMax]).paginate(:page => params[:page])
     
+    @tipoPesquiza = Imovel.tipoPesquiza(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade],params[:idlocalizacao], params[:prcMin],params[:prcMax])
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @imovels }
@@ -30,7 +32,7 @@ class ImovelsController < ApplicationController
     @imovels = Imovel.all
     
     respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.json { render json: @imovels }
     end
   end
@@ -80,7 +82,8 @@ class ImovelsController < ApplicationController
     @imovel = Imovel.new 
     @imovel.moeda = "USD"
     @imovel.raio = 200
-
+    @imovel.user = current_user
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @imovel }
