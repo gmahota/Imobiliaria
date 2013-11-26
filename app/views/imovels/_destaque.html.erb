@@ -4,7 +4,7 @@
     <legend>Destaques</legend> 
 
 
-<% @imovels =Imovel.procurar(Tipologium.all.map{ |tipo| tipo.descricao} , "Destaque")%>          
+<% @imovels =Imovel.procurar(TipoImovel.all.map{ |tipo| tipo.descricao} , "Destaque")%>          
 
 <%@i=0%>
 
