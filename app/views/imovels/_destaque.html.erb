@@ -13,7 +13,7 @@
     <div class="carousel slide vertical" id="myCarousel1">
             <div class="carousel-inner">
               <% @imovels.each do |imovel| %> 
-              
+                  
                   <%if @i%4==0%>
                      <% if @i==0%>
                         <div class="item active">
@@ -28,8 +28,8 @@
                                   <%= imovel.tipoImovel + " #{imovel.tipologia}"%>
                                 </b>
                             </div>
-                            
-                            <%= link_to (image_tag imovel.getImagemGeral, :size => "200x200", :alt => imovel.resumo ) , imovel_path(imovel) %>
+
+                            <%= link_to (image_tag imovel.getImagemGeral, :size => "200x200", :alt => imovel.resumo, :title => imovel.resumo ) , imovel_path(imovel) %>
                                 <%#= link_to (image_tag imovel.getImagemGeral, :size => "150x150") , imovel_path(imovel) %>
                              
                             
