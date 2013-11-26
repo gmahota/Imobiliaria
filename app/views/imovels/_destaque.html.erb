@@ -24,15 +24,15 @@
                   <%end%>   
                       <li class="span11">
                             <div class="caption">
-                                <h5>
+                              <b>
                                   <%= imovel.tipoImovel + " #{imovel.tipologia}"%>
-                                </h5>
+                                </b>
                             </div>
-                            <div >
-                                <%= link_to (image_tag imovel.getImagemGeral, :size => "200x200") , imovel_path(imovel) %>
+                            
+                            <%= link_to (image_tag imovel.getImagemGeral, :size => "200x200", :alt => imovel.resumo ) , imovel_path(imovel) %>
                                 <%#= link_to (image_tag imovel.getImagemGeral, :size => "150x150") , imovel_path(imovel) %>
-                                  
-                            </div>
+                             
+                            
                         </li>
                     <%if (@i+1)%4 == 0 or  imovel.id == @imovels.last.id%>        
                       </ul>  
