@@ -29,14 +29,14 @@
     <a class="brand" href="#">
       <%= (image_tag "REC_top_logo.png", :size => "100x50")%>
     </a>
-    <a class="brand" href="#">Intermediacao</a>
+    <a class="brand" href="#">Intermediação</a>
     
     <ul class="nav">
               
-              <li> <%= link_to "Inicio", root_path %></li>
-              <li><%= link_to "Imoveis", imovels_path %></li>
+              <li> <%= link_to "Início", root_path %></li>
+              <li><%= link_to "Imóveis", imovels_path %></li>
               <% if current_user %>
-                <li><%= link_to "Parametros", admins_path %></li>
+                <li><%= link_to "Parâmetros", admins_path %></li>
               <%end%>
 
     </ul>

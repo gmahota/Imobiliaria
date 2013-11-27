@@ -1,11 +1,11 @@
 <fieldset>
-    <legend>Lista de Imoveis</legend> 
+    <legend>Lista de Imóveis</legend> 
 
 <% if (@tipoPesquiza!= "")%>
 <div class="alert">
         
           <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <strong>Pesquiza:</strong> 
+          <strong>Pesquisa:</strong> 
 
           <div id="<%= @tipoPesquiza %>"><%= @tipoPesquiza %></div>.
         
@@ -23,7 +23,7 @@
     </td>
     <td>
       <br/>
-      <b>Referencia : </b><%= link_to imovel.id, imovel_path(imovel) %>
+      <b>Referência : </b><%= link_to imovel.id, imovel_path(imovel) %>
       <br/>
       Resumo :<%= imovel.resumo %>
       <br/>
@@ -32,13 +32,13 @@
       <br/>
       Localização: <%= imovel.localizacao %>
       <br/>
-      Tipo Negocio: <%= imovel.tipoNegocio %>
+      Tipo Negócio: <%= imovel.tipoNegocio %>
       <br/>
-      Tipo Imovel: <%= imovel.tipoImovel %>
+      Tipo Imóvel: <%= imovel.tipoImovel %>
       <br/>
       Tipologia: <%= imovel.tipologia %>
       <br/>
-      Preco:
+      Preço:
       <span class="price"><%= number_to_currency(imovel.preco ) %></span>
         <%#= imovel.moeda %>
       <br/>
