@@ -28,14 +28,10 @@
                     <ul class="thumbnails">
                   <%end%>   
                       <li class="span3">
-                            <div class="caption">
-                                <h5>
-                                </h5>
-                            </div>
                             <div>
                               <a href= '<%=imovel_path(imovel)%>' >
                                 <%= imovel.resumo %> </br>
-                                <%= imovel.localizacao %>  </br>
+                                <%= imovel.localizacao %> <%= imovel.zona %> <%= imovel.cidade %>   </br>
                                 <%= imovel.tipoNegocio %>  </br>
                                 <%= imovel.tipoImovel %>  </br>
                                 <%= imovel.tipologia %>  </br>
