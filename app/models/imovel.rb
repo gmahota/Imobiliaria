@@ -1,5 +1,5 @@
 class Imovel < ActiveRecord::Base
-  attr_accessible :area,:documentos_attributes, :cidade, :descriacao, :estado, :localizacao, :preco, :provincia,:latitude,:longitude,:raio, :referencia, :resumo, :tipoImovel, :tipoNegocio,:tipologia, :moeda, :estatuto, :observacao, :referencia,:user_id
+  attr_accessible :area,:documentos_attributes, :cidade, :descriacao, :estado, :localizacao, :preco, :provincia,:latitude,:longitude,:raio, :referencia, :resumo, :tipoImovel, :tipoNegocio,:tipologia, :moeda, :estatuto, :observacao, :referencia,:user_id, :zona
   has_many :documentos
   belongs_to :user
 

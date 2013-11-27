@@ -2,7 +2,9 @@ MicroApp::Application.routes.draw do
   
  
    
-  resources :locations
+  resources :locations do
+    get 'getLocation'
+  end
 
 
   resources :companies

@@ -1,4 +1,4 @@
-<h1>Log In</h1>
+<h1>Entrar</h1>
   
 <%= simple_form_for(@user_session) do |f| %>
   <% if @user_session.errors.any? %>
@@ -14,12 +14,12 @@
   <% end %>
   
 
-<%= f.input :username %>
+<%= f.input :username , :text => "Usuario" %>
 
 
-<%= f.input :password %>
+<%= f.input :password , :text => "Password" %>
 
-<%= f.button :submit %>
+<%= f.button :submit , :value => "Submeter" %>
 
 <% end %>
 

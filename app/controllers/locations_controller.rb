@@ -21,6 +21,21 @@ class LocationsController < ApplicationController
     end
   end
 
+  def getLocation
+    
+    @cidade = Cidade.find(:first,:conditions => ["descricao = ?",params[:idCidade]] )
+    
+    @locations = Location.where(:cidade_id => @cidade.id )
+    
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @locations }
+      
+    end
+
+  end
+
   # GET /locations/new
   # GET /locations/new.json
   def new

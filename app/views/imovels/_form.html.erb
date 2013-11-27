@@ -37,6 +37,32 @@
 
       });
     });
+
+    $("#imovel_cidade").change( function() {
+      var cidade = $("#imovel_cidade").val();
+      $("#imovel_localizacao").empty();
+      $('#imovel_localizacao').append('<option value="">' + "Localização" + '</option>');
+      
+      $.ajax({
+         url: '/locations/0/getLocation',
+          data: "idCidade=" + cidade ,
+          type:"get",
+         dataType:"json", //the type of response you are expecting from the server
+         success:function(data){
+             
+             //iterate over the result sent by the server and populate the category combo e.g.
+             $.each(data,function(k,v){
+               $("#imovel_localizacao").append("<option value="+ v.descricao +">"+v.descricao+"</option>");
+             });
+
+         },
+         error:function(jxhr){
+             console.log(jxhr.responseText);
+         }
+
+
+      });
+    });
   });
 </script>
 
@@ -194,10 +220,18 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <%= f.input :descriacao , as: :text %>
       </div>
       <div class="tab-pane" id="localizacao">
+        <p>
+        <b>Cidade</b></br>
         <%= select("imovel","cidade", Cidade.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
+        </p>
+        <p><b>Localizacao</b> </br>
+        <%= select("imovel","localizacao", Location.all.collect { |p| [p.descricao,p.descricao ]}, {include_blank: 'None'})%>
+        </p>
+
+        <%= f.input :zona %>
         
         <%= f.input :area %>
-        <%= f.input :localizacao %>
+        <%#= f.input :localizacao %>
         <%= f.input :latitude , :width=>"500px"%>
         <%= f.input :longitude %>
         <%= f.input :raio %>
