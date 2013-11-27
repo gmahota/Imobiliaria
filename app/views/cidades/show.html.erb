@@ -1,10 +1,21 @@
 <%#<p id="notice"><%= notice %><%#</p> %>
 
+<h1>Dados da Cidade</h1>
+</br>
 <p>
   <b>Descricao:</b>
   <%= @cidade.descricao %>
 </p>
 
+</br>
 
+<b>localizacoes:</b> 
+
+<ul> 
+<% @cidade.locations.each do |location| %>
+  <li><%= location.descricao %></li>
+  
+<% end %>
+</ul>
 <%= link_to 'Edit', edit_cidade_path(@cidade) %> |
 <%= link_to 'Back', cidades_path %>
