@@ -1,6 +1,15 @@
+<script type="text/javascript">
+  $(function(){
+
+    $("#myCarousel").carousel({ interval: 5000, cycle: true });
+  });
+</script>
+
+
+
 <% if !current_user %>
 
-<% @imovels =Imovel.last(10).reverse%>          
+<% @imovels =Imovel.last(15).reverse%>          
 
 <%@i=0%>
 
@@ -10,7 +19,7 @@
             <div class="carousel-inner">
               <% @imovels.each do |imovel| %> 
               
-                  <%if @i%4==0%>
+                  <%if @i%5==0%>
                      <% if @i==0%>
                         <div class="item active">
                         <%else%>
@@ -39,7 +48,7 @@
                             </div>
                           
                         </li>
-                    <%if (@i+1)%4 == 0 or  imovel.id == @imovels.last.id%>        
+                    <%if (@i+1)%5 == 0 or  imovel.id == @imovels.last.id%>        
                       </ul>  
                     </div>
                     <%end%>
@@ -47,9 +56,10 @@
                 <%@i=@i+1%>
                 <% end %>
             </div>
-          <%#  <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
-            <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
-          %>
+            <%#
+            <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
+            <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a> %>
+          
         </div>
 </div>
 </diV>
