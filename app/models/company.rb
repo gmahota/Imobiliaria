@@ -1,3 +1,3 @@
 class Company < ActiveRecord::Base
-  attr_accessible :celular, :email, :nome, :telefone, :skype, :facebook, :twitter
+  attr_accessible :celular, :email, :nome, :telefone, :skype, :facebook, :twitter, :morada
 end

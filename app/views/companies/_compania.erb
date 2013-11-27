@@ -3,7 +3,7 @@
 
   <div class="caption">
           <h4>Contactos</h4>
-          
+      
       <p>
         <b>Email:</b>
         <%= mail_to @company.email, @company.email %>
@@ -28,6 +28,12 @@
       <p>
         <b>Skype:</b>
         <%= @company.skype %>
+      </p>
+
+      <p>
+        <b>Morada:</b>
+        <%=@company.morada %>
+        
       </p>
           
 </div>

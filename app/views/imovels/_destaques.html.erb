@@ -19,7 +19,7 @@
             <div class="carousel-inner">
               <% @imovels.each do |imovel| %> 
               
-                  <%if @i%5==0%>
+                  <%if @i%4==0%>
                      <% if @i==0%>
                         <div class="item active">
                         <%else%>
@@ -44,7 +44,7 @@
                             </div>
                           
                         </li>
-                    <%if (@i+1)%5 == 0 or  imovel.id == @imovels.last.id%>        
+                    <%if (@i+1)%4 == 0 or  imovel.id == @imovels.last.id%>        
                       </ul>  
                     </div>
                     <%end%>
