@@ -17,7 +17,7 @@
              
              //iterate over the result sent by the server and populate the category combo e.g.
              $.each(data,function(k,v){
-               $("#idTipologia").append("<option value="+ v.descricao +">"+v.descricao+"</option>");
+               $("#idTipologia").append("<option value='"+ v.descricao +"'>"+v.descricao+"</option>");
              });
 
          },
@@ -45,7 +45,7 @@
              
              //iterate over the result sent by the server and populate the category combo e.g.
              $.each(data,function(k,v){
-               $("#idlocalizacao").append("<option value="+ v.descricao +">"+v.descricao+"</option>");
+               $("#idlocalizacao").append("<option value='"+ v.descricao +"'>"+v.descricao+"</option>");
              });
 
          },
