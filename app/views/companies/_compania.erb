@@ -63,7 +63,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
       <p>
         <b>Skype:</b>
-        <%= @company.skype %>
+        <a href="skype:<%= @company.skype %>?call"> REC </a>
+        
       </p>
 
       <p>
