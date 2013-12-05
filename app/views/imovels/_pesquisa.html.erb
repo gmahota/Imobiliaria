@@ -28,6 +28,35 @@
 
       });
     });
+
+    $("#idCidade").change( function() {
+      
+      $("#idlocalizacao").empty();
+      var cidade = $("#idCidade").val();
+
+      $('#idlocalizacao').append('<option value="">' + "Localização" + '</option>');
+      
+     $.ajax({
+         url: '/locations/0/getLocation',
+         data: "idCidade=" + cidade ,
+         type:"get",
+         dataType:"json", //the type of response you are expecting from the server
+         success:function(data){
+             
+             //iterate over the result sent by the server and populate the category combo e.g.
+             $.each(data,function(k,v){
+               $("#idlocalizacao").append("<option value="+ v.descricao +">"+v.descricao+"</option>");
+             });
+
+         },
+         error:function(jxhr){
+             console.log(jxhr.responseText);
+         }
+
+
+      });
+    });
+
   });
 </script>
 
@@ -54,12 +83,12 @@
             </select>
 						</br>
 
-            Localização:
-            <input  id ="idlocalizacao" type="text" name="idlocalizacao" class="boxGeral" style="width:128px;" value="" onfocus="gotFocus(this, 'Referência')" onblur="lostFocus(this, 'Referência')" onkeypress="submitonEnter(event)">
+            <select id="idlocalizacao" name="idlocalizacao" class="boxGeral" style="width:128px;">
+              <option value="">Localização</option>
+              <option value=""></option> 
             
-            </br>
-            
-            
+            </select>
+                        
 						<select id ="idNegocio" name="idNegocio" class="boxGeral" style="width:128px;">
 						<option value="">Tipo de negócio</option>
             
