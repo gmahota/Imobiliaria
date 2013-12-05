@@ -12,18 +12,16 @@ class Imovel < ActiveRecord::Base
     if idreferencia.blank?
 
       conditions = {}
-      conditions[:localizacao] = idlocalizacao if idlocalizacao
-      conditions[:tipoNegocio] = idNegocio if idNegocio
-      conditions[:tipoImovel] = idtipoImovel if idtipoImovel
+      conditions[:localizacao] = idlocalizacao if idlocalizacao.blank?
+      conditions[:tipoNegocio] = idNegocio if idNegocio.blank?
+      conditions[:tipoImovel] = idtipoImovel if idtipoImovel.blank?
       
-      conditions[:tipologia ] = idTipologia if idTipologia
-      conditions[:cidade] = idCidade if idCidade
+      conditions[:tipologia ] = idTipologia if idTipologia.blank?
+      conditions[:cidade] = idCidade if idCidade.blank?
+      conditions[:estatuto] = ["","Destaque", "Destaque Semana"] 
       #conditions[:preco] = precoMin..precoMax if (precoMin or precoMax)
-      
 
       @imovel = self.where(conditions)
-
-
 
       #@imovel = self.where(:localizacao => idlocalizacao ) unless idlocalizacao.blank?
       #@imovel = self.where(:tipoNegocio => idNegocio ) unless idNegocio.blank?
