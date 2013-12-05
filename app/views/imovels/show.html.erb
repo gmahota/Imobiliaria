@@ -302,7 +302,8 @@ document.getElementById('links').onclick = function (event) {
 <% if can? :manage, current_user %> 
 <%= link_to 'Editar', edit_imovel_path(@imovel), class: "btn btn-small btn-info" %> |
 <%end%>
-<%= link_to 'Voltar', imovels_path, class: "btn btn-small btn-danger" %> |
+<a href="javascript:history.back()" class = "btn btn-small btn-danger" >Voltar</a> |
+<%#= link_to 'Voltar', imovels_path, class: "btn btn-small btn-danger" %>
 <%= link_to 'Imprimir', imovel_path(@imovel, format: 'pdf')  , class: "btn btn-small btn-info"%> 
 
 
