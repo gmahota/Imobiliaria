@@ -10,13 +10,13 @@ class Imovel < ActiveRecord::Base
   def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, idlocalizacao, precoMin , precoMax)
     @imovel
     if idreferencia.blank?
-     @imovel = self.where( "estatuto != Indisponivel")
      @imovel = self.where(:tipoNegocio => idNegocio) unless idNegocio.blank?
      @imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
      @imovel = self.where(:cidade => idCidade) unless idCidade.blank?
      @imovel = self.where(:tipologia => idTipologia) unless idTipologia.blank?
      @imovel = self.where(preco: precoMin..precoMax) unless ( precoMin.blank? and precoMax.blank? )  
      @imovel = self.where(Imovel.arel_table[:localizacao].matches("%#{idlocalizacao}%" )) unless idlocalizacao.blank?
+     @imovel = self.where( "estatuto != 'Indisponivel'")
       
     else
       
