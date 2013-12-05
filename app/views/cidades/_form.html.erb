@@ -9,11 +9,7 @@
         
         <%= f.fields_for :locations  ,  :html => {:multipart => true} do |doc| %>
          
-    		<%= doc.input :descricao %>
-    		
- 
-          
-          <%= doc.link_to_remove "Apagar" ,class: "btn btn-small btn-danger" %>
+    		<%= doc.input :descricao %> | <%= doc.link_to_remove "Apagar" ,class: "btn btn-small btn-danger" %>
         
         <% end %>
         
