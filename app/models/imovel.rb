@@ -10,14 +10,14 @@ class Imovel < ActiveRecord::Base
   def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, idlocalizacao, precoMin , precoMax)
     @imovel
     if idreferencia.blank?
-     @imovel = self.where(:tipoNegocio => idNegocio) unless idNegocio.blank?
-     @imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
-     @imovel = self.where(:cidade => idCidade) unless idCidade.blank?
-     @imovel = self.where(:tipologia => idTipologia) unless idTipologia.blank?
-     @imovel = self.where(preco: precoMin..precoMax) unless ( precoMin.blank? and precoMax.blank? )  
-     @imovel = self.where(Imovel.arel_table[:localizacao].matches("%#{idlocalizacao}%" )) unless idlocalizacao.blank?
-     @imovel = self.where( "estatuto != 'Indisponivel'")
-      
+     
+     @imovel = self.where(:tipoNegocio => idNegocio , :estatuto => ["Destaque","","Destaque Semana"]) unless idNegocio.blank?
+     @imovel = self.where(:tipoImovel => idtipoImovel , :estatuto => ["Destaque","","Destaque Semana"]) unless idtipoImovel.blank?
+     @imovel = self.where(:cidade => idCidade , :estatuto => ["Destaque","","Destaque Semana"]) unless idCidade.blank?
+     @imovel = self.where(:tipologia => idTipologia , :estatuto => ["Destaque","","Destaque Semana"]) unless idTipologia.blank?
+     @imovel = self.where(preco: precoMin..precoMax, :estatuto => ["Destaque","","Destaque Semana"]) unless ( precoMin.blank? and precoMax.blank? )  
+     @imovel = self.where(Imovel.arel_table[:localizacao].matches("%#{idlocalizacao}%" ), :estatuto => ["Destaque","","Destaque Semana"]) unless idlocalizacao.blank?
+
     else
       
       @imovel = self.where(:id => idreferencia)
