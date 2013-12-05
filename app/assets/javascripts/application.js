@@ -29,6 +29,7 @@
 
 //= require_tree .
 //= require jquery_nested_form
+//= require openlayers-rails
 
 $('.dropdown-toggle').dropdown()
 

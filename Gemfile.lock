@@ -98,6 +98,8 @@ GEM
     nested_form (0.3.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    openlayers-rails (0.0.3)
+      railties (>= 3.1)
     paperclip (3.5.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -202,11 +204,12 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   execjs
   geocoder
-  gmaps4rails (~> 1.5.6)
+  gmaps4rails
   jquery-rails
   less-rails
   nested_form
   nokogiri (~> 1.6.0)
+  openlayers-rails (~> 0.0.3)
   paperclip (~> 3.0)
   pg
   rails (= 3.2.13)

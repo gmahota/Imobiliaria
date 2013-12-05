@@ -29,7 +29,11 @@ end
 # in production environments by default.
 group :assets do
   
-  gem "gmaps4rails", "~> 1.5.6"
+  #gem 'openlayers-rails'
+    #gem para os mapas
+  gem "openlayers-rails", "~> 0.0.3"
+  gem 'gmaps4rails'
+
   gem "geocoder"
   gem "report", "~> 0.1.1"
   # gem para pesquizas
