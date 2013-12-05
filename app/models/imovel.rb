@@ -10,12 +10,27 @@ class Imovel < ActiveRecord::Base
   def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, idlocalizacao, precoMin , precoMax)
     @imovel 
     if idreferencia.blank?
-      @imovel = self.where(:localizacao => idlocalizacao ) unless idlocalizacao.blank?
-      @imovel = self.where(:tipoNegocio => idNegocio ) unless idNegocio.blank?
-      @imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
-      @imovel = self.where(:tipologia => idTipologia ) unless idTipologia.blank?
-      @imovel = self.where(:cidade => idCidade ) unless idCidade.blank?
-      @imovel = self.where(preco: precoMin..precoMax) unless ( precoMin.blank? and precoMax.blank? )      
+
+      conditions = {}
+      conditions[:localizacao] = idlocalizacao if idlocalizacao
+      conditions[:tipoNegocio] = idNegocio if idNegocio
+      conditions[:tipoImovel] = idtipoImovel if idtipoImovel
+      
+      conditions[:tipologia ] = idTipologia if idTipologia
+      conditions[:cidade] = idCidade if idCidade
+      #conditions[:preco] = precoMin..precoMax if (precoMin or precoMax)
+      
+
+      @imovel = self.where(conditions)
+
+
+
+      #@imovel = self.where(:localizacao => idlocalizacao ) unless idlocalizacao.blank?
+      #@imovel = self.where(:tipoNegocio => idNegocio ) unless idNegocio.blank?
+      #@imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
+      #@imovel = self.where(:tipologia => idTipologia ) unless idTipologia.blank?
+      #@imovel = self.where(:cidade => idCidade ) unless idCidade.blank?
+      #@imovel = self.where(preco: precoMin..precoMax) unless ( precoMin.blank? and precoMax.blank? )      
     else
       
       @imovel = self.where(:id => idreferencia)

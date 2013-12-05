@@ -55,6 +55,8 @@ gem 'jquery-rails'
 gem 'simple_form'
 #gem 'less-rails-bootstrap'
 
+#gem 'rails-simple-search'
+gem 'searchlogic'
 
 gem 'authlogic'
 gem 'cancan'
