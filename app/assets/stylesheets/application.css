@@ -19,9 +19,6 @@
  when scrolling occurs this element stays still.
 */
 
-
-background-image: asset-data-url("background.jpg")
-
 .footer {
 padding: 30px 0;
 margin-top: 70px;
