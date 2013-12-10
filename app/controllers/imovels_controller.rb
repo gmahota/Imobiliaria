@@ -7,9 +7,9 @@ class ImovelsController < ApplicationController
   def index
     
       
-    @imovels = Imovel.search(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade],params[:idlocalizacao], params[:prcMin],params[:prcMax]).paginate(:page => params[:page])
+    @imovels = Imovel.search(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade],params[:idlocalizacao], params[:prcMin],params[:prcMax],params[:flgDestaque]).paginate(:page => params[:page])
     
-    @tipoPesquiza = Imovel.tipoPesquiza(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade],params[:idlocalizacao], params[:prcMin],params[:prcMax])
+    @tipoPesquiza = Imovel.tipoPesquiza(params[:idreferencia],params[:idNegocio],params[:idtipoImovel],params[:idTipologia],params[:idCidade],params[:idlocalizacao], params[:prcMin],params[:prcMax], params[:flgDestaque])
     
     respond_to do |format|
       format.html # index.html.erb

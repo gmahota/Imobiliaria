@@ -128,8 +128,9 @@
               <input type="text"id="prcMax" name="prcMax" style="width:128px;" class="numeric float optional" step="any" type="number">
 						</br>
 						
-						<input id= "flgDestaque" type="checkbox" name="flgDestaque" value="1">
-                  &nbsp;<span>Em destaque</span>
+            <%= check_box_tag("flgDestaque", value = "1", checked = false, {:id =>"flgDestaque"}) %> Em Destaque
+
+
             </br>
 						           
             <input class="btn" type="submit" value="Submeter"/>

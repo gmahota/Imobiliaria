@@ -7,40 +7,42 @@ class Imovel < ActiveRecord::Base
   
   self.per_page = 4
   
-  def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, idlocalizacao, precoMin , precoMax)
+  def self.search(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, idlocalizacao, precoMin , precoMax , flgDestaque)
     @imovel 
-    if idreferencia.blank?
+    
 
-      conditions = {}
+      if idreferencia.blank?
 
-      conditions[:localizacao] = idlocalizacao unless idlocalizacao.blank?
-      conditions[:tipoNegocio] = idNegocio unless idNegocio.blank?
-      conditions[:tipoImovel] = idtipoImovel unless idtipoImovel.blank?     
-      conditions[:tipologia ] = idTipologia unless idTipologia.blank? 
-      conditions[:cidade] = idCidade  unless idCidade.blank?
-      conditions[:estatuto] = ["","Destaque", "Destaque Semana"] 
-      conditions[:preco] = precoMin..precoMax unless ( precoMin.blank? and precoMax.blank? )
+        conditions = {}
 
-      @imovel = self.where(conditions)
+        conditions[:localizacao] = idlocalizacao unless idlocalizacao.blank?
+        conditions[:tipoNegocio] = idNegocio unless idNegocio.blank?
+        conditions[:tipoImovel] = idtipoImovel unless idtipoImovel.blank?     
+        conditions[:tipologia ] = idTipologia unless idTipologia.blank? 
+        conditions[:cidade] = idCidade  unless idCidade.blank?
+        conditions[:estatuto] = ["","Destaque", "Destaque Semana"] 
+        conditions[:preco] = precoMin..precoMax unless ( precoMin.blank? and precoMax.blank? )
+        conditions[:estatuto] = ["Destaque", "Destaque Semana"] unless ( flgDestaque.blank? or flgDestaque == 1)
+        @imovel = self.where(conditions)
 
-      #@imovel = self.where(:localizacao => idlocalizacao ) unless idlocalizacao.blank?
-      #@imovel = self.where(:tipoNegocio => idNegocio ) unless idNegocio.blank?
-      #@imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
-      #@imovel = self.where(:tipologia => idTipologia ) unless idTipologia.blank?
-      #@imovel = self.where(:cidade => idCidade ) unless idCidade.blank?
-      #@imovel = self.where(preco: precoMin..precoMax) unless ( precoMin.blank? and precoMax.blank? )      
-    else
-      
-      @imovel = self.where(:id => idreferencia)
-      
+      else
+        @imovel = self.where(:id => idreferencia)
+        
+      end
+      if idreferencia.blank? and idlocalizacao.blank? and idNegocio.blank? and idtipoImovel.blank? and idTipologia.blank? and idCidade.blank? and precoMin.blank? and precoMax.blank?
+        if flgDestaque == 1
+        @imovel = self.where(id: 0..10000000000000, :estatuto => ["Destaque","","Destaque Semana"]);
+      else
+          conditions = {}
+          conditions[:estatuto] = ["Destaque", "Destaque Semana"] unless ( flgDestaque.blank? or flgDestaque == 1)
+          @imovel = self.where(conditions)
+          #@imovel = self.where(id: 0..10000000000000, :estatuto => ["Destaque","","Destaque Semana"]);
+        end
+      end
+      @imovel.order('id desc')
     end
-    if idreferencia.blank? and idlocalizacao.blank? and idNegocio.blank? and idtipoImovel.blank? and idTipologia.blank? and idCidade.blank? and precoMin.blank? and precoMax.blank?
-      @imovel = self.where(id: 0..10000000000000, :estatuto => ["Destaque","","Destaque Semana"]);
-    end
-    @imovel.order('id desc')
-  end
 
-  def self.tipoPesquiza(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, idlocalizacao, precoMin , precoMax)
+  def self.tipoPesquiza(idreferencia , idNegocio , idtipoImovel , idTipologia , idCidade, idlocalizacao, precoMin , precoMax ,  flgDestaque)
     @tipo = ""
     if idreferencia.blank?
      
@@ -55,6 +57,8 @@ class Imovel < ActiveRecord::Base
      @tipo = @tipo + " * Tipologia - #{idTipologia} " unless idTipologia.blank?
      
      @tipo = @tipo + " * Entre $#{precoMin} e $#{precoMax} " unless ( precoMin.blank? and precoMax.blank? )
+     
+     @tipo = @tipo + " * Em Destaque " unless ( flgDestaque == 1)
       
     else
       @tipo = @tipo + " Referencia - #{idreferencia}"
