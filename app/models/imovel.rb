@@ -70,10 +70,13 @@ class Imovel < ActiveRecord::Base
     @tipo
   end
 
-  def self.procurar(idtipoImovel , idEstatuto)
+  def self.procurar(idEstatuto)
     @imovel
-    @imovel = self.where(:estatuto => idEstatuto) unless idEstatuto.blank?
-    @imovel = self.where(:tipoImovel => idtipoImovel) unless idtipoImovel.blank?
+    conditions = {}
+
+    conditions[:estatuto] = idEstatuto 
+    @imovel = self.where(conditions)
+    
     @imovel.order('id desc')
   end
 
